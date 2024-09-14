@@ -1,0 +1,15 @@
+---
+import BaseLayoutEN from "../../layouts/BaseLayoutEN.astro";
+import CumtualElevamos from "../../components/CumtualElevamos.astro";
+import ContactUs from '../../components/ComponentesEN/ContactUs.astro'
+const pageTitle = "Home"
+---
+
+<BaseLayoutEN pageTitle={pageTitle}>
+    <section class="p-10 flex flex-col justify-center items-center h-[550px]">
+		<CumtualElevamos/>
+		<div class="mt-10">
+			<ContactUs/>
+		</div>
+	</section>
+</BaseLayoutEN>

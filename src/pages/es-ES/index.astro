@@ -1,0 +1,41 @@
+---
+import BaseLayoutES from "../../layouts/BaseLayoutES.astro"
+import CumtualElevamos from "../../components/CumtualElevamos.astro"
+import ContactanosBoton from "../../components/ComponetesES/ContactanosBoton.astro"
+import InsiginaCalidad from "../../components/InsigniaCalidad.astro"
+import SlideIcon from "../../components/SlideIcon.astro"
+import { Image } from 'astro:assets'
+const pageTitle = "Inicio"
+---
+
+<BaseLayoutES pageTitle={pageTitle}>
+	<section class="p-10 flex flex-col justify-center items-center h-[550px]">
+		<!-- <CumtualElevamos/> -->
+		 <Image class="logo-primary" src='/logocumtual-23.webp' alt="Logo Cumtual ES" width={340} height={224}/>
+		<div class="mt-10">
+			<ContactanosBoton/>
+		</div>
+		<div class="mt-20">
+			<SlideIcon/>
+		</div>
+	</section>
+	<section class=" flex flex-col justify-center items-center text-center">
+		<p class=" font-[600]">
+		  <span class="text-gradient">
+			Somos una empresa dedicada a la creación de páginas web y aplicaciones web,
+		  </span>
+		  {' '}centrada en ofrecer soluciones digitales personalizadas para startups que buscan establecer omejorar su precencia en línea.
+		</p>
+	  </section>
+	  <section class="flex flex-col justify-center items-center mt-20 gap-2 text-center">
+		<InsiginaCalidad/>
+		<p class="text-[#FFF] font-bold">Calidad</p>
+		<p>Nos comprometemos a entregar productos y servicios de alta calidad que superen las expectativas de nuestro clientes y garanticen su éxito.</p>
+	  </section>
+</BaseLayoutES>
+
+
+<!-- <body class="bg-bg-gray-cumtual p-10">
+	<Header/>
+	
+</body> -->
