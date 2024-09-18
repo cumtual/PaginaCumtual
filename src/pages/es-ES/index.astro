@@ -1,41 +1,103 @@
 ---
-import BaseLayoutES from "../../layouts/BaseLayoutES.astro"
-import CumtualElevamos from "../../components/CumtualElevamos.astro"
-import ContactanosBoton from "../../components/ComponetesES/ContactanosBoton.astro"
-import InsiginaCalidad from "../../components/InsigniaCalidad.astro"
-import SlideIcon from "../../components/SlideIcon.astro"
-import { Image } from 'astro:assets'
-const pageTitle = "Inicio"
+import BaseLayoutES from "../../layouts/BaseLayoutES.astro";
+import CumtualElevamos from "../../components/SVG/CumtualElevamos.astro";
+import ContactanosBoton from "../../components/ComponetesES/ContactanosBoton.astro";
+import InsiginaCalidad from "../../components/SVG/InsigniaCalidad.astro";
+import SlideIcon from "../../components/SVG/SlideIcon.astro";
+
+import InsigniaAdaptabilidad from "../../components/SVG/InsigniaAdaptabilidad.astro";
+
+import DesarrolloIcon from "../../components/SVG/DesarrolloIcon.astro";
+import NubeIcon from "../../components/SVG/NubeIcon.astro";
+import LogoIcon from "../../components/SVG/LogoIcon.astro";
+import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro"
+import { Formulario } from "../../components/ComponetesES/Formulario";
+
+
+const pageTitle = "Inicio";
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
-	<section class="p-10 flex flex-col justify-center items-center h-[550px]">
-		<!-- <CumtualElevamos/> -->
-		 <Image class="logo-primary" src='/logocumtual-23.webp' alt="Logo Cumtual ES" width={340} height={224}/>
-		<div class="mt-10">
-			<ContactanosBoton/>
+  <section class="p-10 flex flex-col justify-center items-center h-[550px]">
+    <CumtualElevamos />
+    <div class="mt-20">
+      <ContactanosBoton />
+    </div>
+    <div class="mt-20 svg-icon">
+      <SlideIcon />
+    </div>
+  </section>
+  <section class="flex flex-col justify-center items-center text-center mt-20">
+    <p class="font-[600] text-[14px]">
+      <span class="text-gradient">
+        Somos una empresa dedicada a la creación de páginas web y aplicaciones
+        web,
+      </span>
+      {" "}centrada en ofrecer soluciones digitales personalizadas para startups
+      que buscan establecer omejorar su precencia en línea.
+    </p>
+  </section>
+  <section
+    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
+  >
+    <InsiginaCalidad />
+    <p class="text-[#FFF] font-bold text-[14px]">Calidad</p>
+    <p>
+      Nos comprometemos a entregar productos y servicios de alta calidad que
+      superen las expectativas de nuestro clientes y garanticen su éxito.
+    </p>
+  </section>
+  <section
+    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
+  >
+    <InsigniaAdaptabilidad />
+    <p class="text-[#FFF] font-bold text-[14px]">Adaptabilidad</p>
+    <p class="text-[14px]">
+      Aceptamos el cambio como una oportunidad para crecer y mejorar
+      continuamente
+    </p>
+  </section>
+  <section
+    class="flex flex-col justify-center items-start mt-12 gap-2 text-center"
+  >
+    <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
+	<div class="flex gap-4 w-full mt-8">
+		<div
+		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
+		>
+		  <NubeIcon />
+		  <p class="font-[600] text-[#FFF] text-[15.46px]">
+			Almacenamiento en la nube
+		  </p>
 		</div>
-		<div class="mt-20">
-			<SlideIcon/>
+		<div
+		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
+		>
+		  <LogoIcon />
+		  <p class="font-[600] text-[#FFF] text-[15.46px]">Logos</p>
 		</div>
-	</section>
-	<section class=" flex flex-col justify-center items-center text-center">
-		<p class=" font-[600]">
-		  <span class="text-gradient">
-			Somos una empresa dedicada a la creación de páginas web y aplicaciones web,
-		  </span>
-		  {' '}centrada en ofrecer soluciones digitales personalizadas para startups que buscan establecer omejorar su precencia en línea.
-		</p>
-	  </section>
-	  <section class="flex flex-col justify-center items-center mt-20 gap-2 text-center">
-		<InsiginaCalidad/>
-		<p class="text-[#FFF] font-bold">Calidad</p>
-		<p>Nos comprometemos a entregar productos y servicios de alta calidad que superen las expectativas de nuestro clientes y garanticen su éxito.</p>
-	  </section>
+	  </div>
+	  <div
+		class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 mt-8"
+	  >
+	  <DesarrolloIcon/>
+	  <p class="font-[600] text-[#FFF] text-[15.46px]">Desarrollo web a la medida</p>
+	  </div>
+  </section>
+  <section class="mt-8">
+    <h2 class="font-[600] text-[#FFF] text-[24px]">Herramientas de desarrollo</h2>
+	<div class="mt-8">
+		<HerramientasDesarrollo/>
+	</div>
+  </section>
+  <section class="mt-10 flex flex-col justify-center items-center text-center gap-4">
+	<h2 class="text-gradient font-[600] text-[24px]">Elevamos el éxito de tu proyecto</h2>
+	<p class="font-[600] text-[14px]">Te atenderemos en menos de 30 min y recibirás tu cotización en menos de 24 hrs.</p>
+  </section>
+  <section class="text-center flex flex-col justify-center items- mt-10">
+	<h2 class="text-gradient text-[24px] font-[600] px-10">Lleva tu negocio a la cumbre virtual</h2>
+	<div class="w-full">
+		<Formulario/>
+	</div>
+  </section>
 </BaseLayoutES>
-
-
-<!-- <body class="bg-bg-gray-cumtual p-10">
-	<Header/>
-	
-</body> -->

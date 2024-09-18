@@ -8,7 +8,17 @@ export default {
 			'green-cumtual': '#04E95F',
 			'blue-cumtual': '#007BEA'
 		},
-		extend: {},
+		extend: {
+			animation: {
+				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+			  },
+			  keyframes: {
+				'infinite-scroll': {
+				  from: { transform: 'translateX(0)' },
+				  to: { transform: 'translateX(-100%)' },
+				}
+			}
+		},
 	},
 	plugins: [],
 }
