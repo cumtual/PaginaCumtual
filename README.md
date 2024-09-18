@@ -1,3 +1,5 @@
+![Logo de Cumtual](./public//logocumtual-23.png)
+
 # Pagina Cumtual
 
 ## Para ejecutar la aplicacion por primera vez
