@@ -1,4 +1,4 @@
-![Logo de Cumtual](./public//logocumtual-23.png)
+<img src="./public/logocumtual-23.webp" alt="Logo Cumtual" width="200" />
 
 # Pagina Cumtual
 
