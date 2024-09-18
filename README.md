@@ -1,14 +1,12 @@
-# Astro Starter Kit: Minimal
+# Pagina Cumtual
 
+## Para ejecutar la aplicacion por primera vez
 ```sh
-npm create astro@latest -- --template minimal
+npm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 **No puedes visualizar algo? Contacta a Luis**
 
 ## 🚀 Project Structure
 
@@ -18,8 +16,43 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
+|   └── components/
+|       └── botonHeaderMX/
+|          └── Boton.tsx
+|          └── OpcionesIdioma.tsx
+|       └── ComponentesEN/
+|          └── ContactUs.astro
+|       └── ComponentesES/
+|          └── ContactanosBoton.astro
+|          └── Formulario.tsx
+|          └── Header.astro
+|       └── SVG/
+|          └── CumtualElevamos.astro
+|          └── DesarrolloIcon.astro
+|          └── HerramientasDesarrollo.astro
+|          └── InsigniaCalidad.astro
+|          └── LogoIcon.astro
+|          └── NubeIcon.astro
+|          └── SlideIcon.astro
+|       └── UI/
+|          └── BotonServicios.tsx
+|          └── BotonWhatsapp.tsx
+|       └── Footer.astro
+│   └── Layouts/
+|       └── BaseLayoutEN.astro
+|       └── BaseLayoutES.astro
+|       └── Layout.astro
 │   └── pages/
+|       └── es-EN/
+|          └── index.astro
+|       └── es-ES/
+|          └── index.astro
 │       └── index.astro
+│   └── styles/
+│       └── globals.css
+│   └── convertirImagen.js
+│   └── tailwind.config.js
+│   └── tailwind.config.mjs
 └── package.json
 ```
 
