@@ -1,27 +1,19 @@
 ---
-import Header from "../components/ComponetesES/Header.astro"
-import CumtualEleveamos from "../components/SVG/CumtualElevamos.astro";
-import ContactanosBoton from "../components/ComponetesES/ContactanosBoton.astro"
-import SlideIcon from "../components/SVG/SlideIcon.astro";
-import '../styles/globals.css';
+"";
+import "../styles/globals.css";
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cumtual</title>
-	</head>
-	<body class="bg-bg-gray-cumtual p-10">
-		<Header/>
-		<section class="p-10 flex flex-col justify-center items-center h-[550px]">
-			<CumtualEleveamos/>
-			<div class="mt-10">
-				<ContactanosBoton/>
-			</div>
-		</section>
-		
-	</body>
-</html>
+<body>
+  <script>
+    const userLang = navigator.language;
+
+    if (userLang.startsWith("es")) {
+      window.location.href = "/es-ES"; // Redirigir a la página en español
+    } else if (userLang.startsWith("en")) {
+      window.location.href = "/en-EU"; // Redirigir a la página en inglés
+    } else {
+      // En caso de que el idioma no sea reconocido, redirigir a una página predeterminada
+      window.location.href = "/es-ES"; // O cualquier página por defecto
+    }
+  </script>
+</body>
