@@ -6,7 +6,7 @@ import InsiginaCalidad from "../../components/SVG/InsigniaCalidad.astro";
 import SlideIcon from "../../components/SVG/SlideIcon.astro";
 
 import InsigniaAdaptabilidad from "../../components/SVG/InsigniaAdaptabilidad.astro";
-
+import '../../styles/globals.css';
 import DesarrolloIcon from "../../components/SVG/DesarrolloIcon.astro";
 import NubeIcon from "../../components/SVG/NubeIcon.astro";
 import LogoIcon from "../../components/SVG/LogoIcon.astro";
@@ -16,6 +16,7 @@ import { Formulario } from "../../components/ComponetesES/Formulario";
 
 const pageTitle = "Inicio";
 ---
+
 
 <BaseLayoutES pageTitle={pageTitle}>
   <section class="p-10 flex flex-col justify-center items-center h-[550px]">
@@ -27,7 +28,7 @@ const pageTitle = "Inicio";
       <SlideIcon />
     </div>
   </section>
-  <section class="flex flex-col justify-center items-center text-center mt-20">
+  <section class="flex flex-col justify-center items-center text-center mt-15">
     <p class="font-[600] text-[14px]">
       <span class="text-gradient">
         Somos una empresa dedicada a la creación de páginas web y aplicaciones
@@ -62,24 +63,19 @@ const pageTitle = "Inicio";
   >
     <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
 	<div class="flex gap-4 w-full mt-8">
-		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
-		>
+		<div class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 hover-cards">
 		  <NubeIcon />
 		  <p class="font-[600] text-[#FFF] text-[15.46px]">
 			Almacenamiento en la nube
 		  </p>
 		</div>
 		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
-		>
+		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 hover-cards">
 		  <LogoIcon />
 		  <p class="font-[600] text-[#FFF] text-[15.46px]">Logos</p>
 		</div>
 	  </div>
-	  <div
-		class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 mt-8"
-	  >
+	  <div class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 mt-8 hover-cards">
 	  <DesarrolloIcon/>
 	  <p class="font-[600] text-[#FFF] text-[15.46px]">Desarrollo web a la medida</p>
 	  </div>

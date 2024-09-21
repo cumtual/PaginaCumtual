@@ -16,6 +16,7 @@
     "@types/react-dom": "^18.3.0",
     "astro": "^4.15.4",
     "fs": "^0.0.1-security",
+    "hover.css": "^2.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-floating-whatsapp": "^5.0.8",
