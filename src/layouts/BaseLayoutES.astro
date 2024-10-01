@@ -14,7 +14,7 @@ import Footer from '../components/Footer.astro';
 		<title>Cumtual - {pageTitle}</title>
 	</head>
 	<body class="bg-bg-gray-cumtual">
-		<Header idioma="es"/>
+		<Header idioma="es" client:load/>
         <slot />
 		<BotonWhatsapp client:load idioma="es" />
 		<Footer/>
