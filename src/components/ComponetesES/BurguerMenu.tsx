@@ -2,7 +2,7 @@ import { useStore } from '@nanostores/react';
 import { isMenuOpen } from './MenuStore'
 
 
-const BurguerMenu = () => {
+export const BurguerMenu = () => {
 
   const $isMenuOpen = useStore(isMenuOpen);
 
@@ -18,5 +18,3 @@ const BurguerMenu = () => {
     </div>
   )
 }
-
-export default BurguerMenu
