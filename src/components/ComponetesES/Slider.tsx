@@ -7,7 +7,7 @@ interface Props {
   idioma: string;
 }
 
-const Slider = ({ idioma }: Props) => {
+export const Slider = ({ idioma }: Props) => {
   const $isMenuOpen = useStore(isMenuOpen);
   const [servicios, setServicios] = useState(false);
 
@@ -46,5 +46,3 @@ const Slider = ({ idioma }: Props) => {
     </>
   );
 };
-
-export default Slider;
