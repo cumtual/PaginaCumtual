@@ -10,10 +10,10 @@ import InsigniaAdaptabilidad from "../../components/SVG/InsigniaAdaptabilidad.as
 import DesarrolloIcon from "../../components/SVG/DesarrolloIcon.astro";
 import NubeIcon from "../../components/SVG/NubeIcon.astro";
 import LogoIcon from "../../components/SVG/LogoIcon.astro";
-import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro"
+import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro";
 import { Formulario } from "../../components/ComponetesES/Formulario";
 
-import '../../styles/globals.css'
+import "../../styles/globals.css";
 
 const pageTitle = "Inicio";
 ---
@@ -62,43 +62,77 @@ const pageTitle = "Inicio";
     class="flex flex-col justify-center items-start mt-12 gap-2 text-center"
   >
     <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
-	<div class="flex gap-4 w-full mt-8">
-		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4"
-		>
-		  <NubeIcon />
-		  <p class="font-[600] text-[#FFF] text-[15.46px]">
-			Almacenamiento en la nube
-		  </p>
-		</div>
-		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4"
-		>
-		  <LogoIcon />
-		  <p class="font-[600] text-[#FFF] text-[15.46px]">Logos</p>
-		</div>
-	  </div>
-	  <div
-		class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
-	  >
-	  <DesarrolloIcon/>
-	  <p class="font-[600] text-[#FFF] text-[15.46px]">Desarrollo web a la medida</p>
-	  </div>
+    <div class="flex gap-4 w-full mt-8">
+      <div
+        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+      >
+        <div
+          class="flex justify-center items-center mt-4 w-full md:justify-start ml-14"
+        >
+          <NubeIcon />
+        </div>
+        <p
+          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 w-full mb-2"
+        >
+          Almacenamiento <br /> en la nube
+        </p>
+      </div>
+
+      <div
+        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+      >
+        <div class="flex-grow flex justify-center items-center mt-4">
+          <LogoIcon />
+        </div>
+        <div class="px-2 w-full">
+          <p
+            class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-8 md:text-center md:self-auto"
+          >
+            Logos
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
+    >
+      <div class="flex-grow flex justify-center items-center mt-4 md:mt-8">
+        <DesarrolloIcon />
+      </div>
+      <div class="px-2 w-full">
+        <p
+          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-2 md:text-center md:mb-8"
+        >
+          Desarrollo web <br /> a la medida
+        </p>
+      </div>
+    </div>
   </section>
   <section class="mt-8 ejemplo">
-    <h2 class="font-[600] text-[#FFF] text-[24px]">Herramientas de desarrollo</h2>
-	<div class="mt-8">
-		<HerramientasDesarrollo/>
-	</div>
+    <h2 class="font-[600] text-[#FFF] text-[24px]">
+      Herramientas de desarrollo
+    </h2>
+    <div class="mt-8">
+      <HerramientasDesarrollo />
+    </div>
   </section>
-  <section class="mt-10 flex flex-col justify-center items-center text-center gap-4">
-	<h2 class="text-gradient font-[600] text-[24px]">Elevamos el éxito de tu proyecto</h2>
-	<p class="font-[600] text-[14px]">Te atenderemos en menos de 30 min y recibirás tu cotización en menos de 24 hrs.</p>
+  <section
+    class="mt-10 flex flex-col justify-center items-center text-center gap-4"
+  >
+    <h2 class="text-gradient font-[600] text-[24px]">
+      Elevamos el éxito de tu proyecto
+    </h2>
+    <p class="font-[600] text-[14px]">
+      Te atenderemos en menos de 30 min y recibirás tu cotización en menos de 24
+      hrs.
+    </p>
   </section>
   <section class="text-center flex flex-col justify-center items- mt-10">
-	<h2 class="text-gradient text-[24px] font-[600] px-10">Lleva tu negocio a la cumbre virtual</h2>
-	<div class="w-full">
-		<Formulario/>
-	</div>
+    <h2 class="text-gradient text-[24px] font-[600] px-10">
+      Lleva tu negocio a la cumbre virtual
+    </h2>
+    <div class="w-full">
+      <Formulario />
+    </div>
   </section>
 </BaseLayoutES>

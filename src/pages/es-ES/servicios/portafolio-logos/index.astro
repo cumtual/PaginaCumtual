@@ -1,7 +1,344 @@
 ---
-import BaseLayoutES from "../../../../layouts/BaseLayoutES.astro"
+import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBoton.astro";
+import BaseLayoutES from "../../../../layouts/BaseLayoutES.astro";
+import "../../../../styles/globals.css";
+const pageTitle = "Portafolio logo";
+
+import { Image } from "astro:assets";
 ---
 
-<BaseLayoutES>
-    <p>Portafolio Logo</p>
+<BaseLayoutES pageTitle={pageTitle}>
+  <artcile class="text-center flex flex-col gap-8 mt-16">
+    <section>
+      <h1 class="font-[600] text-[24px] text-[#FFF] text-center">
+        Portafolio Logo
+      </h1>
+      <div class="text-[#7C7C7C] font-[600] flex flex-col gap-4">
+        <p>Creacion de:</p>
+        <div>
+          <p class="text-gradient">- Identidad visual única y profesional.</p>
+          <p class="text-gradient">- Braning.</p>
+        </div>
+        <p>
+          Completamente <span class="text-[#FFF]"
+            >personalizado y adaptado a las necesidades específicas</span
+          > del proyecto del cliente.
+        </p>
+        <p>
+          Desarrollamos <span class="text-[#FFF]">
+            conceptos con base en la metodología "Design thinking"</span
+          > para garantizar el éxito de tu proyecto.
+        </p>
+      </div>
+      <div class="flex justify-center items-center mt-4">
+        <ContactanosBoton />
+      </div>
+    </section>
+  </artcile>
+  <article>
+    <section class="mt-10 flex flex-col gap-2" id="Xiti tákú">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Xiti Tákú</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/Xiti-taku-1.webp"
+              alt="Imagen huevos orgánicos"
+              width={141}
+              height={211}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Empresa de huevos orgánicos, nombre de la empresa escrito en
+            Mixteco, su significado está ubicado en el slogan. Una hoja como
+            cuerpo de la gallina representa lo orgánico y saludable del
+            producto.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/xiti-taku-2.webp"
+              alt="Imagen planta"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] flex items-center justify-center rounded-[11px]"
+          >
+            <Image
+              src="/imagenesConvertidas/xiti-taku-3.webp"
+              alt="Logo Xiti tákú"
+              width={191}
+              height={147}
+              class="object-cover w-[181px] h-[65px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 flex flex-col gap-2" id="sadeli-tower">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Sedeli Tower</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[231px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/sadeli-tower-1.webp"
+              alt="Imagen mujer olmeca"
+              width={141}
+              height={231}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Inspirado en el nombre de la calle donde se encuentra el desarrollo
+            inmobiliario “calle Olmecas”, se buscó un objeto que hiciera
+            representación a la cultura Olmeca dando como resultado al “Señor de
+            las Limas”. El nombre de la torre proviene del acrónimo del “Señor
+            de las Limas” SEDELI. El diseño de imagen combina la abstracción de
+            una “S” junto con la altura de un edificio.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/sadeli-tower-2.webp"
+              alt="Imagen torres"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] rounded-[11px] overflow-hidden group flex justify-center items-center"
+          >
+            <Image
+              src="/imagenesConvertidas/sadeli-tower-3.webp"
+              alt="Logo Sedeli Tower"
+              width={191}
+              height={147}
+              class="object-cover w-[142px] h-[79px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 flex flex-col gap-2" id="rivas-haus">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Rivas Haus</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/rivas-haus-1.webp"
+              alt="Imagen mano con llave en forma de corazón"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Rivas Haus: La combinación de las dos letras del nombre de la
+            empresa “r” y “h” las cuales están divididas con dos diferentes
+            colores formando una sola letra “h”.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div
+            class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group flex justify-center items-center bg-[#000]"
+          >
+            <p class="font-[500] leading-[45.44px] text-[#FFF] text-[30.29px]">
+              r + h
+            </p>
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] rounded-[11px] overflow-hidden group flex justify-center items-center"
+          >
+            <Image
+              src="/imagenesConvertidas/rivas-haus-3.webp"
+              alt="Logo Sedeli Tower"
+              width={191}
+              height={147}
+              class="object-contain w-[147.6px] h-[45px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <article>
+    <article
+      class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-8"
+    >
+      <div class="flex flex-col items-center gap-4 py-3 px-4">
+        <h2 class="font-[600] text-[#FFF] text-[24px]">Trabajemos juntos</h2>
+        <div>
+          <svg
+            width="42"
+            height="30"
+            viewBox="0 0 42 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.1929 13.7878L33.8792 1.2087C33.2473 0.122585 31.8444 -0.249302 30.7507 0.377544L27.5325 2.21967C26.5987 2.75492 26.1675 3.87016 26.4979 4.88535L21.0213 5.02381C20.812 5.02845 20.6194 5.0981 20.4625 5.21291L17.9289 6.91532L15.3954 5.08079C15.9001 4.01452 15.497 2.73677 14.4675 2.14664L11.2493 0.304518C10.1556 -0.322329 8.75272 0.049558 8.12081 1.13567L0.807143 13.7148C0.175239 14.8013 0.549448 16.1926 1.64444 16.8203L4.86264 18.6625C5.78498 19.191 6.95268 19.0183 7.67857 18.2492L8.4542 19.0605C6.90038 21.2163 8.00642 23.1264 10.3206 23.7773C10.7237 25.223 11.9807 25.9947 13.452 25.9533C13.8258 27.2108 14.9535 28.1091 16.2748 28.1863C17.3591 30.0259 18.8168 30.589 20.4642 29.3028C22.1737 30.3649 23.9584 29.5742 24.9096 27.9702C26.1135 27.7769 26.8683 26.7549 27.2578 25.6823C28.3324 25.5561 29.3496 25.1306 29.7939 24.0749C31.7534 23.8148 33.0615 21.8558 32.5665 19.9503L34.0837 18.0238C34.4022 18.5008 34.8772 18.8237 35.4011 18.963C35.9654 19.1129 36.5897 19.0491 37.1374 18.7355L40.3556 16.8929C41.4506 16.2657 41.8248 14.8739 41.1929 13.7878ZM6.29016 16.8537C6.24594 16.9297 6.1728 16.9816 6.09073 17.0031C6.00738 17.0255 5.91851 17.0179 5.84281 16.9757L5.84366 16.9744L2.62929 15.1319C2.47748 15.0449 2.42007 14.8398 2.50597 14.6878L9.82177 2.11372C9.90937 1.96302 10.116 1.90561 10.2691 1.9913L13.4826 3.83512C13.6345 3.92208 13.6919 4.12723 13.606 4.27919L6.29016 16.8537ZM10.7254 21.8642C9.93275 21.6194 9.45649 21.3049 9.8813 20.4721C10.0739 20.0951 11.2268 18.4033 11.5304 18.4045C12.4417 18.4075 12.3855 19.2425 12.0866 19.871C11.9212 20.0268 10.7828 21.6156 10.7254 21.8642ZM13.7008 23.9702C13.1335 24.0728 12.4638 23.9672 12.2443 23.3611C12.0645 22.8638 13.4316 20.9896 14.3284 20.9039C16.0086 20.7439 13.9632 23.5941 13.7008 23.9702ZM16.3704 26.2374C15.7594 26.1935 15.3333 25.7131 15.284 25.1221C15.8104 24.3666 16.4215 23.2847 17.4093 23.2146C19.1817 23.0888 16.6426 25.9254 16.3704 26.2374ZM18.7743 28.0381C18.5893 28.0668 18.3525 27.8642 18.0263 27.3087C18.2194 27.0791 19.0707 26.0867 19.1515 25.8592C19.1779 25.7866 19.8867 25.9968 19.9352 26.1952C20.0436 26.6397 19.1779 27.9757 18.7743 28.0381ZM21.9121 27.8174C22.2757 27.2104 21.9517 26.7853 21.8671 26.6789C22.2311 26.9938 22.5798 27.2365 22.8868 27.4214C22.6274 27.6971 22.3025 27.8912 21.9121 27.8174ZM29.3313 22.1365C27.5627 21.4991 26.2338 20.0259 25.1397 18.5637C24.3704 17.5337 22.7928 18.695 23.5621 19.7245C24.694 21.2382 26.0229 22.6886 27.7307 23.5662C27.4747 23.7064 27.0469 23.7498 26.7573 23.7705C25.411 22.9554 24.3823 22.2564 23.3014 21.1006C22.4207 20.1614 20.9817 21.4907 21.8624 22.4299C22.9476 23.5907 23.9979 24.3678 25.3413 25.199C25.1941 25.5489 24.9177 26.0441 24.4797 26.0491C24.1608 25.9356 22.9795 25.4227 21.9164 23.7562C21.4299 22.9896 20.2546 23.2463 20.1151 24.1243C20.0407 24.1057 19.9658 24.0905 19.8906 24.0778C20.332 22.1462 18.7871 20.9736 16.8939 21.3138C16.9347 19.7794 15.773 18.8558 14.2498 18.955C14.1677 16.5759 10.8143 15.5181 9.57173 17.4054L8.75825 16.5122L14.4173 6.78235L16.2029 8.0753L15.2831 8.69328C15.1113 8.80894 14.988 8.96935 14.9187 9.14833L12.7529 14.7186C12.5263 15.3011 12.8639 15.822 13.4163 16.0158C16.6485 17.1513 19.1 16.0795 20.397 12.9314L23.2044 12.5413C25.2507 15.6831 27.1647 18.4725 30.6618 20.437C30.8715 21.2665 30.0958 22.3286 29.3313 22.1365ZM31.2172 18.5004C28.232 16.6768 26.4996 14.012 24.566 11.0369C24.3339 10.6794 24.0098 10.4599 23.5553 10.5223L19.5776 11.0753C19.2085 11.1141 18.8772 11.3607 18.7505 11.7325C18.1037 13.6118 17.0861 14.8368 14.971 14.4265L16.6392 10.1331L21.3555 6.96429L27.555 6.80768L33.0223 16.2078L31.2172 18.5004ZM39.3707 15.2049L36.1572 17.0487C36.0041 17.134 35.7974 17.077 35.7098 16.9263L28.394 4.35221C28.3081 4.20025 28.3655 3.9951 28.5174 3.90815L31.7309 2.06391C31.884 1.97864 32.0906 2.03563 32.1782 2.18632L39.494 14.7608C39.5799 14.9128 39.5225 15.1179 39.3707 15.2049Z"
+              fill="url(#paint0_linear_398_3700)"></path>
+            <defs>
+              <linearGradient
+                id="paint0_linear_398_3700"
+                x1="0.5"
+                y1="15.0867"
+                x2="41.5002"
+                y2="15.0867"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#04E95F"></stop>
+                <stop offset="1" stop-color="#007BEA"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <ContactanosBoton />
+        </div>
+      </div>
+    </article>
+  </article>
+  <article>
+    <section class="mt-10 flex flex-col gap-2" id="Arthonix">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Arthonix</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/arthonix-1.webp"
+              alt="Imagen guerrero"
+              width={141}
+              height={147}
+              class="object-cover w-[141px] h-[147px]"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Diseño para streamer de twitch, amante de los juegos de aventura y
+            guerra, una flama con un casco de caballero reflejan lo equipado que
+            debe estar para sus futuras batallas y aventuras.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/arthonix-2.webp"
+              alt="Imagen cerillo"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] flex items-center justify-center rounded-[11px]"
+          >
+            <Image
+              src="/imagenesConvertidas/arthonix-3.webp"
+              alt="Logo Arthonix"
+              width={86}
+              height={88}
+              class="object-cover w-[86px] h-[88px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 flex flex-col gap-2" id="Barkov">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Barkov</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/barkov-1.webp"
+              alt="Imagen masaje"
+              width={141}
+              height={147}
+              class="object-cover w-[141px] h-[147px]"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Diseño para un spa, el nombre proviene del apellido de un
+            colaborador en el libro “Entrenamiento de relajación progresiva”
+            (Douglas A. Bernstein y Thomas D. Borkovec).
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/barkov-2.webp"
+              alt="Imagen spa"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] flex items-center justify-center rounded-[11px]"
+          >
+            <Image
+              src="/imagenesConvertidas/barkov-3.webp"
+              alt="Logo Barkov"
+              width={140}
+              height={48}
+              class="object-cover w-[140px] h-[48px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 flex flex-col gap-2" id="Nolu">
+      <h3 class="text-[24px] text-[#FFF] font-[600]">Nolu</h3>
+      <div class="flex flex-col justify-center items-center mt-4 p-2">
+        <div class="grid grid-cols-2 items-center justify-center">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/nolu-1.webp"
+              alt="Imagen olas"
+              width={141}
+              height={147}
+              class="object-cover w-[141px] h-[147px]"
+            />
+          </div>
+          <p class="text-[14px] w-[191px] font-[300] leading-[16.41px]">
+            Tienda de trajes de baño para dama y complementos. Nolu es una
+            combinación de las primeras 2 letras del apodo de la propietaria
+            “Nona” y su apellido “Luna”. El diseño manifiesta un atardecer en el
+            mar con una ola y un sol.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 justify-center items-center mt-2">
+          <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
+            <Image
+              src="/imagenesConvertidas/nolu-2.webp"
+              alt="Imagen atardecer"
+              width={141}
+              height={147}
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <div
+            class="bg-[#FFF] w-[191px] h-[147px] flex items-center justify-center rounded-[11px]"
+          >
+            <Image
+              src="/imagenesConvertidas/nolu-3.webp"
+              alt="Logo Barkov"
+              width={140}
+              height={55}
+              class="object-cover w-[140px] h-[55px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <div class="flex items-center justify-center mt-10">
+    <ContactanosBoton/>
+  </div>
 </BaseLayoutES>

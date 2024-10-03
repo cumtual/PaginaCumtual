@@ -6,20 +6,22 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
-  <section class="p-2 text-center flex flex-col gap-8 mt-16">
-    <h1 class="font-[600] text-[24px] text-[#FFF] text-center">
-      Almacenamiento en la nube
-    </h1>
-    <p class="text-[#7C7C7C] font-[600] text-[14px]">
-      Una manera <span class="text-gradient"
-        >segura de acceder y guardar datos
-      </span> en <span class="text-[#FFF]"
-        >diferentes dispositivos en tiempo real</span
-      >, útil para equipos de trabajo ó almacenamiento personal.
-    </p>
-  </section>
-  <section>
-    <article
+  <article class="p-2 text-center flex flex-col gap-8 mt-16">
+    <section>
+      <h1 class="font-[600] text-[24px] text-[#FFF] text-center">
+        Almacenamiento en la nube
+      </h1>
+      <p class="text-[#7C7C7C] font-[600] text-[14px]">
+        Una manera <span class="text-gradient"
+          >segura de acceder y guardar datos
+        </span> en <span class="text-[#FFF]"
+          >diferentes dispositivos en tiempo real</span
+        >, útil para equipos de trabajo ó almacenamiento personal.
+      </p>
+    </section>
+  </article>
+  <article>
+    <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
@@ -56,8 +58,8 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
           entre equipos.
         </p>
       </div>
-    </article>
-    <article
+    </section>
+    <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
@@ -105,8 +107,8 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
           hardware físico adicional.
         </p>
       </div>
-    </article>
-    <article
+    </section>
+    <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
@@ -154,9 +156,9 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
           por el almacenamiento que utilizas.
         </p>
       </div>
-    </article>
+    </section>
     <div class="mt-16 flex justify-center items-center">
         <ContactanosBoton/>
     </div>
-  </section>
+  </article>
 </BaseLayoutES>

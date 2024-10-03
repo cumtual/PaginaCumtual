@@ -35,7 +35,7 @@ export const Slider = ({ idioma }: Props) => {
         >
           <a href={`${idioma === 'es' ? "/es-ES/servicios/desarrollo-web-a-la-medida" : '/es-EN/services/desarrollo-web-a-la-medida'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Desarrollo web a la medida' : 'Custom Web Development'}</a>
           <a href={`${idioma === 'es' ? "/es-ES/servicios/almacenamiento-en-la-nube" : '/es-EN/services/cloud-storage'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Almacenamiento en la nube' : 'Cloud Storage'}</a>
-          <a href={`${idioma === 'es' ? "/es-ES/servicios/portafolio-logo" : '/es-EN/services/work-samples-logos'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Logos' : 'Work Samples Logos'}</a>
+          <a href={`${idioma === 'es' ? "/es-ES/servicios/portafolio-logos" : '/es-EN/services/work-samples-logos'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Logos' : 'Work Samples Logos'}</a>
         </div>
         <p className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out">{idioma === 'es' ? 'Acerca de nosotros' : 'About Us'}</p>
         <p className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out mt-4">{idioma === 'es' ? 'Contáctanos' : 'Contact Us'}</p>
