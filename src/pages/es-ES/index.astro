@@ -13,6 +13,7 @@ import LogoIcon from "../../components/SVG/LogoIcon.astro";
 import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro"
 import { Formulario } from "../../components/ComponetesES/Formulario";
 
+import '../../styles/globals.css'
 
 const pageTitle = "Inicio";
 ---
@@ -63,7 +64,7 @@ const pageTitle = "Inicio";
     <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
 	<div class="flex gap-4 w-full mt-8">
 		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
+		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4"
 		>
 		  <NubeIcon />
 		  <p class="font-[600] text-[#FFF] text-[15.46px]">
@@ -71,20 +72,20 @@ const pageTitle = "Inicio";
 		  </p>
 		</div>
 		<div
-		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4"
+		  class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4"
 		>
 		  <LogoIcon />
 		  <p class="font-[600] text-[#FFF] text-[15.46px]">Logos</p>
 		</div>
 	  </div>
 	  <div
-		class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-around items-center p-4 text-[#FFF] gap-4 mt-8"
+		class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
 	  >
 	  <DesarrolloIcon/>
 	  <p class="font-[600] text-[#FFF] text-[15.46px]">Desarrollo web a la medida</p>
 	  </div>
   </section>
-  <section class="mt-8">
+  <section class="mt-8 ejemplo">
     <h2 class="font-[600] text-[#FFF] text-[24px]">Herramientas de desarrollo</h2>
 	<div class="mt-8">
 		<HerramientasDesarrollo/>
