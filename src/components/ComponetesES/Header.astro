@@ -6,7 +6,7 @@ const { idioma } = Astro.props;
 
 <header>
     <nav class="flex items-center justify-between static">
-        <div onclick={`window.location.href=${idioma === 'es' ? '/es-ES/' : '/es-EN/'}`}>
+        <div class="cursor-pointer" onclick={`window.location.href=${idioma === 'es' ? '/es-ES/' : '/es-EN/'}`}>
             <svg
                 width="71"
                 height="43"
