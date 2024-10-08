@@ -14,12 +14,13 @@ import '../../node_modules/aos/dist/aos.css';;
 		<meta name="generator" content={Astro.generator} />
 		<title>Cumtual - {pageTitle}</title>
 	</head>
-	<body class="bg-bg-gray-cumtual">`
+	<body class= "bg-bg-gray-cumtual  ">`
 		
 		<script>
 			import AOS from "aos"
 			AOS.init();
 		  </script>
+		
 		<Header idioma="es"/>
         <slot />
 		<BotonWhatsapp client:load idioma="es" />
