@@ -19,16 +19,18 @@ const pageTitle = "Inicio";
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
-  <section class="p-10 flex flex-col justify-center items-center h-[550px]">
+  
+  <section class="p-10 flex flex-col justify-center items-center h-[550px] ">
     <CumtualElevamos />
-    <div class="mt-20">
+    <div class="mt-20 ">
       <ContactanosBoton />
     </div>
-    <div class="mt-20 svg-icon">
+    <div class="mt-20 svg-icon tooltip " >     
+        <span class="tooltiptext">Scroll</span>
       <SlideIcon />
     </div>
   </section>
-  <section class="flex flex-col justify-center items-center text-center mt-20">
+  <section class="flex flex-col justify-center items-center text-center mt-20 " >
     <p class="font-[600] text-[14px]">
       <span class="text-gradient">
         Somos una empresa dedicada a la creación de páginas web y aplicaciones
@@ -39,7 +41,7 @@ const pageTitle = "Inicio";
     </p>
   </section>
   <section
-    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
+    class="flex flex-col justify-center items-center mt-10 gap-2 text-center" 
   >
     <InsiginaCalidad />
     <p class="text-[#FFF] font-bold text-[14px]">Calidad</p>
@@ -49,7 +51,7 @@ const pageTitle = "Inicio";
     </p>
   </section>
   <section
-    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
+    class="flex flex-col justify-center items-center mt-10 gap-2 text-center" 
   >
     <InsigniaAdaptabilidad />
     <p class="text-[#FFF] font-bold text-[14px]">Adaptabilidad</p>
@@ -59,12 +61,12 @@ const pageTitle = "Inicio";
     </p>
   </section>
   <section
-    class="flex flex-col justify-center items-start mt-12 gap-2 text-center"
+    class="flex flex-col justify-center items-start mt-12 gap-2 text-center" 
   >
     <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
     <div class="flex gap-4 w-full mt-8">
       <div
-        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"  
       >
         <div
           class="flex justify-center items-center mt-4 w-full md:justify-start md:ml-14"
@@ -72,21 +74,21 @@ const pageTitle = "Inicio";
           <NubeIcon />
         </div>
         <p
-          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 w-full mb-2"
+          class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full mb-2"
         >
           Almacenamiento <br /> en la nube
         </p>
       </div>
 
       <div
-        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative" 
       >
         <div class="flex-grow flex justify-center items-center mt-4">
           <LogoIcon />
         </div>
         <div class="px-2 w-full">
           <p
-            class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-8 md:text-center md:self-auto"
+            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end mb-8 md:text-center md:self-auto" 
           >
             Logos
           </p>
@@ -94,14 +96,14 @@ const pageTitle = "Inicio";
       </div>
     </div>
     <div
-      class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
+      class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8" 
     >
       <div class="flex-grow flex justify-center items-center mt-4 md:mt-8">
         <DesarrolloIcon />
       </div>
       <div class="px-2 w-full">
         <p
-          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-2 md:text-center md:mb-8"
+          class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end mb-2 md:text-center md:mb-8"
         >
           Desarrollo web <br /> a la medida
         </p>

@@ -15,6 +15,7 @@
     "@nanostores/react": "^0.8.0",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
+    "aos": "^2.3.4",
     "astro": "^4.15.4",
     "fs": "^0.0.1-security",
     "nanostores": "^0.11.3",
