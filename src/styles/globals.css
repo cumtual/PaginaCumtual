@@ -11,12 +11,19 @@ Dark green: #28b485
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* transform-style: preserve-3d; */
 }
-
+/* *:before, *:after {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  position: absolute;
+  content: "";
+}  */
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -24,6 +31,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 30px;
+    
 }
 
 .header {
@@ -334,4 +342,291 @@ body {
   .slide img{
     
   }
+
+  /* ANIMACION DE FLOTAR EN UNA IMAGEN */
+
+  @keyframes float {
+    0% {
+      /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+      transform: translatey(0px);
+    }
+    50% {
+      /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+      transform: translatey(-20px);
+    }
+    100% {
+      /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+      transform: translatey(0px);
+    }
+  }
   
+  .logoHeader {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    /* border: 5px white solid; */
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    img { width: 100%; height: auto; }
+  }
+  
+
+  /* ANIMACION DE MAQUINA DE ESCRIBIR EN EL TEXTO */
+
+  .linkContactanos { 
+    position: relative; 
+    float: left;
+    background: linear-gradient(
+      to right,
+      #04e95f,
+      #007bea
+    );
+    color: #fff;
+    font-size: 2.5em;
+  }
+  
+  .linkContactanos span {
+      position:absolute;
+      right:0;
+      width:0;
+      background: linear-gradient(
+        to right,
+        #04e95f,
+        #007bea
+      );
+      border-left: 1px solid #000;
+      animation: escribir 6s steps(30) infinite alternate;
+  }
+  
+  @keyframes escribir {
+      from { width: 87% }
+      to { width:5px }
+  }
+
+  /* EFECTO HOVER PARA LOGOS SECUNDARIOS */
+  .logoSecundario{
+    padding: 15px 30px;
+    margin: 10px;
+    display: inline-block;
+    color: #000;
+    background: linear-gradient(
+      to right,
+      #04e95f,
+      #007bea
+    );
+    text-decoration: none;
+  }
+  
+  .logoSecundario:hover{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /*====================*/
+  /* BUZZ OUT
+  /*====================*/
+  
+  @-webkit-keyframes buzz-out-on-hover {
+    10% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+      -webkit-transform: translateX(2px) rotate(1deg);
+      transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+      -webkit-transform: translateX(-2px) rotate(-1deg);
+      transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+      -webkit-transform: translateX(2px) rotate(1deg);
+      transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+      -webkit-transform: translateX(-2px) rotate(-1deg);
+      transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+      -webkit-transform: translateX(1px) rotate(0);
+      transform: translateX(1px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateX(-1px) rotate(0);
+      transform: translateX(-1px) rotate(0);
+    }
+  }
+  @keyframes buzz-out-on-hover {
+    10% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    20% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+    30% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    40% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+    50% {
+      -webkit-transform: translateX(2px) rotate(1deg);
+      transform: translateX(2px) rotate(1deg);
+    }
+    60% {
+      -webkit-transform: translateX(-2px) rotate(-1deg);
+      transform: translateX(-2px) rotate(-1deg);
+    }
+    70% {
+      -webkit-transform: translateX(2px) rotate(1deg);
+      transform: translateX(2px) rotate(1deg);
+    }
+    80% {
+      -webkit-transform: translateX(-2px) rotate(-1deg);
+      transform: translateX(-2px) rotate(-1deg);
+    }
+    90% {
+      -webkit-transform: translateX(1px) rotate(0);
+      transform: translateX(1px) rotate(0);
+    }
+    100% {
+      -webkit-transform: translateX(-1px) rotate(0);
+      transform: translateX(-1px) rotate(0);
+    }
+  }
+  .buzz-out-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .buzz-out-on-hover:hover, .buzz-out-on-hover:focus, .buzz-out-on-hover:active {
+    -webkit-animation-name: buzz-out-on-hover;
+    animation-name: buzz-out-on-hover;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+  
+
+  /* ANIMACIONES DE LA SECCION DLE LOGO  */
+  .titulosLogos1 {
+    width: 105px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #04e95f 0%, #007bea 100%);
+  }
+  .titulosLogos2 {
+    width: 160px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #04e95f 0%, #007bea 100%);
+  }
+  .titulosLogos3 {
+    width: 138px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #04e95f 0%, #007bea 100%);
+  }
+  .titulosLogos4 {
+    width: 61px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #04e95f 0%, #007bea 100%);
+  }
+  .titulosLogos5 {
+    width: 105px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #04e95f 0%, #007bea 100%);
+  }
+
+  /* TOOLTIP EN EL ICONO DE SCROLL */
+
+  .tooltip {
+    position: relative;
+    /* right: 30px; */
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background: linear-gradient(90deg, #04e96042 0%, #007dea60 100%);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    font-family: "Lato", sans-serif;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 90%;
+    margin-left: -60px;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* ANIMACION DE HEADER OPCION */
+
+
+  .stars, .twinkling, .clouds {
+    position:absolute; 
+    display:block;
+    top:0; bottom:0;
+    left:0; right:0;
+    /* width:100%; height:100%; */
+  /* z-index: -99999; */
+  }
+  
+  .stars {
+    z-index: 0;
+    background: #000 url('https://i.ibb.co/g91MwKZ/stars.png') repeat top center;
+  }
+  
+  .twinkling{
+    z-index: -999999999;
+    background:transparent url('https://i.ibb.co/pnJQm6V/twinkling.png') repeat top center;
+    animation: move-twink-back 200s linear infinite;
+   
+  }
+  
+  .clouds{
+    
+    background:transparent url('https://i.ibb.co/BsG8rYZ/clouds.png') repeat top center;
+    animation: move-clouds-back 200s linear infinite;
+    z-index: -999999999999;
+    
+  }
+  
+  @keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-100000px 5000px;}
+  }
+  
+  @keyframes move-clouds-back {
+    from {background-position:100px 0;}
+    to {background-position:10000px 0;}
+  }
