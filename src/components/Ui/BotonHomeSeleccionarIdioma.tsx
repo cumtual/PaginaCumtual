@@ -1,17 +1,8 @@
-import { useEffect, useState } from "react";
-import { Boton } from "./Boton";
+import {  useState } from "react";
+import { Boton } from "../botonHeaderMX/botonHeaderES/Boton";
+import { OpcionHome } from "./OpcionHome";
 
-export default function componentName({idioma}) {
-
-  useEffect(() => {
-    if(idioma === 'es'){
-      setActiveESP(true)
-      setActiveENG(false)
-    }else if(idioma === 'en'){
-      setActiveENG(true)
-      setActiveESP(false)
-    }
-  }, [idioma])
+export default function componentName() {
 
     const [activeESP, setActiveESP] = useState(false);
     const [activeENG, setActiveENG] = useState(false);
@@ -34,8 +25,8 @@ export default function componentName({idioma}) {
 
   return (
     <div className="flex gap-4">
-      <Boton active={activeESP} idioma="ES" handleActive={handleOpcionESP}/>
-      <Boton active={activeENG} idioma="EN" handleActive={handleOpcionENG}/>
+      <OpcionHome  idioma="ES" handleActive={handleOpcionESP}/>
+      <OpcionHome idioma="EN" handleActive={handleOpcionENG}/>
     </div>
   );
 }

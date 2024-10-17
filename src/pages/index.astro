@@ -3,7 +3,7 @@
 import "../styles/globals.css";
 import CumtualElevamos from "../components/SVG/CumtualElevamos.astro";
 import ContactanosBoton from "../components/ComponetesES/ContactanosBoton.astro";
-import OpcionesIdioma from '../components/botonHeaderMX/botonHeaderES/OpcionesIdioma'
+import BotonHomeSeleccionarIdioma from '../components/Ui/BotonHomeSeleccionarIdioma'
 ---
 
 <html>
@@ -24,7 +24,7 @@ import OpcionesIdioma from '../components/botonHeaderMX/botonHeaderES/OpcionesId
         </div>
       </div>
       <div>
-        <OpcionesIdioma idioma={'es'} client:load />
+        <BotonHomeSeleccionarIdioma client:load />
       </div>
     </section>
     <script>
@@ -38,7 +38,6 @@ import OpcionesIdioma from '../components/botonHeaderMX/botonHeaderES/OpcionesId
         } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
           window.location.href = "/es-ES";
         }
-
         const switcher = document.getElementById("languageSwitcher");
         const texts = switcher.getElementsByTagName("p");
         let current = 0;
