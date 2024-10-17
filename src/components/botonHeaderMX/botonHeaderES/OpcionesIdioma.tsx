@@ -28,7 +28,7 @@ export default function componentName({idioma}) {
       if(!activeENG){
         setActiveENG(true)
         setActiveESP(false)
-        window.location.href = '/es-EN'
+        window.location.href = '/en-EN'
       }
     }
 

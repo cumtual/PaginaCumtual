@@ -6,12 +6,16 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
-  <article class="p-2 text-center flex flex-col gap-8 mt-16">
-    <section>
-      <h1 class="font-[600] text-[24px] text-[#FFF] text-center">
-        Almacenamiento en la nube
-      </h1>
-      <p class="text-[#7C7C7C] font-[600] text-[14px]">
+  <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12">
+    Almacenamiento en la nube
+  </h1>
+  <article
+    class="p-2 text-center flex flex-col gap-8 mt-16 md:items-center md:mt-28"
+  >
+    <section class="md:w-[754px]">
+      <p
+        class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px]"
+      >
         Una manera <span class="text-gradient"
           >segura de acceder y guardar datos
         </span> en <span class="text-[#FFF]"
@@ -20,7 +24,7 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
       </p>
     </section>
   </article>
-  <article>
+  <article class="block md:hidden">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
     >
@@ -158,7 +162,112 @@ import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBot
       </div>
     </section>
     <div class="mt-16 flex justify-center items-center">
-        <ContactanosBoton/>
+      <ContactanosBoton />
     </div>
   </article>
+  <article class="hidden md:flex gap-4 mt-32 justify-around">
+    <section class="w-[276px]">
+      <div class="flex flex-col justify-center gap-4 py-3 px-4">
+        <div>
+          <svg
+            width="24"
+            height="48"
+            viewBox="0 0 24 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.7236 47.2H11.7255C12.2661 47.2013 12.6846 47.0256 13.0348 46.6718C13.3856 46.3175 13.5637 45.8895 13.5637 45.3333V42.4V41.7087L14.2476 41.6085C16.8395 41.2284 18.9779 40.2646 20.6961 38.7357C22.329 37.2827 23.2 35.1278 23.2 32.1333V32.1328C23.2016 29.7808 22.4816 27.7264 21.036 25.9375C19.6006 24.1611 17.4583 22.8241 14.5372 21.9685C11.2734 21.0328 8.88907 20.1186 7.46436 19.2072C5.93333 18.2278 5.1154 16.8278 5.1154 15.0667C5.1154 13.5367 5.73069 12.2406 6.91278 11.2273C8.12319 10.1897 9.81312 9.73334 11.8556 9.73334H11.8581C13.0714 9.73712 14.1421 9.91401 15.0407 10.2995C15.9168 10.6752 16.6816 11.2193 17.3295 11.9261C17.8328 12.4751 18.3462 12.8261 18.8648 13.0175C19.3421 13.1936 19.7666 13.1799 20.1841 12.9992L20.1952 12.9943L20.1953 12.9944C20.7518 12.7635 21.07 12.4169 21.2306 11.9431C21.3976 11.4506 21.3381 11.0721 21.096 10.719L21.0884 10.7079L21.0885 10.7078C20.3571 9.60118 19.4218 8.66578 18.2754 7.89988C17.1521 7.14938 15.8121 6.64111 14.2377 6.39002L13.5637 6.28253V5.60001V2.66667V2.66295H13.5637C13.5663 2.10886 13.3897 1.68417 13.0394 1.33283L13.6001 0.773844L13.0394 1.33282C12.6863 0.978595 12.2645 0.8013 11.7217 0.800007C11.1811 0.798719 10.7626 0.974417 10.4124 1.32819C10.0616 1.68248 9.8835 2.1105 9.8835 2.66667V5.60001V6.31344L9.17473 6.39479C7.43509 6.59446 5.68834 7.41666 3.93095 8.93816C2.29073 10.3582 1.43522 12.3635 1.43522 15.0667C1.43522 17.2999 2.08488 19.1451 3.35826 20.6516C4.61769 22.1415 7.03569 23.5175 10.7774 24.7041L10.7854 24.7066L10.7854 24.7067C12.5616 25.2907 14.0338 25.8492 15.1934 26.3834C16.3386 26.911 17.2362 27.4402 17.8158 27.9852C18.9723 29.0726 19.5198 30.5314 19.5198 32.2667V32.2675C19.5178 34.2224 18.793 35.7761 17.276 36.7704C15.8682 37.6931 14.1798 38.1332 12.2525 38.1333C12.2522 38.1333 12.2519 38.1333 12.2516 38.1333V37.3333L11.7236 47.2ZM11.7236 47.2C11.18 47.2 10.7615 47.0231 10.4133 46.6701M11.7236 47.2L10.4133 46.6701M10.4133 46.6701C10.0633 46.3153 9.88496 45.8871 9.8835 45.3322L10.4133 46.6701Z"
+              fill="url(#paint0_linear_765_3377)"
+              stroke="url(#paint1_linear_765_3377)"
+              stroke-width="1.6"></path>
+            <defs>
+              <linearGradient
+                id="paint0_linear_765_3377"
+                x1="0"
+                y1="24"
+                x2="24"
+                y2="24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#04E95F"></stop>
+                <stop offset="1" stop-color="#007BEA"></stop>
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_765_3377"
+                x1="0"
+                y1="24"
+                x2="24"
+                y2="24"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#04E95F"></stop>
+                <stop offset="1" stop-color="#007BEA"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
+          Costos
+        </h2>
+        <p class="text-[19px] leading-[25.99px] font-[400]">
+          Elimina la necesidad de adquirir y mantener hardware ya que solo pagas por el almacenamiento que utilizas.
+        </p>
+      </div>
+    </section>
+    <section class="w-[276px]">
+      <div class="flex flex-col justify-center gap-4 py-3 px-4">
+        <div>
+          <svg width="53" height="31" viewBox="0 0 53 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M52.0511 1.89485L52.0511 1.89486L52.0542 1.90188C52.1454 2.10717 52.1936 2.32626 52.197 2.54719V15.2502C52.197 15.7003 52.0109 16.1391 51.6681 16.468C51.3242 16.798 50.8509 16.9889 50.3508 16.9889C49.8506 16.9889 49.3773 16.798 49.0334 16.468C48.6906 16.1391 48.5046 15.7003 48.5046 15.2502V8.6672V6.78184L47.1451 8.08817L30.4815 24.1009L30.4796 24.1027C30.3094 24.2673 30.1051 24.3997 29.8777 24.4906C29.6502 24.5815 29.4052 24.6287 29.1569 24.6287C28.9087 24.6287 28.6636 24.5815 28.4361 24.4906C28.2087 24.3997 28.0044 24.2673 27.8343 24.1027L27.8328 24.1013L19.1168 15.7137L18.5603 15.1781L18.0035 15.7134L3.98905 29.1844L3.98723 29.1861C3.81705 29.3507 3.61278 29.4831 3.38538 29.574C3.15792 29.6649 2.91286 29.7121 2.66459 29.7121C2.41633 29.7121 2.17126 29.6649 1.94381 29.574C1.7164 29.4831 1.51213 29.3507 1.34195 29.1861L1.34197 29.1861L1.33721 29.1816C1.16562 29.0183 1.03132 28.8259 0.940325 28.6163C0.849371 28.4069 0.80303 28.1835 0.80303 27.9587C0.80303 27.7339 0.849371 27.5105 0.940324 27.3011C1.03132 27.0915 1.16562 26.8991 1.33721 26.7358L1.33958 26.7336L17.235 11.4834L17.2373 11.4811C17.4075 11.3165 17.6118 11.1841 17.8392 11.0932C18.0667 11.0023 18.3117 10.9551 18.56 10.9551C18.8082 10.9551 19.0533 11.0023 19.2808 11.0932C19.5082 11.1841 19.7124 11.3165 19.8826 11.4811L19.8841 11.4825L28.6001 19.8701L29.1561 20.4052L29.7129 19.871L44.5221 5.66287L45.9631 4.28037H43.9661H37.1046C36.6045 4.28037 36.1312 4.08945 35.7873 3.75949C35.4445 3.43061 35.2584 2.99184 35.2584 2.5417C35.2584 2.09157 35.4445 1.65279 35.7873 1.32392C36.1312 0.993955 36.6045 0.80303 37.1046 0.80303H50.3457C50.59 0.806395 50.8305 0.85542 51.0535 0.946623L51.0535 0.946653L51.0602 0.949334C51.5169 1.13126 51.8694 1.47503 52.0511 1.89485Z" fill="url(#paint0_linear_765_3376)" stroke="url(#paint1_linear_765_3376)" stroke-width="1.60606"/>
+            <defs>
+            <linearGradient id="paint0_linear_765_3376" x1="1.02822e-07" y1="9.63636" x2="53" y2="9.63636" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#04E95F"/>
+            <stop offset="1" stop-color="#007BEA"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_765_3376" x1="-3.64253e-07" y1="8.83333" x2="53" y2="8.83334" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#04E95F"/>
+            <stop offset="1" stop-color="#007BEA"/>
+            </linearGradient>
+            </defs>
+            </svg>
+            
+        </div>
+        <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
+          Escalabilidad
+        </h2>
+        <p class="text-[19px] leading-[25.99px] font-[400]">
+          Ajusta la capacidad de almacenamiento según lo necesites, sin requerir hardware físico adicional.
+        </p>
+      </div>
+    </section>
+  </article>
+  <article class="hidden md:flex md:justify-center">
+    <section
+      class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-8 py-6 px-1 w-[896px] h-[274px]"
+    >
+      <div class="flex flex-col items-center gap-8 py-3 px-1">
+        <div>
+          <svg width="57" height="33" viewBox="0 0 57 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.5 30.6429H35.3571V23.5714H31.35C28.7571 29.2286 22.8643 33 16.5 33C7.30714 33 0 25.6929 0 16.5C0 7.30714 7.30714 0 16.5 0C22.8643 0 28.7571 3.77143 31.35 9.42857H56.5714V23.5714H49.5V30.6429ZM40.0714 25.9286H44.7857V18.8571H51.8571V14.1429H28.05L27.5786 12.4929C25.9286 7.77857 21.45 4.71429 16.5 4.71429C9.9 4.71429 4.71429 9.9 4.71429 16.5C4.71429 23.1 9.9 28.2857 16.5 28.2857C21.45 28.2857 25.9286 25.2214 27.5786 20.5071L28.05 18.8571H40.0714V25.9286ZM16.5 23.5714C12.4929 23.5714 9.42857 20.5071 9.42857 16.5C9.42857 12.4929 12.4929 9.42857 16.5 9.42857C20.5071 9.42857 23.5714 12.4929 23.5714 16.5C23.5714 20.5071 20.5071 23.5714 16.5 23.5714ZM16.5 14.1429C15.0857 14.1429 14.1429 15.0857 14.1429 16.5C14.1429 17.9143 15.0857 18.8571 16.5 18.8571C17.9143 18.8571 18.8571 17.9143 18.8571 16.5C18.8571 15.0857 17.9143 14.1429 16.5 14.1429Z" fill="url(#paint0_linear_765_2450)"/>
+            <defs>
+            <linearGradient id="paint0_linear_765_2450" x1="-2.80993e-07" y1="22" x2="56.5714" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#04E95F"/>
+            <stop offset="1" stop-color="#007BEA"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        </div>
+        <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">Accesibilidad</h2>
+        <p class="text-[20px] leading-[25.99px] font-[400] w-[754px]">
+          Accede a tus archivos desde cualquier dispositivo conectado a
+          Internet, lo que facilita el trabajo desde casa y la colaboración
+          entre equipos.
+        </p>
+      </div>
+    </section>
+  </article>
+  <div class='mt-36 hidden md:flex md:justify-center'>
+    <ContactanosBoton/>
+  </div>
 </BaseLayoutES>

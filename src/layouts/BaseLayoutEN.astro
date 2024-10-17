@@ -2,6 +2,7 @@
 import Header from '../components/ComponetesES/Header.astro';
 const {pageTitle} = Astro.props;
 import { BotonWhatsapp } from '../components/Ui/BotonWhatsapp';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="es">
@@ -16,5 +17,6 @@ import { BotonWhatsapp } from '../components/Ui/BotonWhatsapp';
 		<Header idioma="en"/>
         <slot />
 		<BotonWhatsapp client:load idioma="en" />
+		<Footer idioma="en"/>
 	</body>
 </html>

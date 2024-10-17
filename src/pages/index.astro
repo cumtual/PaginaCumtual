@@ -1,25 +1,69 @@
 ---
 "";
 import "../styles/globals.css";
+import CumtualElevamos from "../components/SVG/CumtualElevamos.astro";
+import ContactanosBoton from "../components/ComponetesES/ContactanosBoton.astro";
+import OpcionesIdioma from '../components/botonHeaderMX/botonHeaderES/OpcionesIdioma'
 ---
 
-<body>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const userLang = navigator.language;
+<html>
+  <head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Cumtual</title>
+	</head>
+  <body class="bg-bg-gray-cumtual w-full h-screen">
+    <section class="p-10 flex flex-col justify-center items-center h-[550px]">
+      <CumtualElevamos />
+      <div class="mt-20">
+        <div id="languageSwitcher" class="text-2xl font-bold p-10">
+          <p class="text-center">Elige un idioma</p>
+          <p class="text-center hidden">Choose a language</p>
+        </div>
+      </div>
+      <div>
+        <OpcionesIdioma idioma={'es'} client:load />
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userLang = navigator.language;
+        const currentPath = window.location.pathname;
+        if (userLang.startsWith("es") && currentPath !== "/es-ES") {
+          window.location.href = "/es-ES"; 
+        } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
+          window.location.href = "/en-EN"; 
+        } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
+          window.location.href = "/es-ES";
+        }
 
-      // Obtén la ruta actual sin el dominio
-      const currentPath = window.location.pathname;
-
-      // Verifica si ya estamos en la ruta correcta antes de redirigir
-      if (userLang.startsWith("es") && currentPath !== "/es-ES") {
-        window.location.href = "/es-ES"; // Redirigir a la página en español
-      } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
-        window.location.href = "/es-EN"; // Redirigir a la página en inglés
-      } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
-        // Si el idioma no es reconocido o ya estamos en una de las rutas, redirigir a español por defecto
-        window.location.href = "/es-ES";
-      }
-    });
-  </script>
-</body>
+        const switcher = document.getElementById("languageSwitcher");
+        const texts = switcher.getElementsByTagName("p");
+        let current = 0;
+  
+        setInterval(() => {
+          // Añadir animación para ocultar el texto actual
+          texts[current].classList.add("opacity-0", "transition-opacity", "duration-500");
+  
+          setTimeout(() => {
+            // Ocultar el texto actual después de la animación
+            texts[current].classList.add("hidden");
+  
+            // Alternar al siguiente texto
+            current = (current + 1) % texts.length;
+            texts[current].classList.remove("hidden");
+  
+            // Mostrar el siguiente texto con animación
+            setTimeout(() => {
+              texts[current].classList.remove("opacity-0");
+              texts[current].classList.add("opacity-100");
+            }, 10); // Pequeña demora para la animación
+          }, 500); // Duración de la animación de salida (0.5s)
+        }, 3000); // Intervalo de 3 segundos
+      });
+    </script>
+  </body>
+  
+</html>
