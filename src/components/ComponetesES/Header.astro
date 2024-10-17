@@ -1,6 +1,8 @@
 ---
 import { Slider } from "./Slider";
 import { BurguerMenu } from "./BurguerMenu";
+import NavBar from "./NavBar";
+import ServiciosSlider from "./ServiciosSlider";
 const { idioma } = Astro.props;
 ---
 
@@ -60,9 +62,13 @@ const { idioma } = Astro.props;
                 </defs>
             </svg>
         </div>
-        <div>
+        <div class="block md:hidden">
             <BurguerMenu client:load/>
             <Slider idioma={idioma} client:load />
+        </div>
+        <div class="hidden md:block">
+            <NavBar client:load/>
+            <ServiciosSlider client:load/>
         </div>
     </nav>
 </header>

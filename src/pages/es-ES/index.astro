@@ -29,109 +29,126 @@ const pageTitle = "Inicio";
     </div>
   </section>
   <section class="flex flex-col justify-center items-center text-center mt-20">
-    <p class="font-[600] text-[14px]">
+    <p
+      class="font-[600] text-[14px] md:w-[790px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]"
+    >
+      Somos una empresa dedicada a la <span class="text-[#FFF]"
+        >creación de páginas web, diseño de marcas y almacenamiento web,</span
+      > centrada en ofrecer soluciones digitales personalizadas para startups que
       <span class="text-gradient">
-        Somos una empresa dedicada a la creación de páginas web y aplicaciones
-        web,
-      </span>
-      {" "}centrada en ofrecer soluciones digitales personalizadas para startups
-      que buscan establecer omejorar su precencia en línea.
+        buscan establecer o mejorar su presencia en linea.</span
+      >
     </p>
   </section>
-  <section
-    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
-  >
-    <InsiginaCalidad />
-    <p class="text-[#FFF] font-bold text-[14px]">Calidad</p>
-    <p>
-      Nos comprometemos a entregar productos y servicios de alta calidad que
-      superen las expectativas de nuestro clientes y garanticen su éxito.
-    </p>
+  <section class="md:flex md:justify-center md:mt-24">
+    <div class="md:flex md:justify-around md:items-start md:w-[754px]">
+      <article
+        class="flex flex-col justify-center items-center md:items-start mt-10 gap-2 text-center md:text-start md:w-[275px] md:h-[227.38px]"
+      >
+        <InsiginaCalidad />
+        <p
+          class="text-[#FFF] font-bold text-[14px] md:text-[20px] md:leading-[25.99px]"
+        >
+          Calidad
+        </p>
+        <p class="md:text-[20px] md:leading-[25.99px]">
+          Nos comprometemos a entregar productos y servicios de alta calidad que
+          superen las expectativas de nuestro clientes y garanticen su éxito.
+        </p>
+      </article>
+      <article
+        class="flex flex-col justify-center items-center md:items-start mt-10 gap-2 text-start md:w-[275px] md:h-[227.38px]"
+      >
+        <InsigniaAdaptabilidad />
+        <p
+          class="text-[#FFF] font-bold text-[14px] md:text-[20px] md:leading-[25.99px]"
+        >
+          Adaptabilidad
+        </p>
+        <p class="text-[14px] md:text-[20px] md:leading-[25.99px]">
+          Aceptamos el cambio como una oportunidad para crecer y mejorar
+          continuamente.
+        </p>
+      </article>
+    </div>
   </section>
   <section
-    class="flex flex-col justify-center items-center mt-10 gap-2 text-center"
+    class="flex flex-col justify-center items-start  mt-12 gap-2 text-center md:mt-24"
   >
-    <InsigniaAdaptabilidad />
-    <p class="text-[#FFF] font-bold text-[14px]">Adaptabilidad</p>
-    <p class="text-[14px]">
-      Aceptamos el cambio como una oportunidad para crecer y mejorar
-      continuamente
-    </p>
-  </section>
-  <section
-    class="flex flex-col justify-center items-start mt-12 gap-2 text-center"
-  >
-    <h2 class="font-[600] text-[#FFF] text-[24px]">Nuestros servicios</h2>
-    <div class="flex gap-4 w-full mt-8">
+    <h2 class="font-[600] text-[#FFF] text-[24px] md:ml-16">Nuestros servicios</h2>
+    <div class="flex gap-4 w-full mt-8 md:justify-center">
       <div
-        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+        class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
       >
         <div
-          class="flex justify-center items-center mt-4 w-full md:justify-start md:ml-14"
+          class="flex justify-center items-center mt-4 w-full"
         >
           <NubeIcon />
         </div>
         <p
-          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 w-full mb-2"
+          class="font-[600] text-[#FFF] text-[15.46px] text-center md:mt-10 px-2 w-full mb-2"
         >
           Almacenamiento <br /> en la nube
         </p>
       </div>
-
       <div
-        class="bg-[#353536] rounded-[9px] w-1/2 h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
+        class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
       >
-        <div class="flex-grow flex justify-center items-center mt-4">
+        <div class="flex justify-center items-center mt-4 w-full">
           <LogoIcon />
         </div>
         <div class="px-2 w-full">
           <p
-            class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-8 md:text-center md:self-auto"
+            class="font-[600] text-[#FFF] text-[15.46px] text-center md:mt-10 px-2 mb-8 md:text-center"
           >
             Logos
           </p>
         </div>
       </div>
     </div>
-    <div
-      class="bg-[#353536] rounded-[9px] w-full h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
-    >
-      <div class="flex-grow flex justify-center items-center mt-4 md:mt-8">
-        <DesarrolloIcon />
-      </div>
-      <div class="px-2 w-full">
-        <p
-          class="font-[600] text-[#FFF] text-[15.46px] text-start px-2 self-end mb-2 md:text-center md:mb-8"
-        >
-          Desarrollo web <br /> a la medida
-        </p>
+    <div class="flex gap-4 w-full  md:justify-center">
+      <div
+        class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
+      >
+        <div class="flex-grow flex justify-center items-center mt-4 md:mt-8">
+          <DesarrolloIcon />
+        </div>
+        <div class="px-2 w-full">
+          <p
+            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end mb-2 md:text-center md:mb-8"
+          >
+            Desarrollo web <br /> a la medida
+          </p>
+        </div>
       </div>
     </div>
   </section>
-  <section class="mt-8 ejemplo">
-    <h2 class="font-[600] text-[#FFF] text-[24px]">
-      Herramientas de desarrollo
-    </h2>
-    <div class="mt-8">
-      <HerramientasDesarrollo />
-    </div>
+  <section class="mt-8 ejemplo md:flex md:justify-center">
+    <article class="md:w-[754px]">
+      <h2 class="font-[600] text-[#FFF] text-[24px]">
+        Herramientas de desarrollo
+      </h2>
+      <div class="mt-8">
+        <HerramientasDesarrollo />
+      </div>
+    </article>
   </section>
   <section
-    class="mt-10 flex flex-col justify-center items-center text-center gap-4"
+    class="mt-10 flex flex-col justify-center items-center text-center gap-4 md:mt-32"
   >
-    <h2 class="text-gradient font-[600] text-[24px]">
+    <h2 class="text-gradient font-[600] text-[25px] leading-[32.49px]">
       Elevamos el éxito de tu proyecto
     </h2>
-    <p class="font-[600] text-[14px]">
+    <p class="font-[600] text-[14px] leading-[18.19px]">
       Te atenderemos en menos de 30 min y recibirás tu cotización en menos de 24
       hrs.
     </p>
   </section>
-  <section class="text-center flex flex-col justify-center items- mt-10">
-    <h2 class="text-gradient text-[24px] font-[600] px-10">
-      Lleva tu negocio a la cumbre virtual
+  <section class="text-center flex flex-col justify-center items- mt-10 md:mt-52">
+    <h2 class="text-gradient text-[25px] font-[600] px-10">
+      Lleva tu negocio a la <br/>cumbre virtual
     </h2>
-    <div class="w-full">
+    <div class="w-full md:flex justify-center md:mt-24">
       <Formulario />
     </div>
   </section>

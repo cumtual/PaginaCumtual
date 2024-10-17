@@ -15,7 +15,9 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body class="bg-bg-gray-cumtual">
 		<Header idioma="es"/>
-        <slot />
+        <div class="md:p-40">
+			<slot />
+		</div>
 		<BotonWhatsapp client:load idioma="es" />
 		<Footer/>
 	</body>

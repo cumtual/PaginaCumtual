@@ -88,7 +88,7 @@ export const Formulario = () => {
   return (
     <form
       onSubmit={handleRegistroSubmit(onSubmitRegistro)}
-      className="w-full flex flex-col gap-4 mt-4 items-center"
+      className="w-full flex flex-col gap-4 mt-4 items-center md:w-[756px]"
     >
       {successMessage.length > 0 && (
         <div className="flex justify-center items-center">
@@ -104,128 +104,141 @@ export const Formulario = () => {
           </span>
         </div>
       )}
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="name"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          Nombre *
-        </label>
-        <input
-          className="w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
-          type="text"
-          placeholder="Nombre Completo"
-          id="name"
-        />
+      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+        <div className="flex flex-col gap-4">
+          <label
+            htmlFor="name"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Nombre <span className="text-[#FF0000]">*</span>
+          </label>
+          <input
+            className="w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            type="text"
+            placeholder="Nombre Completo"
+            id="name"
+          />
+        </div>
+        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+          <label
+            htmlFor="email"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Email <span className="text-[#FF0000]">*</span>
+          </label>
+          <input
+            className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
+            type="email"
+            placeholder="Email"
+            id="email"
+          />
+        </div>
       </div>
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="email"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          Email *
-        </label>
-        <input
-          className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
-          type="email"
-          placeholder="Email"
-          id="email"
-        />
-      </div>
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="tipoServicio"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          Tipo de servicio *
-        </label>
-        <select
-          name="tipoServicio"
-          id="tipoServicio"
-          className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
-        >
-          <option value="">Seleccione un servicio</option>
-          {Object.values(tipoServicios).map((servicio) => (
-            <option key={servicio} value={servicio}>
-              {servicio}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="tipoServicio"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          Giro empresarial *
-        </label>
-        <select
-          name="tipoServicio"
-          id="tipoServicio"
-          className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
-        >
-          <option value="">Seleccione un servicio</option>
-          {Object.values(giroEmpresarial).map((giro) => (
-            <option key={giro} value={giro}>
-              {giro}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="tipoServicio"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          WhatsApp con lada de país *
-        </label>
-        <div className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
-          <select className="w-[60px] h-[44px] bg-[rgb(38,40,45)]">
-            {countries.map((country) => (
-              <option value={country.callingCode} key={country.callingCode}>
-                +{country.callingCode}
+      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+          <label
+            htmlFor="tipoServicio"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Tipo de servicio <span className="text-[#FF0000]">*</span>
+          </label>
+          <select
+            name="tipoServicio"
+            id="tipoServicio"
+            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+          >
+            <option value="">Seleccione un servicio</option>
+            {Object.values(tipoServicios).map((servicio) => (
+              <option key={servicio} value={servicio}>
+                {servicio}
               </option>
             ))}
           </select>
-          <input type="tel" name="telephone" placeholder="WhatsApp de contacto" id="whatsApp" className="w-[300px] h-[44px] bg-[rgb(38,40,45)]" minLength={10} maxLength={10}/>
+        </div>
+        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+          <label
+            htmlFor="tipoServicio"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            WhatsApp con lada de país
+          </label>
+          <div className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
+            <select className="w-[60px] h-[44px] bg-[rgb(38,40,45)]">
+              {countries.map((country) => (
+                <option value={country.callingCode} key={country.callingCode}>
+                  +{country.callingCode}
+                </option>
+              ))}
+            </select>
+            <input
+              type="tel"
+              name="telephone"
+              placeholder="WhatsApp de contacto"
+              id="whatsApp"
+              className="w-[300px] h-[44px] bg-[rgb(38,40,45)]"
+              minLength={10}
+              maxLength={10}
+            />
+          </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
-        <label
-          htmlFor="horarioContacto"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
-        >
-          Horario para ser contactado
-        </label>
-        <select
-          name="horarioContacto"
-          id="horarioContacto"
-          className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
-        >
-          <option value="">Seleccione un horario</option>
-          {Object.values(horario).map((horariocontacto) => (
-            <option key={horariocontacto} value={horariocontacto}>
-              {horariocontacto}
-            </option>
-          ))}
-        </select>
+      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+      <div className="flex flex-col gap-4 ">
+          <label
+            htmlFor="tipoServicio"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Giro empresarial <span className="text-[#FF0000]">*</span>
+          </label>
+          <select
+            name="tipoServicio"
+            id="tipoServicio"
+            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+          >
+            <option value="">Seleccione un servicio</option>
+            {Object.values(giroEmpresarial).map((giro) => (
+              <option key={giro} value={giro}>
+                {giro}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+          <label
+            htmlFor="horarioContacto"
+            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Horario para ser contactado
+          </label>
+          <select
+            name="horarioContacto"
+            id="horarioContacto"
+            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+          >
+            <option value="">Seleccione un horario</option>
+            {Object.values(horario).map((horariocontacto) => (
+              <option key={horariocontacto} value={horariocontacto}>
+                {horariocontacto}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4 mt-4 md:mt-0 md:w-[754px]">
         <label
           htmlFor="platicanosProyecto"
-          className="font-[700] text-[14px] leading-[18.19px] text-[#FFF]"
+          className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
         >
-          Pláticanos de tu proyecto *
+          Pláticanos de tu proyecto <span className="text-[#FF0000]">*</span>
         </label>
         <textarea
-        className="w-[340px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
-        name="platicanosProyecto"
-        id="platicanosProyecto"
-        placeholder="Escribe aquí..."
-        maxLength={200}
-      ></textarea>
+          className="w-[340px] md:w-[754px] md:h-[407px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
+          name="platicanosProyecto"
+          id="platicanosProyecto"
+          placeholder="Escribe aquí..."
+          maxLength={200}
+        ></textarea>
       </div>
-      <p className="font-[600] text-[14px] leading-[18.19px] text-center text-[#7C7C7C] mt-10">Te atendemos en menos de 30 min y recibirás tu cotizacioón en menos de 24 hrs.</p>
       <button className="btn btn-white btn-animated mt-4">Enviar</button>
     </form>
   );

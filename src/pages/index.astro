@@ -5,15 +5,21 @@ import "../styles/globals.css";
 
 <body>
   <script>
-    const userLang = navigator.language;
+    document.addEventListener("DOMContentLoaded", () => {
+      const userLang = navigator.language;
 
-    if (userLang.startsWith("es")) {
-      window.location.href = "/es-ES"; // Redirigir a la página en español
-    } else if (userLang.startsWith("en")) {
-      window.location.href = "/en-EU"; // Redirigir a la página en inglés
-    } else {
-      // En caso de que el idioma no sea reconocido, redirigir a una página predeterminada
-      window.location.href = "/es-ES"; // O cualquier página por defecto
-    }
+      // Obtén la ruta actual sin el dominio
+      const currentPath = window.location.pathname;
+
+      // Verifica si ya estamos en la ruta correcta antes de redirigir
+      if (userLang.startsWith("es") && currentPath !== "/es-ES") {
+        window.location.href = "/es-ES"; // Redirigir a la página en español
+      } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
+        window.location.href = "/es-EN"; // Redirigir a la página en inglés
+      } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
+        // Si el idioma no es reconocido o ya estamos en una de las rutas, redirigir a español por defecto
+        window.location.href = "/es-ES";
+      }
+    });
   </script>
 </body>
