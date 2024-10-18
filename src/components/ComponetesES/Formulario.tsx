@@ -113,7 +113,7 @@ export const Formulario = () => {
             Nombre <span className="text-[#FF0000]">*</span>
           </label>
           <input
-            className="w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className="w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             type="text"
             placeholder="Nombre Completo"
             id="name"
@@ -127,7 +127,7 @@ export const Formulario = () => {
             Email <span className="text-[#FF0000]">*</span>
           </label>
           <input
-            className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
+            className="w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
             type="email"
             placeholder="Email"
             id="email"
@@ -145,7 +145,7 @@ export const Formulario = () => {
           <select
             name="tipoServicio"
             id="tipoServicio"
-            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className=" w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
           >
             <option value="">Seleccione un servicio</option>
             {Object.values(tipoServicios).map((servicio) => (
@@ -162,8 +162,8 @@ export const Formulario = () => {
           >
             WhatsApp con lada de país
           </label>
-          <div className="w-[340px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
-            <select className="w-[60px] h-[44px] bg-[rgb(38,40,45)]">
+          <div className="w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
+            <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]">
               {countries.map((country) => (
                 <option value={country.callingCode} key={country.callingCode}>
                   +{country.callingCode}
@@ -193,7 +193,7 @@ export const Formulario = () => {
           <select
             name="tipoServicio"
             id="tipoServicio"
-            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
           >
             <option value="">Seleccione un servicio</option>
             {Object.values(giroEmpresarial).map((giro) => (
@@ -213,7 +213,7 @@ export const Formulario = () => {
           <select
             name="horarioContacto"
             id="horarioContacto"
-            className=" w-[340px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
           >
             <option value="">Seleccione un horario</option>
             {Object.values(horario).map((horariocontacto) => (
@@ -232,7 +232,7 @@ export const Formulario = () => {
           Pláticanos de tu proyecto <span className="text-[#FF0000]">*</span>
         </label>
         <textarea
-          className="w-[340px] md:w-[754px] md:h-[407px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
+          className="w-[340px] md:w-[756px] md:h-[407px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
           name="platicanosProyecto"
           id="platicanosProyecto"
           placeholder="Escribe aquí..."

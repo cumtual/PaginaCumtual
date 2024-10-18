@@ -101,6 +101,8 @@ const { idioma } = Astro.props;
         />
       </defs>
     </svg>
-    <OpcionesIdioma client:load idioma={idioma} />
+    <div class="hidden md:block">
+      <OpcionesIdioma client:load idioma={idioma} />
+    </div>
   </div>
 </footer>

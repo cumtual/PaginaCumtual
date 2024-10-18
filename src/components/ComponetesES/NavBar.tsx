@@ -1,15 +1,19 @@
-import { useStore } from '@nanostores/react';
 import { isSliderOpen } from './MenuStore';
 
 const NavBar = () => {
-  const $isSliderOpen = useStore(isSliderOpen);
+
+  const handleMouseLeave = () => {
+    setTimeout(()=>{
+      isSliderOpen.set(false);
+    }, 1000)
+  };
 
   return (
     <nav className="px-20 flex gap-4 relative">
       <div
         className="relative group"
         onMouseEnter={() => isSliderOpen.set(true)}
-        onMouseLeave={() => isSliderOpen.set(false)}
+        onMouseLeave={handleMouseLeave}
       >
         <p className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300 cursor-pointer">
           Servicios
@@ -23,7 +27,7 @@ const NavBar = () => {
       </a>
       <a
         className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300"
-        href="#"
+        href="/es-ES/contactanos"
       >
         Contáctanos
       </a>

@@ -14,12 +14,12 @@ import { Image } from "astro:assets";
   <artcile class="text-center flex flex-col gap-8 mt-16">
     <section>
       <div class="text-[#7C7C7C] font-[600] flex flex-col gap-4">
-        <p>Creacion de:</p>
+        <p class="md:text-[25px] md:leading-[32.49px]">Creación de:</p>
         <div>
-          <p class="text-gradient">- Identidad visual única y profesional.</p>
-          <p class="text-gradient">- Braning.</p>
+          <p class="text-gradient md:text-[20px]">- Identidad visual única y profesional.</p>
+          <p class="text-gradient md:text-[20px]">- Braning.</p>
         </div>
-        <div class="flex flex-col gap-4 md:flex-row-reverse md:justify-around">
+        <div class="flex flex-col gap-4 md:flex-row-reverse md:justify-around md:mt-12">
           <p
             class="md:w-[275px] md:text-start md:text-[20px] md:leading-[25.99px]"
           >
@@ -42,10 +42,10 @@ import { Image } from "astro:assets";
     </section>
   </artcile>
   <article>
-    <section class="mt-10 flex flex-col gap-2 md:hidden" id="Xiti-tákú">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Xiti Tákú</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Xiti-tákú">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Xiti Tákú</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/Xiti-taku-1.webp"
@@ -62,7 +62,7 @@ import { Image } from "astro:assets";
             producto.
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex gap-4 justify-center items-center mt-2">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/xiti-taku-2.webp"
@@ -86,10 +86,10 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2 md:hidden" id="sadeli-tower">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Sedeli Tower</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="sadeli-tower">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Sedeli Tower</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[231px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/sadeli-tower-1.webp"
@@ -108,7 +108,7 @@ import { Image } from "astro:assets";
             una “S” junto con la altura de un edificio.
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex gap-4 justify-center items-center mt-2">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/sadeli-tower-2.webp"
@@ -132,10 +132,10 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2 md:hidden" id="rivas-haus">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Rivas Haus</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="rivas-haus">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Rivas Haus</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/rivas-haus-1.webp"
@@ -151,7 +151,7 @@ import { Image } from "astro:assets";
             colores formando una sola letra “h”.
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex gap-4 justify-center items-center mt-2">
           <div
             class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group flex justify-center items-center bg-[#000]"
           >
@@ -173,39 +173,39 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 hidden md:flex md:justify-center md:items-center" id="Xiti-tákú-pc">
-      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+    <section class="mt-10 hidden md:flex md:justify-center md:items-center md:mt-52" id="Xiti-tákú-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
         <div
-          class="flex-1 overflow-hidden w-[229.33px] h-[677px] rounded-[15px] group"
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
           <Image
             src="/imagenesConvertidas/xiti-taku-2.webp"
             alt="Imagen planta"
             width={229.33}
-            height={677}
+            height={517}
             class="object-cover w-full h-full"
           />
         </div>
         <div
-          class="flex-1 overflow-hidden w-[234.13px] h-[561px] rounded-[12.37px] group"
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group"
         >
           <Image
             src="/imagenesConvertidas/Xiti-taku-1.webp"
             alt="Imagen huevos orgánicos"
             width={234.13}
-            height={561}
+            height={428}
             class="object-cover w-full h-full"
           />
         </div>
-        <div class="flex-1 h-[601px] flex flex-col justify-between">
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
           <div>
             <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Xiti Tákú</h2>
-            <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Empresa de huevos orgánicos, nombre de la empresa escrito en
+            <p class="text-[20px] leading-[23.44px] text-start font-[300] mt-6">Empresa de huevos orgánicos, nombre de la empresa escrito en
               Mixteco, su significado está ubicado en el slogan. Una hoja como
               cuerpo de la gallina representa lo orgánico y saludable del
               producto.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/xiti-taku-3.webp"
             alt="Logo Xiti tákú"
@@ -217,31 +217,31 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 hidden md:flex md:justify-center md:items-center" id="sadeli-tower-pc">
-      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="sadeli-tower-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
         <div
-          class="flex-1 overflow-hidden w-[229.33px] h-[717px] rounded-[15px] group"
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
           <Image
             src="/imagenesConvertidas/sadeli-tower-1.webp"
             alt="Imagen mujer olmeca"
             width={229.33}
-            height={717}
+            height={517}
             class="object-cover w-full h-full"
           />
         </div>
         <div
-          class="flex-1 overflow-hidden w-[234.13px] h-[601px] rounded-[12.37px] group"
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group"
         >
           <Image
             src="/imagenesConvertidas/sadeli-tower-2.webp"
             alt="Imagen torres"
             width={234.13}
-            height={601}
+            height={428}
             class="object-cover w-full h-full"
           />
         </div>
-        <div class="flex-1 h-[601px] flex flex-col justify-between">
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
           <div>
             <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Sedeli Tower</h2>
             <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Inspirado en el nombre de la calle donde se encuentra el desarrollo
@@ -251,46 +251,46 @@ import { Image } from "astro:assets";
               de las Limas” SEDELI.<br/> El diseño de imagen combina la abstracción de
               una “S” junto con la altura de un edificio.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/sadeli-tower-3.webp"
             alt="Logo Sedeli Tower"
-            width={251}
-            height={139}
-            class="object-cover w-[251px] h-[139px]"
+            width={230}
+            height={128.51}
+            class="object-cover w-[230px] h-[128.51px]"
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 hidden md:flex md:justify-center md:items-center" id="sadeli-tower-pc">
-      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="rivas-house-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
         <div
-          class="flex-1 overflow-hidden w-[229.33px] h-[717px] rounded-[15px] group"
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
           <Image
             src="/imagenesConvertidas/rivas-haus-1.webp"
               alt="Imagen mano con llave en forma de corazón"
             width={229.33}
-            height={717}
+            height={517}
             class="object-cover w-full h-full"
           />
         </div>
         <div
-          class="flex-1 overflow-hidden w-[234.13px] h-[601px] rounded-[12.37px] group bg-[#D8D8D8] flex items-center justify-center"
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group bg-[#D8D8D8] flex items-center justify-center"
         >
         <p class="font-[500] leading-[135.93px] text-[#FFF] text-[90.62px]">
           r + h
         </p>
         </div>
-        <div class="flex-1 h-[601px] flex flex-col justify-between">
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
           <div>
             <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Rivas Haus</h2>
             <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Rivas Haus: La combinación de las dos letras del nombre de la
               empresa “r” y “h” las cuales están divididas con dos diferentes
               colores formando una sola letra “h”.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/rivas-haus-3.webp"
               alt="Logo Sedeli Tower"
@@ -303,7 +303,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
   </article>
-  <article>
+  <article class="hidden">
     <article
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-8"
     >
@@ -342,10 +342,10 @@ import { Image } from "astro:assets";
     </article>
   </article>
   <article>
-    <section class="mt-10 flex flex-col gap-2" id="Arthonix">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Arthonix</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Arthonix">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Arthonix</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/arthonix-1.webp"
@@ -361,7 +361,7 @@ import { Image } from "astro:assets";
             debe estar para sus futuras batallas y aventuras.
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex gap-4 justify-center items-center mt-2">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/arthonix-2.webp"
@@ -385,10 +385,10 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2" id="Barkov">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Barkov</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Barkov">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Barkov</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/barkov-1.webp"
@@ -404,7 +404,7 @@ import { Image } from "astro:assets";
             (Douglas A. Bernstein y Thomas D. Borkovec).
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex gap-4 justify-center items-center mt-2">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/barkov-2.webp"
@@ -428,10 +428,10 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2" id="Nolu">
-      <h3 class="text-[24px] text-[#FFF] font-[600]">Nolu</h3>
-      <div class="flex flex-col justify-center items-center mt-4 p-2">
-        <div class="grid grid-cols-2 items-center justify-center">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Nolu">
+      <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full">Nolu</h3>
+      <div class="flex flex-col justify-center items-center p-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/nolu-1.webp"
@@ -448,7 +448,7 @@ import { Image } from "astro:assets";
             mar con una ola y un sol.
           </p>
         </div>
-        <div class="grid grid-cols-2 justify-center items-center mt-2">
+        <div class="flex items-center justify-around gap-4">
           <div class="overflow-hidden w-[141px] h-[147px] rounded-[11px] group">
             <Image
               src="/imagenesConvertidas/nolu-2.webp"
@@ -467,6 +467,136 @@ import { Image } from "astro:assets";
               width={140}
               height={55}
               class="object-cover w-[140px] h-[55px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Arthonix-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/arthonix-2.webp"
+            alt="Imagen cerillo"
+            width={229.33}
+            height={517}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/arthonix-1.webp"
+            alt="Imagen guerrero"
+            width={234.13}
+            height={428}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Arthonix</h2>
+            <p class="text-[20px] leading-[23.44px] text-start font-[300] mt-6">Diseño para streamer de twitch, amante de los juegos de aventura y
+              guerra, una flama con un casco de caballero reflejan lo equipado que
+              debe estar para sus futuras batallas y aventuras.</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/arthonix-3.webp"
+            alt="Logo Arthonix"
+            width={155}
+            height={159}
+            class="object-cover w-[155px] h-[159px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/barkov-2.webp"
+              alt="Imagen spa"
+            width={229.33}
+            height={517}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/barkov-1.webp"
+            alt="Imagen masaje"
+            width={234.13}
+            height={428}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Barkov</h2>
+            <p class="text-[20px] leading-[23.44px] text-start font-[300] mt-6">Diseño para un spa, el nombre proviene del apellido de un
+              colaborador en el libro “Entrenamiento de relajación progresiva”
+              (Douglas A. Bernstein y Thomas D. Borkovec).</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/barkov-3.webp"
+            alt="Logo Barkov"
+            width={251}
+            height={86}
+            class="object-cover w-[251px] h-[86px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc">
+      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/nolu-2.webp"
+            alt="Imagen atardecer"
+            width={229.33}
+            height={517}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[428px] rounded-[12.37px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/nolu-1.webp"
+            alt="Imagen olas"
+            width={234.13}
+            height={428}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="flex-1 h-[517px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Nolu</h2>
+            <p class="text-[20px] leading-[23.44px] text-start font-[300] mt-6">Tienda de trajes de baño para dama y complementos. Nolu es una
+              combinación de las primeras 2 letras del apodo de la propietaria
+              “Nona” y su apellido “Luna”. El diseño manifiesta un atardecer en el
+              mar con una ola y un sol.</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/nolu-3.webp"
+              alt="Logo Barkov"
+            width={247}
+            height={97}
+            class="object-cover w-[247px] h-[97px]"
             />
           </div>
         </div>

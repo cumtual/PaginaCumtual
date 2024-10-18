@@ -8,8 +8,11 @@ import SlideIcon from "../../components/SVG/SlideIcon.astro";
 import InsigniaAdaptabilidad from "../../components/SVG/InsigniaAdaptabilidad.astro";
 
 import DesarrolloIcon from "../../components/SVG/DesarrolloIcon.astro";
+import DesarrolloIconPC from "../../components/SVG/DesarrolloIconPC.astro"
 import NubeIcon from "../../components/SVG/NubeIcon.astro";
+import NubeIconPC from "../../components/SVG/NubeIconPC.astro";
 import LogoIcon from "../../components/SVG/LogoIcon.astro";
+import LogoIconPC from '../../components/SVG/LogoIconPC.astro'
 import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro";
 import { Formulario } from "../../components/ComponetesES/Formulario";
 
@@ -81,9 +84,14 @@ const pageTitle = "Inicio";
         class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
       >
         <div
-          class="flex justify-center items-center mt-4 w-full"
+          class="flex justify-center items-center mt-4 w-full md:hidden"
         >
           <NubeIcon />
+        </div>
+        <div
+          class="justify-center items-center mt-4 w-full hidden md:flex"
+        >
+          <NubeIconPC/>
         </div>
         <p
           class="font-[600] text-[#FFF] text-[15.46px] text-center md:mt-10 px-2 w-full mb-2"
@@ -94,8 +102,11 @@ const pageTitle = "Inicio";
       <div
         class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-4 relative"
       >
-        <div class="flex justify-center items-center mt-4 w-full">
+        <div class="flex justify-center items-center mt-4 w-full md:hidden">
           <LogoIcon />
+        </div>
+        <div class="hidden justify-center items-center mt-4 w-full md:flex">
+          <LogoIconPC />
         </div>
         <div class="px-2 w-full">
           <p
@@ -110,14 +121,17 @@ const pageTitle = "Inicio";
       <div
         class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] gap-4 mt-8"
       >
-        <div class="flex-grow flex justify-center items-center mt-4 md:mt-8">
+        <div class="flex-grow flex justify-center items-center mt-4 md:mt-8 md:hidden">
           <DesarrolloIcon />
+        </div>
+        <div class="flex-grow hidden justify-center items-center mt-4 md:mt-8 md:flex">
+          <DesarrolloIconPC />
         </div>
         <div class="px-2 w-full">
           <p
             class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end mb-2 md:text-center md:mb-8"
           >
-            Desarrollo web <br /> a la medida
+            Desarrollo web a la medida
           </p>
         </div>
       </div>

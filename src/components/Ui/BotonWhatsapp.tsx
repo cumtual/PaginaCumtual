@@ -11,7 +11,7 @@ export const BotonWhatsapp = ({idioma} : Props) => {
   if(idioma === 'es'){
     return (
       <>
-          <FloatingWhatsApp darkMode={true} statusMessage='En linea' chatMessage=' ¡Hola! ¿Cómo podemos ayudarte?' accountName='Cumtual' avatar={LogoCumtual.src} phoneNumber='+529535939919'/>
+          <FloatingWhatsApp  buttonClassName='mb-20' darkMode={true} statusMessage='En linea' chatMessage=' ¡Hola!, Pláticanos de tu proyecto.' accountName='Cumtual' avatar={LogoCumtual.src} phoneNumber='+529535939919'/>
       </>
     )
   }
