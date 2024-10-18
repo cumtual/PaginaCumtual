@@ -8,35 +8,41 @@ import { Image } from "astro:assets";
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
+  <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12">
+    Portafolio Logo
+  </h1>
   <artcile class="text-center flex flex-col gap-8 mt-16">
     <section>
-      <h1 class="font-[600] text-[24px] text-[#FFF] text-center">
-        Portafolio Logo
-      </h1>
       <div class="text-[#7C7C7C] font-[600] flex flex-col gap-4">
         <p>Creacion de:</p>
         <div>
           <p class="text-gradient">- Identidad visual única y profesional.</p>
           <p class="text-gradient">- Braning.</p>
         </div>
-        <p>
-          Completamente <span class="text-[#FFF]"
-            >personalizado y adaptado a las necesidades específicas</span
-          > del proyecto del cliente.
-        </p>
-        <p>
-          Desarrollamos <span class="text-[#FFF]">
-            conceptos con base en la metodología "Design thinking"</span
-          > para garantizar el éxito de tu proyecto.
-        </p>
+        <div class="flex flex-col gap-4 md:flex-row-reverse md:justify-around">
+          <p
+            class="md:w-[275px] md:text-start md:text-[20px] md:leading-[25.99px]"
+          >
+            Completamente <span class="text-[#FFF]"
+              >personalizado y adaptado a las necesidades específicas</span
+            > del proyecto del cliente.
+          </p>
+          <p
+            class="md:w-[275px] md:text-start md:text-[20px] md:leading-[25.99px]"
+          >
+            Desarrollamos <span class="text-[#FFF]">
+              conceptos con base en la metodología "Design thinking"</span
+            > para garantizar el éxito de tu proyecto.
+          </p>
+        </div>
       </div>
-      <div class="flex justify-center items-center mt-4">
+      <div class="flex justify-center items-center mt-14">
         <ContactanosBoton />
       </div>
     </section>
   </artcile>
   <article>
-    <section class="mt-10 flex flex-col gap-2" id="Xiti tákú">
+    <section class="mt-10 flex flex-col gap-2 md:hidden" id="Xiti-tákú">
       <h3 class="text-[24px] text-[#FFF] font-[600]">Xiti Tákú</h3>
       <div class="flex flex-col justify-center items-center mt-4 p-2">
         <div class="grid grid-cols-2 items-center justify-center">
@@ -80,7 +86,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2" id="sadeli-tower">
+    <section class="mt-10 flex flex-col gap-2 md:hidden" id="sadeli-tower">
       <h3 class="text-[24px] text-[#FFF] font-[600]">Sedeli Tower</h3>
       <div class="flex flex-col justify-center items-center mt-4 p-2">
         <div class="grid grid-cols-2 items-center justify-center">
@@ -126,7 +132,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-    <section class="mt-10 flex flex-col gap-2" id="rivas-haus">
+    <section class="mt-10 flex flex-col gap-2 md:hidden" id="rivas-haus">
       <h3 class="text-[24px] text-[#FFF] font-[600]">Rivas Haus</h3>
       <div class="flex flex-col justify-center items-center mt-4 p-2">
         <div class="grid grid-cols-2 items-center justify-center">
@@ -162,6 +168,135 @@ import { Image } from "astro:assets";
               width={191}
               height={147}
               class="object-contain w-[147.6px] h-[45px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 hidden md:block" id="Xiti-tákú-pc">
+      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[717px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/xiti-taku-2.webp"
+            alt="Imagen planta"
+            width={229.33}
+            height={717}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[601px] rounded-[12.37px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/Xiti-taku-1.webp"
+            alt="Imagen huevos orgánicos"
+            width={234.13}
+            height={601}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="flex-1 h-[601px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Xiti Tákú</h2>
+            <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Empresa de huevos orgánicos, nombre de la empresa escrito en
+              Mixteco, su significado está ubicado en el slogan. Una hoja como
+              cuerpo de la gallina representa lo orgánico y saludable del
+              producto.</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/xiti-taku-3.webp"
+            alt="Logo Xiti tákú"
+            width={251}
+            height={90}
+            class="object-cover w-[251px] h-[90px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 hidden md:block" id="sadeli-tower-pc">
+      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[717px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/sadeli-tower-1.webp"
+            alt="Imagen mujer olmeca"
+            width={229.33}
+            height={717}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[601px] rounded-[12.37px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/sadeli-tower-2.webp"
+            alt="Imagen torres"
+            width={234.13}
+            height={601}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div class="flex-1 h-[601px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Sedeli Tower</h2>
+            <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Inspirado en el nombre de la calle donde se encuentra el desarrollo
+              inmobiliario “calle Olmecas”, se buscó un objeto que hiciera
+              representación a la cultura Olmeca dando como resultado al “Señor de
+              las Limas”. <br/>El nombre de la torre proviene del acrónimo del “Señor
+              de las Limas” SEDELI.<br/> El diseño de imagen combina la abstracción de
+              una “S” junto con la altura de un edificio.</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/sadeli-tower-3.webp"
+            alt="Logo Sedeli Tower"
+            width={251}
+            height={90}
+            class="object-cover w-[251px] h-[90px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 hidden md:block" id="sadeli-tower-pc">
+      <div class="flex gap-4 w-[1080px] h-[717px] items-end">
+        <div
+          class="flex-1 overflow-hidden w-[229.33px] h-[717px] rounded-[15px] group"
+        >
+          <Image
+            src="/imagenesConvertidas/rivas-haus-1.webp"
+              alt="Imagen mano con llave en forma de corazón"
+            width={229.33}
+            height={717}
+            class="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          class="flex-1 overflow-hidden w-[234.13px] h-[601px] rounded-[12.37px] group bg-[#D8D8D8] flex items-center justify-center"
+        >
+        <p class="font-[500] leading-[135.93px] text-[#FFF] text-[90.62px]">
+          r + h
+        </p>
+        </div>
+        <div class="flex-1 h-[601px] flex flex-col justify-between">
+          <div>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF]">Rivas Haus</h2>
+            <p class="text-[20px] leading-[23.44px] text-justify font-[300] mt-6">Rivas Haus: La combinación de las dos letras del nombre de la
+              empresa “r” y “h” las cuales están divididas con dos diferentes
+              colores formando una sola letra “h”.</p>
+          </div>
+          <div class="bg-[#FFF] w-[575px] h-[256px] flex items-center justify-center rounded-[11px]">
+            <Image
+            src="/imagenesConvertidas/rivas-haus-3.webp"
+              alt="Logo Sedeli Tower"
+            width={245.15}
+            height={60.35}
+            class="object-cover w-[245.15px] h-[60.35px]"
             />
           </div>
         </div>
@@ -339,6 +474,6 @@ import { Image } from "astro:assets";
     </section>
   </article>
   <div class="flex items-center justify-center mt-10">
-    <ContactanosBoton/>
+    <ContactanosBoton />
   </div>
 </BaseLayoutES>

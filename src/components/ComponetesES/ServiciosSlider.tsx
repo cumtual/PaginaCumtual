@@ -29,7 +29,7 @@ const ServiciosSlider = () => {
         <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300">
           <a href="/es-ES/servicios/almacenamiento-en-la-nube">Almacenamiento en la nube</a>
         </li>
-        <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300">Logos</li>
+        <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300"><a href="/es-ES/servicios/portafolio-logos">Logos</a></li>
       </ul>
     </div>
   );
