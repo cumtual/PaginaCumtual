@@ -8,19 +8,20 @@ import SlideIcon from "../../components/SVG/SlideIcon.astro";
 import InsigniaAdaptabilidad from "../../components/SVG/InsigniaAdaptabilidad.astro";
 
 import DesarrolloIcon from "../../components/SVG/DesarrolloIcon.astro";
-import DesarrolloIconPC from "../../components/SVG/DesarrolloIconPC.astro"
+import DesarrolloIconPC from "../../components/SVG/DesarrolloIconPC.astro";
 import NubeIcon from "../../components/SVG/NubeIcon.astro";
 import NubeIconPC from "../../components/SVG/NubeIconPC.astro";
 import LogoIcon from "../../components/SVG/LogoIcon.astro";
-import LogoIconPC from '../../components/SVG/LogoIconPC.astro'
+import LogoIconPC from "../../components/SVG/LogoIconPC.astro";
 import HerramientasDesarrollo from "../../components/SVG/HerramientasDesarrollo.astro";
 import { Formulario } from "../../components/ComponetesES/Formulario";
 
 import "../../styles/globals.css";
 
 const pageTitle = "Inicio";
-const description = "Empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web."
-const url = 'es-ES/'
+const description =
+  "Empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web.";
+const url = "es-ES/";
 ---
 
 <BaseLayoutES pageTitle={pageTitle} description={description} url={url}>
@@ -70,89 +71,88 @@ const url = 'es-ES/'
         >
           Adaptabilidad
         </p>
-        <p class="text-[14px] md:text-[20px] md:leading-[25.99px] font-[400] text-justify">
-          Aceptamos el cambio como una oportunidad para crecer <br class="hidden md:block"/>y mejorar
-          continuamente.
+        <p
+          class="text-[14px] md:text-[20px] md:leading-[25.99px] font-[400] text-justify"
+        >
+          Aceptamos el cambio como una oportunidad para crecer <br
+            class="hidden md:block"
+          />y mejorar continuamente.
         </p>
       </section>
     </div>
   </article>
-  <article
-    class="mt-8 ejemplo md:flex md:justify-center"
-  >
-  <section class="flex flex-col justify-start  mt-12 gap-2 text-center md:mt-24">
-    <h2 class="font-[600] text-[#FFF] text-[24px] text-start">Nuestros servicios</h2>
-    <div class="flex gap-4 w-full mt-8 md:justify-center">
-      <div
-        class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
-      >
+  <article class="mt-[28px] md:mt-[18px] ejemplo md:flex md:justify-center">
+    <section class="flex flex-col justify-start gap-2 text-center">
+      <h2 class="font-[600] text-[#FFF] text-[24px] text-start">
+        Nuestros servicios
+      </h2>
+      <div class="flex gap-4 w-full mt-[10px] md:justify-center">
         <div
-          class="flex justify-center items-center mt-4 w-full md:hidden"
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
         >
-          <NubeIcon />
-        </div>
-        <div
-          class="justify-center items-center w-full hidden md:flex"
-        >
-          <NubeIconPC/>
-        </div>
-        <p
-          class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full leading-[20.09px] md:h-[40px]"
-        >
-          Almacenamiento <br /> en la nube
-        </p>
-      </div>
-      <div
-        class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
-      >
-        <div class="flex justify-center items-center w-full md:hidden">
-          <LogoIcon />
-        </div>
-        <div class="hidden justify-center items-center w-full md:flex ">
-          <LogoIconPC />
-        </div>
-        <div class="px-2 w-full">
+          <div class="flex justify-center items-center mt-4 w-full md:hidden">
+            <NubeIcon />
+          </div>
+          <div class="justify-center items-center w-full hidden md:flex">
+            <NubeIconPC />
+          </div>
           <p
-            class="font-[600] text-[#FFF] text-[15.46px] text-center leading-[20.09px] px-2  md:text-center md:h-[40px]"
+            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full leading-[20.09px] md:h-[40px]"
           >
-            Logos
+            Almacenamiento <br /> en la nube
           </p>
         </div>
-      </div>
-    </div>
-    <div class="flex gap-5 w-full  md:justify-center">
-      <div
-        class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] mt-2 gap-5"
-      >
-      <div class="flex justify-center items-center w-full md:hidden">
-          <DesarrolloIcon />
-        </div>
-        <div class="hidden justify-center items-center w-full md:flex ">
-          <DesarrolloIconPC />
-        </div>
-        <div class="px-2 w-full">
-          <p
-            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end md:text-center leading-[20.09px]"
-          >
-            Desarrollo web <br class="block md:hidden"/>a la medida
-          </p>
+        <div
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
+        >
+          <div class="flex justify-center items-center w-full md:hidden">
+            <LogoIcon />
+          </div>
+          <div class="hidden justify-center items-center w-full md:flex">
+            <LogoIconPC />
+          </div>
+          <div class="px-2 w-full">
+            <p
+              class="font-[600] text-[#FFF] text-[15.46px] text-center leading-[20.09px] px-2 md:text-center md:h-[40px]"
+            >
+              Logos
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="flex gap-5 w-full md:justify-center">
+        <div
+          class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] mt-2 gap-5"
+        >
+          <div class="flex justify-center items-center w-full md:hidden">
+            <DesarrolloIcon />
+          </div>
+          <div class="hidden justify-center items-center w-full md:flex">
+            <DesarrolloIconPC />
+          </div>
+          <div class="px-2 w-full">
+            <p
+              class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end md:text-center leading-[20.09px]"
+            >
+              Desarrollo web <br class="block md:hidden" />a la medida
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </article>
-  <article class="mt-8 ejemplo md:flex md:justify-center">
+  <article class="mt-[48px] ejemplo md:flex md:justify-center">
     <section class="md:w-[754px]">
       <h2 class="font-[600] text-[#FFF] text-[24px]">
         Herramientas de desarrollo
       </h2>
-      <div class="mt-8">
+      <div class="mt-[18px]">
         <HerramientasDesarrollo />
       </div>
     </section>
   </article>
-  <section
-    class="mt-10 flex flex-col justify-center items-center text-center gap-4 md:mt-32"
+  <article
+    class="mt-[48px] flex flex-col justify-center items-center text-center gap-4"
   >
     <h2 class="text-gradient font-[600] text-[25px] leading-[32.49px]">
       Elevamos el éxito de tu proyecto
@@ -161,13 +161,15 @@ const url = 'es-ES/'
       Te atenderemos en menos de 30 min y recibirás tu cotización en menos de 24
       hrs.
     </p>
-  </section>
-  <section class="text-center flex flex-col justify-center items- mt-10 md:mt-52">
+  </article>
+  <article
+    class="text-center flex flex-col justify-center mt-[48px]"
+  >
     <h2 class="text-gradient text-[25px] font-[600] px-10">
-      Lleva tu negocio a la <br/>cumbre virtual
+      Lleva tu negocio a la <br />cumbre virtual
     </h2>
-    <div class="w-full md:flex justify-center md:mt-24">
+    <div class="w-full md:flex justify-center mt-[48px]">
       <Formulario />
     </div>
-  </section>
+  </article>
 </BaseLayoutES>

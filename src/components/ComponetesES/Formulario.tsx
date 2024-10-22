@@ -88,7 +88,7 @@ export const Formulario = () => {
   return (
     <form
       onSubmit={handleRegistroSubmit(onSubmitRegistro)}
-      className="w-full flex flex-col gap-4 mt-4 items-center md:w-[756px]"
+      className="w-full flex flex-col gap-4 items-center md:w-[756px]"
     >
       {successMessage.length > 0 && (
         <div className="flex justify-center items-center">
