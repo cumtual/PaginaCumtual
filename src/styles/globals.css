@@ -243,7 +243,7 @@ body {
   -webkit-background-clip: text; /* Prefijo para WebKit (Chrome, Safari) */
   background-clip: text; /* Definición estándar */
   -webkit-text-fill-color: transparent; /* Prefijo para WebKit (Chrome, Safari) */
-  /* text-fill-color: transparent; Definición estándar, aunque no siempre soportada */
+   text-fill-color: transparent; /*Definición estándar, aunque no siempre soportada */
 }
 @keyframes jump {
   0% {

@@ -105,10 +105,10 @@ export const Formulario = () => {
         </div>
       )}
       <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <label
             htmlFor="name"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             Nombre <span className="text-[#FF0000]">*</span>
           </label>
@@ -119,10 +119,10 @@ export const Formulario = () => {
             id="name"
           />
         </div>
-        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+        <div className="flex flex-col gap-2 mt-4 md:mt-0">
           <label
             htmlFor="email"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             Email <span className="text-[#FF0000]">*</span>
           </label>
@@ -135,10 +135,10 @@ export const Formulario = () => {
         </div>
       </div>
       <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
-        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+        <div className="flex flex-col gap-2 mt-0 ">
           <label
             htmlFor="tipoServicio"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             Tipo de servicio <span className="text-[#FF0000]">*</span>
           </label>
@@ -155,10 +155,32 @@ export const Formulario = () => {
             ))}
           </select>
         </div>
-        <div className="flex flex-col gap-4 mt-4 md:mt-0">
-          <label
+        <div className="flex flex-col gap-2 mt-4 md:mt-0">
+        <label
             htmlFor="tipoServicio"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
+          >
+            Giro empresarial <span className="text-[#FF0000]">*</span>
+          </label>
+          <select
+            name="tipoServicio"
+            id="tipoServicio"
+            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+          >
+            <option value="">Seleccione un servicio</option>
+            {Object.values(giroEmpresarial).map((giro) => (
+              <option key={giro} value={giro}>
+                {giro}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+      <div className="flex flex-col gap-2 ">
+      <label
+            htmlFor="tipoServicio"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             WhatsApp con lada de país
           </label>
@@ -180,33 +202,12 @@ export const Formulario = () => {
               maxLength={10}
             />
           </div>
+          
         </div>
-      </div>
-      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
-      <div className="flex flex-col gap-4 ">
-          <label
-            htmlFor="tipoServicio"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
-          >
-            Giro empresarial <span className="text-[#FF0000]">*</span>
-          </label>
-          <select
-            name="tipoServicio"
-            id="tipoServicio"
-            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
-          >
-            <option value="">Seleccione un servicio</option>
-            {Object.values(giroEmpresarial).map((giro) => (
-              <option key={giro} value={giro}>
-                {giro}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="flex flex-col gap-4 mt-4 md:mt-0">
+        <div className="flex flex-col gap-2 mt-4 md:mt-0">
           <label
             htmlFor="horarioContacto"
-            className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+            className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             Horario para ser contactado
           </label>
@@ -224,10 +225,10 @@ export const Formulario = () => {
           </select>
         </div>
       </div>
-      <div className="flex flex-col gap-4 mt-4 md:mt-0 md:w-[754px]">
+      <div className="flex flex-col gap-2 mt-0 md:mt-0 md:w-[754px]">
         <label
           htmlFor="platicanosProyecto"
-          className="font-[700] text-[14px] md:text-[25px] leading-[18.19px] text-[#FFF] text-start"
+          className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
         >
           Pláticanos de tu proyecto <span className="text-[#FF0000]">*</span>
         </label>
