@@ -3,18 +3,24 @@
 import "../styles/globals.css";
 import CumtualElevamos from "../components/SVG/CumtualElevamos.astro";
 import ContactanosBoton from "../components/ComponetesES/ContactanosBoton.astro";
-import BotonHomeSeleccionarIdioma from '../components/Ui/BotonHomeSeleccionarIdioma'
+import BotonHomeSeleccionarIdioma from "../components/Ui/BotonHomeSeleccionarIdioma";
 ---
 
 <html>
   <head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cumtual</title>
-	</head>
-  <body class="bg-bg-gray-cumtual w-full h-screen ">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cumtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bg-gray-cumtual w-full h-screen">
     <section class="p-10 flex flex-col justify-center items-center h-[550px]">
       <CumtualElevamos />
       <div class="mt-20">
@@ -32,28 +38,32 @@ import BotonHomeSeleccionarIdioma from '../components/Ui/BotonHomeSeleccionarIdi
         const userLang = navigator.language;
         const currentPath = window.location.pathname;
         if (userLang.startsWith("es") && currentPath !== "/es-ES") {
-          window.location.href = "/es-ES"; 
+          window.location.href = "/es-ES";
         } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
-          window.location.href = "/en-EN"; 
+          window.location.href = "/en-EN";
         } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
           window.location.href = "/es-ES";
         }
         const switcher = document.getElementById("languageSwitcher");
         const texts = switcher.getElementsByTagName("p");
         let current = 0;
-  
+
         setInterval(() => {
           // Añadir animación para ocultar el texto actual
-          texts[current].classList.add("opacity-0", "transition-opacity", "duration-500");
-  
+          texts[current].classList.add(
+            "opacity-0",
+            "transition-opacity",
+            "duration-500"
+          );
+
           setTimeout(() => {
             // Ocultar el texto actual después de la animación
             texts[current].classList.add("hidden");
-  
+
             // Alternar al siguiente texto
             current = (current + 1) % texts.length;
             texts[current].classList.remove("hidden");
-  
+
             // Mostrar el siguiente texto con animación
             setTimeout(() => {
               texts[current].classList.remove("opacity-0");
@@ -64,5 +74,4 @@ import BotonHomeSeleccionarIdioma from '../components/Ui/BotonHomeSeleccionarIdi
       });
     </script>
   </body>
-  
 </html>
