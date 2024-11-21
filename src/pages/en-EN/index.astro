@@ -30,7 +30,9 @@ const url = "en-EN/";
   >
     <CumtualElevamos />
     <div class="mt-20">
-      <ContactUs />
+      <button type="button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});" class="btn btn-white btn-animated">
+        Contact us
+      </button>
     </div>
     <div class="mt-20 svg-icon">
       <SlideIcon />
@@ -171,7 +173,7 @@ const url = "en-EN/";
     <!-- <h2 class="text-gradient text-[25px] font-[600] leading-[32.49px]">
       Lleva tu negocio a la cumbre virtual
     </h2> -->
-    <div class="w-full md:flex justify-center mt-[48px]">
+    <div class="w-full md:flex justify-center mt-[48px]" id="form">
       <Form />
     </div>
   </article>

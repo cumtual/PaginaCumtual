@@ -26,13 +26,13 @@ const NavBar = ({ idioma }: NavBarProps) => {
       </div>
       <a
         className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300"
-        href="#"
+        href={idioma === 'es' ? "/es-ES/acerca-de-nosotros" : "/en-EN/about-us"}
       >
         {idioma === 'es' ? 'Acerca de nosotros' : 'About us'}
       </a>
       <a
         className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300"
-        href="/es-ES/contactanos"
+        href={idioma === 'es' ? "/es-ES/contactanos" : "/en-EN/contact-us"}
       >
         {idioma === 'es' ? 'Contáctanos' : 'Contact us'}
       </a>

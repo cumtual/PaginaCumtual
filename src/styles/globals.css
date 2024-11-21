@@ -391,3 +391,74 @@ body {
 .section-gradient-pc{
   background: conic-gradient(from 180deg at 50% 0%, rgba(192, 192, 192, 0.6) 0deg, rgba(25, 26, 30, 0) 72.0deg, rgba(25, 26, 30, 0) 288.0deg, rgba(192, 192, 192, 0.6) 360deg);
 }
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left bottom; /* Comienza desde la izquierda */
+  }
+  50% {
+    background-position: right bottom; /* Desplaza el gradiente hacia la derecha */
+  }
+  100% {
+    background-position: left bottom; /* Vuelve a la posición inicial */
+  }
+}
+
+
+.text-gradient-animated{
+  background: linear-gradient(to right, #04e95f, #007bea);
+  background-size: 200% 100%; /* Asegura que el gradiente cubra dos veces el ancho del texto */
+  background-position: left bottom; /* Empieza desde la izquierda */
+  -webkit-background-clip: text; /* Para WebKit (Chrome, Safari) */
+  text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
+  color: white; /* Color inicial del texto */
+  animation: gradient-animation 5s linear infinite, color-change 3s ease-in-out infinite; /* Añade la animación para cambiar el color */
+}
+
+@keyframes color-change {
+  0% {
+    color: white; /* Comienza en blanco */
+  }
+  50% {
+    color: transparent; /* Se vuelve transparente para mostrar el gradiente */
+  }
+  100% {
+    color: white; /* Vuelve a blanco */
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0); /* La imagen está en su posición original */
+  }
+  50% {
+    transform: translateY(-5px); /* La imagen sube 20px */
+  }
+  100% {
+    transform: translateY(0); /* La imagen vuelve a su posición original */
+  }
+}
+
+.img-jump {
+  animation: jump 2s ease-in-out infinite;
+  animation-delay: 0s, 5s; /* Se repite cada 5 segundos */
+}
+
+.img-slide-left{
+  animation: slideleft 2s ease-in-out infinite;
+  animation-delay: 0s, 5s;
+}
+
+.img-slide-right{
+  animation: slideright 2s ease-in-out infinite;
+  animation-delay: 0s, 5s;
+}
+
+.img-zoom {
+  transition: transform .7s ease-in-out; /* Animación suave de 0.3 segundos */
+}
+
+.img-zoom:hover {
+  transform: scale(1.2); /* Aumenta el tamaño de la imagen al 120% */
+}
