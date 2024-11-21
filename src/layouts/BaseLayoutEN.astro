@@ -1,22 +1,44 @@
 ---
-import Header from '../components/ComponetesES/Header.astro';
-const {pageTitle} = Astro.props;
-import { BotonWhatsapp } from '../components/Ui/BotonWhatsapp';
-import Footer from '../components/Footer.astro';
+import Header from "../components/ComponetesES/Header.astro";
+const { pageTitle, description, url } = Astro.props;
+import { BotonWhatsapp } from "../components/Ui/BotonWhatsapp";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cumtual - {pageTitle}</title>
-	</head>
-	<body class="bg-bg-gray-cumtual p-10">
-		<Header idioma="en"/>
-        <slot />
-		<BotonWhatsapp client:load idioma="en" />
-		<Footer idioma="en"/>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cumtual - {pageTitle}</title>
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:url"
+      content={`https://cumtual-demo.netlify.app/${url}`}
+    />
+    <meta
+      property="og:image"
+      content={"https://cumtual-demo.netlify.app/logocumtual-23.webp"}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="304.86" />
+    <meta property="og:image:height" content="181.79" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bg-gray-cumtual">
+    <Header idioma="en" />
+    <div class="">
+      <slot />
+    </div>
+    <BotonWhatsapp client:load idioma="en" />
+    <Footer idioma="en" />
+  </body>
 </html>

@@ -1,31 +1,30 @@
 ---
-import BaseLayoutES from "../../../../layouts/BaseLayoutES.astro";
+import BaseLayoutEN from '../../../../layouts/BaseLayoutEN.astro'
 import "../../../../styles/globals.css";
 import ContactanosBoton from "../../../../components/ComponetesES/ContactanosBoton.astro";
-const pageTitle = "Desarrollo web a la medida";
+import ContactUs from "../../../../components/ComponentesEN/ContactUs.astro";
+const pageTitle = "Custom web development";
 ---
 
-<BaseLayoutES pageTitle={pageTitle}>
+<BaseLayoutEN pageTitle={pageTitle}>
   <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40">
-    Desarrollo web a la medida
+    Custom web development
   </h1>
   <article class="flex flex-col gap-8 mt-8 md:mt-32 ">
     <section class="flex justify-center flex-col items-center px-[30px] md:px-40">
       <p
-        class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px] md:w-[754px] text-center"
-      >
-        Desarrollo web completamente <span class="text-[#FFF]"
-          >personalizado y adaptado a las necesidades específicas
-        </span>snap del proyecto del cliente, sin plantillas.
-      </p>
-      <p
-        class="text-[#7C7C7C] font-[600] text-[14px] text-center mt-6 md:text-[20px] md:leading-[25.99px]"
-      >
-        El desarrollo web <span class="text-gradient">a la medida </span> implica
-        un enfoque personalizado que considera:
-      </p>
+      class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px] md:w-[754px] text-center"
+    >
+      Fully <span class="text-[#FFF]">customized web development</span> tailored to the specific needs of the client's project, without templates.
+    </p>
+    <p
+      class="text-[#7C7C7C] font-[600] text-[14px] text-center mt-6 md:text-[20px] md:leading-[25.99px]"
+    >
+      <span class="text-gradient">Custom</span> web development involves a personalized approach that considers:
+    </p>
+    
       <div class="flex justify-center items-center mt-12 ">
-        <ContactanosBoton />
+        <ContactUs />
       </div>
     </section>
     <!-- <section class="flex justify-center items-center mt-8">
@@ -41,7 +40,7 @@ const pageTitle = "Desarrollo web a la medida";
     </section> -->
     <section class="w-full h-[750px]  section-gradient flex flex-col gap-10 md:hidden mt-[48px]">
       <div class="flex gap-4 justify-center items-center mt-10">
-        <div class='svg-icon-left'>
+        <div>
           <svg width="83" height="111" viewBox="0 0 83 111" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M73.0161 9.58595H31.8092C27.6586 9.58595 24.2939 12.9506 24.2939 17.1012V103.256C24.2939 107.406 27.6586 110.771 31.8092 110.771H73.0161C77.1666 110.771 80.5313 107.406 80.5313 103.256V17.1012C80.5313 12.9506 77.1666 9.58595 73.0161 9.58595Z" fill="#191A1E"/>
             <path d="M77.8091 104.064V17.4933H27.0156V104.064C27.0156 106.241 28.7952 108.006 30.9861 108.006H73.8386C76.0296 108.006 77.8091 106.241 77.8091 104.064Z" fill="white"/>
@@ -103,12 +102,13 @@ const pageTitle = "Desarrollo web a la medida";
             </linearGradient>
             </defs>
             </svg>
+            
         </div>
-        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[77px] text-center svg-icon-right">E-commerce Personalizado</p>
+        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[77px] text-center">Custom E-commerce</p>
       </div>
       <div class="flex gap-4 justify-center items-center">
-        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[31px] text-center svg-icon-left">Blogs</p>
-        <div class='svg-icon-right'>
+        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[31px] text-center">Blogs</p>
+        <div>
           <svg width="102" height="125" viewBox="0 0 102 125" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.4125 72.3352C9.32867 72.34 8.34992 71.6859 7.93932 70.6785L0.114067 51.4328C0.114067 51.4328 -0.621217 49.9002 1.64186 49.8906C3.90493 49.8811 100.234 49.4562 100.234 49.4562C100.234 49.4562 102.014 49.6519 101.695 50.8646C101.432 51.8673 95.8794 65.5364 93.9267 70.3252C93.5208 71.323 92.5564 71.9723 91.4774 71.9771L10.4125 72.3352Z" fill="#DDDEE0"/>
             <path d="M91.0001 123.942L10.5702 124.295C9.11403 124.3 7.91565 123.116 7.9061 121.655L7.70558 76.3266C7.70081 74.8704 8.88488 73.6721 10.3458 73.6625L90.7757 73.3092C92.2319 73.3044 93.4303 74.4885 93.4398 75.9495L93.6404 121.278C93.6451 122.734 92.4611 123.932 91.0001 123.942Z" fill="#DDDEE0"/>
@@ -180,7 +180,7 @@ const pageTitle = "Desarrollo web a la medida";
         </div>
       </div>
       <div class="flex gap-4 justify-center items-center">
-        <div class="svg-icon-left">
+        <div>
           <svg width="120" height="93" viewBox="0 0 120 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M116.474 0.299927H3.52637C1.57603 0.299927 0 1.75325 0 3.55174V77.1172C0 78.9112 1.57603 80.369 3.52637 80.369H46.8771C46.8771 80.369 49.6351 88.2306 41.0852 92.2999H81.6187C81.6187 92.2999 71.9655 89.2479 74.4478 80.369H116.474C118.419 80.369 120 78.9112 120 77.1172V3.55174C120 1.75779 118.419 0.299927 116.474 0.299927Z" fill="#191A1E"/>
             <path d="M6.72266 1.6488H113.282C115.917 1.6488 118.059 3.62442 118.059 6.05419V66.9122H1.94531V6.04965C1.94531 3.61988 4.0828 1.6488 6.72266 1.6488Z" fill="white"/>
@@ -250,11 +250,11 @@ const pageTitle = "Desarrollo web a la medida";
             </defs>
           </svg>
         </div>
-        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[74px] text-center svg-icon-right">Landing Page</p>
+        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[74px] text-center">Landing Page</p>
       </div>
       <div class="flex gap-4 justify-center items-center">
-        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[85px] text-center svg-icon-left">Sistemas Administrativos</p>
-        <div class="svg-icon-right">
+        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[85px] text-center">Administrative Systems</p>
+        <div>
           <svg width="118" height="121" viewBox="0 0 118 121" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.83" d="M73.3861 94.7844L61.3797 87.8489C61.1047 87.6894 61.1377 87.4089 61.4567 87.2219L76.0372 78.8014C77.0217 78.2349 77.1261 77.3714 76.2736 76.8764L63.1947 69.325C62.9087 69.16 62.4027 69.182 62.0727 69.369C61.7427 69.5615 61.7042 69.853 61.9902 70.018L75.0692 77.5695C75.3442 77.729 75.3112 78.0094 74.9922 78.1964L60.4117 86.6169C59.4272 87.1834 59.3227 88.0469 60.1752 88.5419L72.1817 95.4774C72.4677 95.6424 72.9736 95.6204 73.3036 95.4334C73.6336 95.2409 73.6721 94.9494 73.3861 94.7844Z" fill="#00FFFF"/>
             <path opacity="0.38" d="M69.7286 60.9208C69.6461 60.5083 69.8772 59.9198 70.2402 59.6008L77.3407 53.3748L75.6301 44.7728C75.4706 43.9589 75.9217 42.7819 76.6422 42.1549L94.0936 26.8539C94.4566 26.5349 94.8196 26.6119 94.9021 27.0189C94.9846 27.4259 94.7536 28.0199 94.3906 28.3389L76.9501 43.6289L78.6606 52.2308C78.8201 53.0448 78.3691 54.2218 77.6486 54.8488L70.5372 61.0803C70.1742 61.3993 69.8111 61.3223 69.7286 60.9153V60.9208Z" fill="#00FFFF"/>
@@ -539,7 +539,7 @@ const pageTitle = "Desarrollo web a la medida";
         </div>
       </div>
       <div class="flex gap-4 justify-center items-center">
-        <div class="svg-icon-left">
+        <div>
           <svg width="123" height="74" viewBox="0 0 123 74" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M62.3239 37.4365C62.1632 31.2757 61.2772 2.39092 61.2634 2.39551C26.833 3.66714 0.702637 9.87378 0.702637 17.3383C0.702637 23.1823 16.9951 44.116 40.1828 39.7089V38.9652C47.0046 38.2261 54.4554 37.7073 62.3239 37.4411V37.4365Z" fill="url(#paint0_linear_1079_912)"/>
             <path opacity="0.15" d="M40.1826 39.7039V38.9602C46.8759 38.2348 54.1797 37.7207 61.8876 37.4498C61.5938 27.745 61.2678 17.1956 61.2586 17.1956C35.8031 18.1367 14.8878 21.7725 5.71094 26.6203C12.2389 34.2501 24.6614 42.6465 40.178 39.6993L40.1826 39.7039Z" fill="#2D2D30"/>
@@ -808,14 +808,14 @@ const pageTitle = "Desarrollo web a la medida";
             </svg>
             
         </div>
-        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[140px] text-center svg-icon-right">Catálogo web de Productos Administrables</p>
+        <p class=" font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[140px] text-center">Web Catalog of Manageable Products</p>
       </div>
     </section>
     <section class="w-full h-[601px] section-gradient-pc md:flex md:flex-col gap-10 hidden mt-[8px]">
       <div class=" flex justify-around mt-10">
         <div class="flex gap-8 items-center justify-center">
-          <p class="font-[600] text-[20px] w-[129px] leading-[22px] text-center text-[#FFF] svg-icon-right">E-commerce Personalizado</p>
-          <div class="svg-icon-left">
+          <p class="font-[600] text-[20px] w-[129px] leading-[22px] text-center text-[#FFF]">Custom E-commerce</p>
+          <div>
             <svg width="138" height="186" viewBox="0 0 138 186" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M120.848 16.1489H52.0064C45.0723 16.1489 39.4512 21.7701 39.4512 28.7041V172.637C39.4512 179.571 45.0723 185.193 52.0064 185.193H120.848C127.782 185.193 133.403 179.571 133.403 172.637V28.7041C133.403 21.7701 127.782 16.1489 120.848 16.1489Z" fill="#191A1E"/>
               <path d="M128.856 173.988V29.3594H43.9985V173.988C43.9985 177.624 46.9715 180.573 50.6318 180.573H122.223C125.883 180.573 128.856 177.624 128.856 173.988Z" fill="white"/>
@@ -882,7 +882,7 @@ const pageTitle = "Desarrollo web a la medida";
           </div>
         </div>
         <div class="flex gap-8 items-center justify-center">
-          <div class="svg-icon-right">
+          <div>
             <svg width="171" height="207" viewBox="0 0 171 207" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.3535 120.142C16.5428 120.15 14.9077 119.058 14.2217 117.375L1.14857 85.2221C1.14857 85.2221 -0.0798202 82.6617 3.70096 82.6457C7.48173 82.6298 168.412 81.9199 168.412 81.9199C168.412 81.9199 171.387 82.247 170.853 84.2729C170.414 85.948 161.138 108.784 157.875 116.784C157.197 118.451 155.586 119.536 153.783 119.544L18.3535 120.142Z" fill="#DDDEE0"/>
               <path d="M152.986 206.358L18.6169 206.949C16.1841 206.957 14.182 204.979 14.1661 202.538L13.8311 126.811C13.8231 124.378 15.8013 122.376 18.242 122.36L152.611 121.77C155.044 121.762 157.046 123.74 157.062 126.18L157.397 201.908C157.405 204.34 155.427 206.342 152.986 206.358Z" fill="#DDDEE0"/>
@@ -953,12 +953,12 @@ const pageTitle = "Desarrollo web a la medida";
               </svg>
               
           </div>
-          <p class="font-medium text-[20px] w-[51px] leading-[16px] text-center text-[#FFF] svg-icon-left">Blogs</p>
+          <p class="font-medium text-[20px] w-[51px] leading-[16px] text-center text-[#FFF]">Blogs</p>
         </div>
       </div>
       <div class="flex justify-around">
         <div class="flex flex-col gap-8 justify-center items-center">
-          <div class="svg-icon-left">
+          <div class="">
             <svg width="261" height="165" viewBox="0 0 261 165" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M252.369 0.209473H7.68846C3.47412 0.209473 0.0551758 2.81437 0.0551758 6.02526V137.699C0.0551758 140.91 3.47412 143.515 7.68846 143.515H101.603C101.603 143.515 107.574 157.588 89.0549 164.869H176.867C176.867 164.869 155.962 159.406 161.34 143.515H252.381C256.596 143.515 260.015 140.91 260.015 137.699V6.02526C260.015 2.81437 256.596 0.209473 252.381 0.209473H252.369Z" fill="#191A1E"/>
               <path d="M17.0088 5.78516H242.778C249.053 5.78516 254.155 9.61314 254.155 14.3211V119.437H5.64355V14.3211C5.64355 9.61314 10.7456 5.78516 17.0206 5.78516H17.0088Z" fill="white"/>
@@ -1027,10 +1027,10 @@ const pageTitle = "Desarrollo web a la medida";
               </svg>
               
           </div>
-          <p class="font-medium text-[20px] leading-[25.99px] text-center text-[#FFF] svg-icon-left">Landing Page</p>
+          <p class="font-medium text-[20px] leading-[25.99px] text-center text-[#FFF]">Landing Page</p>
         </div>
         <div class="flex flex-col gap-8 justify-center items-center">
-          <div class="svg-icon">
+          <div class="">
             <svg width="198" height="202" viewBox="0 0 198 202" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.83" d="M123.181 158.29L103.122 146.704C102.663 146.437 102.718 145.969 103.251 145.656L127.61 131.589C129.255 130.642 129.429 129.2 128.005 128.373L106.155 115.757C105.677 115.481 104.832 115.518 104.28 115.831C103.729 116.152 103.665 116.639 104.142 116.915L125.993 129.531C126.452 129.797 126.397 130.266 125.864 130.578L101.505 144.646C99.8606 145.592 99.6859 147.035 101.11 147.862L121.169 159.448C121.646 159.724 122.492 159.687 123.043 159.375C123.594 159.053 123.659 158.566 123.181 158.29Z" fill="#00FFFF"/>
               <path opacity="0.38" d="M117.07 101.717C116.933 101.028 117.319 100.044 117.925 99.5114L129.787 89.1101L126.93 74.7393C126.663 73.3794 127.417 71.413 128.62 70.3656L157.775 44.8032C158.382 44.2703 158.988 44.3989 159.126 45.0789C159.264 45.7588 158.878 46.7512 158.272 47.2841L129.135 72.8281L131.992 87.1989C132.259 88.5588 131.506 90.5251 130.302 91.5726L118.421 101.983C117.815 102.516 117.208 102.387 117.07 101.707V101.717Z" fill="#00FFFF"/>
@@ -1315,10 +1315,10 @@ const pageTitle = "Desarrollo web a la medida";
               
               
           </div>
-          <p class="font-medium text-[20px] w-[142px] leading-[25.99px] text-center text-[#FFF] svg-icon">Sistemas Administrativos</p>
+          <p class="font-medium text-[20px] w-[142px] leading-[25.99px] text-center text-[#FFF]">Administrative Systems</p>
         </div>
         <div class="flex flex-col gap-8 justify-center items-center">
-          <div class="svg-icon-right">
+          <div class="">
             <svg width="261" height="157" viewBox="0 0 261 157" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M131.127 79.0127C130.785 65.9113 128.901 4.48487 128.872 4.49463C55.6519 7.19888 0.0830078 20.3979 0.0830078 36.2719C0.0830078 48.6998 34.7306 93.2174 84.0415 83.8452V82.2637C98.5488 80.6919 114.394 79.5887 131.127 79.0225V79.0127Z" fill="url(#paint0_linear_1062_302)"/>
               <path opacity="0.15" d="M84.0414 83.8349V82.2534C98.2753 80.7109 113.808 79.6174 130.199 79.0414C129.574 58.4032 128.881 35.9688 128.862 35.9688C74.7279 37.9701 30.2494 45.7021 10.7339 56.0114C24.6163 72.2369 51.0339 90.0927 84.0316 83.8251L84.0414 83.8349Z" fill="#2D2D30"/>
@@ -1588,7 +1588,7 @@ const pageTitle = "Desarrollo web a la medida";
               
               
           </div>
-          <p class="font-medium text-[20px] leading-[24px] w-[255px] text-center text-[#FFF] svg-icon-right">Catálogo Web de Productos Administrables</p>
+          <p class="font-medium text-[20px] leading-[24px] w-[255px] text-center text-[#FFF]">Web Catalog of Manageable Products</p>
         </div>
       </div>
     </section>
@@ -1625,11 +1625,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">
-          Requerimientos específicos
+            Specific requirements
         </h2>
         <p class="text-[14px]">
-          Diseñamos con base a las necesidades e intereses del cliente
-          otorganido un diseño 100% personalizado.
+            We design based on the needs and interests of the client, providing a 100% custom design.
         </p>
       </div>
     </section>
@@ -1678,12 +1677,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">
-          Identidad corporativa
+            Corporate Identity
         </h2>
         <p class="text-[14px]">
-          Nos aseguramos de que el sitio web refleje la marca y la identidad
-          visual del cliente (paletas de colores, tipografías y otros elementos
-          gráficos).
+            We ensure that the website reflects the client's brand and visual identity (color palettes, typography, and other graphic elements).
         </p>
       </div>
     </section>
@@ -1691,7 +1688,7 @@ const pageTitle = "Desarrollo web a la medida";
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-8"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
-        <h2 class="font-[600] text-[#FFF] text-[24px]">Trabajemos juntos</h2>
+        <h2 class="font-[600] text-[#FFF] text-[24px]">Let's work together</h2>
         <div>
           <svg
             width="42"
@@ -4078,11 +4075,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">
-          Experiencia de usuario
+            User Experience
         </h2>
         <p class="text-[14px]">
-          Diseñamos pensando en una navegación intuitiva y una interacción
-          fluida
+            We design with intuitive navigation and smooth interaction in mind.
         </p>
       </div>
     </section>
@@ -4116,10 +4112,9 @@ const pageTitle = "Desarrollo web a la medida";
             </defs>
           </svg>
         </div>
-        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Optimización</h2>
+        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Optimization</h2>
         <p class="text-[14px]">
-          Optimizamos el sitio para un rendimiento y velocidad óptimos,
-          considerando aspectos como la carga rápida de páginas
+          We optimize the site for optimal performance and speed, considering factors such as fast page load times.
         </p>
       </div>
     </section>
@@ -4195,11 +4190,9 @@ const pageTitle = "Desarrollo web a la medida";
             </defs>
           </svg>
         </div>
-        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Diseño responsivo</h2>
+        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Responsive design</h2>
         <p class="text-[14px]">
-          Ofrecemos una experiencia fluida y funcional, independientemente de si
-          el usuario está en un ordenador de escritorio, una tableta o un
-          teléfono móvil.
+            We offer a smooth and functional experience, whether the user is on a desktop, tablet, or mobile phone.
         </p>
       </div>
     </section>
@@ -4237,11 +4230,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Requerimientos específicos
+          Specific requirements
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          Diseñamos con base en las necesidades e intereses del cliente
-          otorganido un diseño 100% personalizado.
+          We design based on the needs and interests of the client, providing a 100% custom design.
         </p>
       </div>
     </section>
@@ -6598,11 +6590,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Experiencia de usuario
+          User experience
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          Diseñamos pensando en un navegación intuitiva y una interacción
-          fluida.
+            We design with intuitive navigation and smooth interaction in mind.
         </p>
       </div>
     </section>
@@ -6649,11 +6640,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Optimización
+          Optimization
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          Optimizamos el sitio para un rendimiento y velocidad óptimos,
-          considerando aspectos como la carga rápida de páginas.
+          We optimize the site for optimal performance and speed, considering factors such as fast page load times.
         </p>
       </div>
     </section>
@@ -6704,12 +6694,10 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Identidad corporativa
+            Corporate Identity
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400]">
-          Nos aseguramos de que el sitio web refleje la marca y la identidad
-          visual del cliente (paletas de colores, tipografías y otros elementos
-          gráficos).
+            We ensure that the website reflects the client's brand and visual identity (color palettes, typography, and other graphic elements).
         </p>
       </div>
     </section>
@@ -6786,17 +6774,15 @@ const pageTitle = "Desarrollo web a la medida";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Diseño responsivo
+          Responsive design
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400]">
-          Ofrecemos una experiencia fluida y funcional, independientemente de si
-          el usuario está en un ordenador de escritorio, una tableta o un
-          teléfono móvil.
+          We offer a smooth and functional experience, whether the user is on a desktop, tablet, or mobile phone.
         </p>
       </div>
     </section>
   </article>
   <div class='mt-[48px] hidden md:flex md:justify-center px-[30px]'>
-    <ContactanosBoton/>
+    <ContactUs/>
   </div>
-</BaseLayoutES>
+</BaseLayoutEN>

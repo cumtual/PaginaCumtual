@@ -1,6 +1,11 @@
 import { isSliderOpen } from './MenuStore';
 
-const NavBar = () => {
+interface NavBarProps {
+  idioma: string
+}
+
+
+const NavBar = ({ idioma }: NavBarProps) => {
 
   const handleMouseLeave = () => {
     setTimeout(()=>{
@@ -16,20 +21,20 @@ const NavBar = () => {
         onMouseLeave={handleMouseLeave}
       >
         <p className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300 cursor-pointer">
-          Servicios
+          {idioma === 'es' ? 'Servicios' : 'Services'}
         </p>
       </div>
       <a
         className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300"
         href="#"
       >
-        Acerca de nosotros
+        {idioma === 'es' ? 'Acerca de nosotros' : 'About us'}
       </a>
       <a
         className="text-[#FFF] font-[400] text-[18px] leading-[21.09px] hover:text-[#777] transition-colors ease-in-out delay-100 duration-300"
         href="/es-ES/contactanos"
       >
-        Contáctanos
+        {idioma === 'es' ? 'Contáctanos' : 'Contact us'}
       </a>
     </nav>
   );

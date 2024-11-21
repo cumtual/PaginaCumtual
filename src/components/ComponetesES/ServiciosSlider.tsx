@@ -2,7 +2,12 @@ import { useStore } from "@nanostores/react";
 import { isSliderOpen } from "./MenuStore";
 import { useState } from "react";
 
-const ServiciosSlider = () => {
+
+interface ServiciosSliderProps {
+  idioma: string
+}
+
+const ServiciosSlider = ({idioma}: ServiciosSliderProps) => {
   const $isSliderOpen = useStore(isSliderOpen);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -28,13 +33,26 @@ const ServiciosSlider = () => {
     >
       <ul className="p-4 text-center">
         <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300">
+          
+          {idioma === 'es' ? 
           <a href="/es-ES/servicios/desarrollo-web-a-la-medida">Desarrollo web a la medida</a>
+          : 
+          <a href="/en-EN/services/custom-web-development">Custom web development</a>
+          }
         </li>
         <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300">
+        {idioma === 'es' ? 
           <a href="/es-ES/servicios/almacenamiento-en-la-nube">Almacenamiento en la nube</a>
+          : 
+          <a href="/en-EN/services/cloud-storage">Cloud storage</a>
+          }
         </li>
         <li className="py-2 cursor-pointer font-[400] text-[18px] leading-[25.99px] text-[#FFF] hover:text-[#777] ease-in-out transition-colors delay-100 duration-300">
+        {idioma === 'es' ? 
           <a href="/es-ES/servicios/portafolio-logos">Logos</a>
+          : 
+          <a href="/en-EN/services/logos">Logos</a>
+          }
         </li>
       </ul>
     </div>

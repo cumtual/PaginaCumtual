@@ -67,8 +67,8 @@ const { idioma } = Astro.props;
             <Slider idioma={idioma} client:load />
         </div>
         <div class="hidden md:block">
-            <NavBar client:load/>
-            <ServiciosSlider client:load/>
+            <NavBar idioma={idioma} client:load/>
+            <ServiciosSlider idioma={idioma} client:load/>
         </div>
     </nav>
 </header>

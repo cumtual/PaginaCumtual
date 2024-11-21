@@ -280,6 +280,40 @@ body {
   animation: jump 2s ease-in-out infinite;
 }
 
+@keyframes slideleft {
+  0% {
+    transform: translateX(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateX(-10px); /* Subir el ícono */
+  }
+  100% {
+    transform: translateX(0); /* Volver a la posición inicial */
+  }
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateX(10px); /* Subir el ícono */
+  }
+  100% {
+    transform: translateX(0); /* Volver a la posición inicial */
+  }
+}
+
+.svg-icon-left{
+  display: inline-block;
+  transform-origin: center; /* Asegura que el SVG salte desde el centro */
+  animation: slideleft 5s ease-in-out infinite;
+}
+.svg-icon-right{
+  display: inline-block;
+  transform-origin: center; /* Asegura que el SVG salte desde el centro */
+  animation: slideright 5s ease-in-out infinite;
+}
+
 .carrucel {
   align-items: center;
   background: #ffff;

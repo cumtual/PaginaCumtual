@@ -28,7 +28,9 @@ const url = "es-ES/";
   <article class=" flex flex-col justify-center items-center h-[550px] px-[70px]">
     <CumtualElevamos />
     <div class="mt-20">
-      <ContactanosBoton />
+      <button type="button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});" class="btn btn-white btn-animated">
+        Contáctanos
+      </button>
     </div>
     <div class="mt-20 svg-icon">
       <SlideIcon />
@@ -168,7 +170,7 @@ const url = "es-ES/";
     <!-- <h2 class="text-gradient text-[25px] font-[600] leading-[32.49px]">
       Lleva tu negocio a la cumbre virtual
     </h2> -->
-    <div class="w-full md:flex justify-center mt-[48px]">
+    <div class="w-full md:flex justify-center mt-[48px]" id="form">
       <Formulario />
     </div>
   </article>
