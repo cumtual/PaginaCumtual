@@ -1,7 +1,6 @@
 ---
 import BaseLayoutES from "../../layouts/BaseLayoutES.astro";
 import CumtualElevamos from "../../components/SVG/CumtualElevamos.astro";
-import ContactanosBoton from "../../components/ComponetesES/ContactanosBoton.astro";
 import InsiginaCalidad from "../../components/SVG/InsigniaCalidad.astro";
 import SlideIcon from "../../components/SVG/SlideIcon.astro";
 
@@ -25,10 +24,16 @@ const url = "es-ES/";
 ---
 
 <BaseLayoutES pageTitle={pageTitle} description={description} url={url}>
-  <article class=" flex flex-col justify-center items-center h-[550px] px-[70px]">
+  <article
+    class="flex flex-col justify-center items-center h-[550px] px-[70px]"
+  >
     <CumtualElevamos />
     <div class="mt-20">
-      <button type="button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});" class="btn btn-white btn-animated">
+      <button
+        type="button"
+        onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});"
+        class="btn btn-white btn-animated"
+      >
         Contáctanos
       </button>
     </div>
@@ -36,7 +41,9 @@ const url = "es-ES/";
       <SlideIcon />
     </div>
   </article>
-  <article class="flex flex-col justify-center items-center text-center mt-20 px-[30px]">
+  <article
+    class="flex flex-col justify-center items-center text-center mt-20 px-[30px]"
+  >
     <p
       class="font-[600] text-[14px] md:w-[790px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]"
     >
@@ -83,7 +90,9 @@ const url = "es-ES/";
       </section>
     </div>
   </article>
-  <article class="mt-[28px] md:mt-[18px] ejemplo md:flex md:justify-center px-[30px]">
+  <article
+    class="mt-[28px] md:mt-[18px] ejemplo md:flex md:justify-center px-[30px]"
+  >
     <section class="flex flex-col justify-start gap-2 text-center">
       <h2 class="font-[600] text-[#FFF] text-[24px] text-start">
         Nuestros servicios
@@ -99,7 +108,7 @@ const url = "es-ES/";
             <NubeIconPC />
           </div>
           <p
-            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full leading-[20.09px] md:h-[40px]"
+            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full leading-[20.09px] md:h-[40px] text-gradient-animated"
           >
             Almacenamiento <br /> en la nube
           </p>
@@ -115,7 +124,7 @@ const url = "es-ES/";
           </div>
           <div class="px-2 w-full">
             <p
-              class="font-[600] text-[#FFF] text-[15.46px] text-center leading-[20.09px] px-2 md:text-center md:h-[40px]"
+              class="font-[600] text-[#FFF] text-[15.46px] text-center leading-[20.09px] px-2 md:text-center md:h-[40px] text-gradient-animated"
             >
               Logos
             </p>
@@ -134,7 +143,7 @@ const url = "es-ES/";
           </div>
           <div class="px-2 w-full">
             <p
-              class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end md:text-center leading-[20.09px]"
+              class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end md:text-center leading-[20.09px] text-gradient-animated"
             >
               Desarrollo web <br class="block md:hidden" />a la medida
             </p>
@@ -164,9 +173,7 @@ const url = "es-ES/";
       hrs.
     </p>
   </article>
-  <article
-    class="text-center flex flex-col justify-center px-[30px]"
-  >
+  <article class="text-center flex flex-col justify-center px-[30px]">
     <!-- <h2 class="text-gradient text-[25px] font-[600] leading-[32.49px]">
       Lleva tu negocio a la cumbre virtual
     </h2> -->
