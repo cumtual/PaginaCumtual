@@ -466,9 +466,9 @@ body {
 
 .contenedor-imagenes{
   display: flex;
-  width: 850px;
-  height: 602px;
-  gap: 10px;
+  width: 380px;
+  height: 264px;
+  gap: 5px;
 }
 
 
@@ -493,7 +493,7 @@ body {
 
 .contenedor-imagenes div:hover {
   cursor: pointer;
-  width: 300px;
+  width: 120px;
   filter: contrast(120%);
   padding: 2px;
   transform: translate(90deg);
@@ -501,9 +501,9 @@ body {
 
 .texto-sobre-imagen {
   position: absolute;
-  bottom: 24%;
-  left: -50.5%;
-  width: 135%;
+  bottom: 29%;
+  left: -59.5%;
+  width: 155%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
@@ -525,16 +525,17 @@ body {
 }
 
 .contenedor-imagenes .contenedor-imagen .texto-sobre-imagen {
-  transform: rotate(270deg);
+  transform: rotate(-90deg);
   transition: transform 0.5s ease; /* Añadimos transición para el cambio suave */
   animation-delay: 1s;
 
 }
 .contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen {
   transform: rotate(0deg);  /* El texto se vuelve horizontal */
-  top: 60%;
+  top: 51%;
   left: 0;
   width: 100%;
+  height: 130px;
 }
 
 
@@ -563,3 +564,27 @@ body {
   display: none;
 }
 
+@media (min-width: 768px){
+  .contenedor-imagenes{
+    width: 850px;
+    height: 602px;
+    gap: 10px;
+  }
+  .texto-sobre-imagen {
+    position: absolute;
+    bottom: 24%;
+    left: -50.5%;
+    width: 135%;
+  }
+  .contenedor-imagenes div:hover {
+    cursor: pointer;
+    width: 300px;
+  }
+  .contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen {
+    transform: rotate(0deg);  /* El texto se vuelve horizontal */
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
