@@ -119,7 +119,7 @@ export const Form = () => {
           <input
             className="w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             type="text"
-            placeholder="Nombre Completo"
+            placeholder="Full Name"
             id="name"
           />
         </div>
@@ -151,7 +151,7 @@ export const Form = () => {
             id="tipoServicio"
             className=" w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
           >
-            <option value="">Seleccione un servicio</option>
+            <option value="">Select service</option>
             {Object.values(serviceType).map((servicio) => (
               <option key={servicio} value={servicio}>
                 {servicio}
@@ -171,7 +171,7 @@ export const Form = () => {
             id="tipoServicio"
             className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
           >
-            <option value="">Select a service</option>
+            <option value="">Select business sector</option>
             {Object.values(businessSector).map((giro) => (
               <option key={giro} value={giro}>
                 {giro}
