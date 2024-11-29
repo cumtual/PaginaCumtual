@@ -1,5 +1,4 @@
 import {  useState } from "react";
-import { Boton } from "../botonHeaderMX/botonHeaderES/Boton";
 import { OpcionHome } from "./OpcionHome";
 
 export default function componentName() {
