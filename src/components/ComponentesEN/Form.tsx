@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 
-import "../../styles/globals.css";
+import "@styles/globals.css";
 enum serviceType {
     landing_page = "Landing Page",
     logos = "Logos",
