@@ -42,7 +42,7 @@ export default defineConfig({
 });
 ```
 
-````text
+```text
     tsconfig.json:
 ```
 
