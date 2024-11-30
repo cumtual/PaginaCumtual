@@ -12,7 +12,7 @@ npm install
 
 > 🧑‍🚀 **No puedes visualizar algo? Contacta a Luis**
 
-> 🧑‍🚀 **Recuerda que se eliminaron las rutas relativas por lo que toda ruta que sea hacia una nueva carpeta debe declararse en el archivo: **
+> 🧑‍🚀 **Recuerda que se eliminaron las rutas relativas por lo que toda ruta que sea hacia una nueva carpeta debe declararse en el archivo:**
 
 ```text
     tsconfig.json y en el archivo astro.config.mjs
