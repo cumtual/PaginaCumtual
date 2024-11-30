@@ -44,7 +44,8 @@ export default defineConfig({
 
 ````text
     tsconfig.json:
-    ```
+```
+
 ```javascript
     {
     "extends": "astro/tsconfigs/base",
@@ -60,7 +61,7 @@ export default defineConfig({
         }
     }
 }
-````
+```
 
 ## 🚀 Project Structure
 
