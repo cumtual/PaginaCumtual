@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 
-import "../../styles/globals.css";
+import "@styles/globals.css";
 enum tipoServicios {
   landing_page = "Landing page",
   logos = "Logos",
@@ -11,6 +11,16 @@ enum tipoServicios {
   blogs = "Blogs",
   catalogo_de_productos_administrables = "Catálogo de productos administrables",
 }
+const servicioIds: Record<string, number> = {
+  "Landing page": 1,
+  "Logos": 2,
+  "Almacenamiento en la nube": 3,
+  "E commerce personalizado": 4,
+  "Sistemas administrativos": 5,
+  "Blogs": 6,
+  "Catálogo de productos administrables": 7,
+};
+
 
 enum giroEmpresarial {
   biener_raices = "Bienes Raíces",
@@ -22,7 +32,16 @@ enum giroEmpresarial {
   educacion = "Educación",
   otro = "Otro",
 }
-
+const giroEmpresarialIds: Record<string, number> = {
+  "Bienes Raíces": 1,
+  "Transporte y Logística": 2,
+  "Salud": 3,
+  "Agricultura y Ganadería": 4,
+  "Tecnología": 5,
+  "Finanzas": 6,
+  "Educación": 7,
+  "Otro": 8,
+}
 enum horario {
   mañana = "Por la mañana ( 9am - 12pm)",
   medioDia = "Medio día ( 12pm - 2pm )",
@@ -77,7 +96,8 @@ export const Formulario = () => {
       return;
     }
     try {
-      //logica de back
+      const {nombre, email, tipoServicio, giroEmpresarial, platicanosProyecto} = data;
+      console.log(data)
       return console.log("enviando");
     } catch (error) {
       //error back
@@ -149,7 +169,7 @@ export const Formulario = () => {
           >
             <option value="">Seleccione un servicio</option>
             {Object.values(tipoServicios).map((servicio) => (
-              <option key={servicio} value={servicio}>
+              <option key={servicio} value={servicioIds[servicio]}>
                 {servicio}
               </option>
             ))}
@@ -169,7 +189,7 @@ export const Formulario = () => {
           >
             <option value="">Seleccione un servicio</option>
             {Object.values(giroEmpresarial).map((giro) => (
-              <option key={giro} value={giro}>
+              <option key={giro} value={giroEmpresarialIds[giro]}>
                 {giro}
               </option>
             ))}
@@ -202,7 +222,6 @@ export const Formulario = () => {
               maxLength={10}
             />
           </div>
-          
         </div>
         <div className="flex flex-col gap-2 mt-4 md:mt-0">
           <label

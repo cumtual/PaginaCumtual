@@ -10,7 +10,7 @@ export default function componentName() {
       if(!activeESP){
         setActiveESP(true)
         setActiveENG(false)
-        window.location.href = '/es-ES'
+        window.location.href = '/es-MX'
       }
     }
 

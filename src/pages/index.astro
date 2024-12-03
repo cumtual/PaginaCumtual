@@ -58,12 +58,12 @@ import BotonHomeSeleccionarIdioma from "@components/Ui/BotonHomeSeleccionarIdiom
       document.addEventListener("DOMContentLoaded", () => {
         const userLang = navigator.language;
         const currentPath = window.location.pathname;
-        if (userLang.startsWith("es") && currentPath !== "/es-ES") {
-          window.location.href = "/es-ES";
+        if (userLang.startsWith("es") && currentPath !== "/es-MX") {
+          window.location.href = "/es-MX";
         } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
           window.location.href = "/en-EN";
-        } else if (currentPath !== "/es-ES" && currentPath !== "/en-EU") {
-          window.location.href = "/es-ES";
+        } else if (currentPath !== "/es-MX" && currentPath !== "/en-EU") {
+          window.location.href = "/es-MX";
         }
         const switcher = document.getElementById("languageSwitcher");
         const texts = switcher.getElementsByTagName("p");
