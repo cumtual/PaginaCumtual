@@ -28,7 +28,7 @@ export default defineConfig({
       },
     },
   },
-  site: "https://cumtual-demo.netlify.app",
+  site: "https://cumtual.com",
   integrations: [
     tailwind(),
     react({
