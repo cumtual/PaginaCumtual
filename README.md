@@ -110,7 +110,7 @@ Inside of your Astro project, you'll see the following folders and files:
 |       └── BaseLayoutES.astro
 |       └── Layout.astro
 │   └── pages/
-|       └── en-EN/
+|       └── en-US/
 |          └── about-us
 |             └── index.astro
 |          └── contact-us
@@ -123,7 +123,7 @@ Inside of your Astro project, you'll see the following folders and files:
 |             └── logos
 |               └── index.astro
 |          └── index.astro
-|       └── en-EN/
+|       └── es-MX/
 |          └── acerca-de-nostros
 |             └── index.astro
 |          └── contactanos

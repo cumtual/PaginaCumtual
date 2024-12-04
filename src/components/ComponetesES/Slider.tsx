@@ -33,12 +33,12 @@ export const Slider = ({ idioma }: Props) => {
         <div
           className={`flex flex-col gap-4 ml-2 transition-all duration-500 ease-in-out overflow-hidden ${servicios ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
         >
-          <a href={`${idioma === 'es' ? "/es-MX/servicios/desarrollo-web-a-la-medida" : '/en-EN/services/custom-web-development'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Desarrollo web a la medida' : 'Custom Web Development'}</a>
-          <a href={`${idioma === 'es' ? "/es-MX/servicios/almacenamiento-en-la-nube" : '/en-EN/services/cloud-storage'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Almacenamiento en la nube' : 'Cloud Storage'}</a>
-          <a href={`${idioma === 'es' ? "/es-MX/servicios/portafolio-logos" : '/en-EN/services/logos'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Logos' : 'Work Samples Logos'}</a>
+          <a href={`${idioma === 'es' ? "/es-MX/servicios/desarrollo-web-a-la-medida" : '/en-US/services/custom-web-development'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Desarrollo web a la medida' : 'Custom Web Development'}</a>
+          <a href={`${idioma === 'es' ? "/es-MX/servicios/almacenamiento-en-la-nube" : '/en-US/services/cloud-storage'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Almacenamiento en la nube' : 'Cloud Storage'}</a>
+          <a href={`${idioma === 'es' ? "/es-MX/servicios/portafolio-logos" : '/en-US/services/logos'}`} className="text-sm font-extralight hover:text-green-cumtual transition-colors ease-in-out delay-100 duration-200">{idioma === 'es' ? 'Logos' : 'Work Samples Logos'}</a>
         </div>
-        <a href={`${idioma === 'es' ? "/es-MX/acerca-de-nosotros" : '/en-EN/about-us'}`} className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out">{idioma === 'es' ? 'Acerca de nosotros' : 'About Us'}</a>
-        <a href={`${idioma === 'es' ? "/es-MX/contactanos" : '/en-EN/contact-us'}`} className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out mt-4">{idioma === 'es' ? 'Contáctanos' : 'Contact Us'}</a>
+        <a href={`${idioma === 'es' ? "/es-MX/acerca-de-nosotros" : '/en-US/about-us'}`} className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out">{idioma === 'es' ? 'Acerca de nosotros' : 'About Us'}</a>
+        <a href={`${idioma === 'es' ? "/es-MX/contactanos" : '/en-US/contact-us'}`} className="hover:text-green-cumtual transition-colors duration-200 delay-100 cursor-pointer ease-in-out mt-4">{idioma === 'es' ? 'Contáctanos' : 'Contact Us'}</a>
         <div className="mt-4">
           <OpcionesIdioma idioma={idioma} />
         </div>

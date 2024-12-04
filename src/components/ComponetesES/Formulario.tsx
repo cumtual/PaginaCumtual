@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import axios, { type AxiosResponse } from "axios";
+
+
 
 import "@styles/globals.css";
 enum tipoServicios {
@@ -56,6 +59,7 @@ interface FormData {
   whatsApp?: string;
   horarioContacto?: horario;
   platicanosProyecto: string;
+  lada?:string;
 }
 
 interface Country {
@@ -63,52 +67,54 @@ interface Country {
   callingCode: string;
 }
 
+interface ComponentsProps {
+  BACK_URL: string
+}
+
 const countries: Country[] = [
-  { name: "United States", callingCode: "1" },
-  { name: "Mexico", callingCode: "52" },
-  { name: "Argentina", callingCode: "54" },
-  { name: "Spain", callingCode: "34" },
-  { name: "United Kingdom", callingCode: "44" },
+  { name: "United States", callingCode: "+1" },
+  { name: "Mexico", callingCode: "+52" },
+  { name: "Argentina", callingCode: "+54" },
+  { name: "Spain", callingCode: "+34" },
+  { name: "United Kingdom", callingCode: "+44" },
 ];
 
-export const Formulario = () => {
+export const Formulario = ({BACK_URL}: ComponentsProps) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
   const {
     register: registroContacto,
-    handleSubmit: handleRegistroSubmit,
+    handleSubmit,
     formState: { errors: errorsContacto },
     clearErrors: clearRegistroErrors,
   } = useForm<FormData>();
 
   const onSubmitRegistro: SubmitHandler<FormData> = async (data) => {
-    event?.preventDefault();
-    if (
-      [
-        data.nombre,
-        data.email,
-        data.tipoServicio,
-        data.giroEmpresarial,
-        data.platicanosProyecto,
-      ].includes("")
-    ) {
-      return;
-    }
     try {
-      const {nombre, email, tipoServicio, giroEmpresarial, platicanosProyecto} = data;
-      console.log(data)
-      return console.log("enviando");
+      const dataSend= {
+        strFullName: data.nombre,
+        strEmail: data.email,
+        intTipoServ: +data.tipoServicio,
+        intBuisness: +data.giroEmpresarial,
+        strPhone: `${data.lada} ${data.whatsApp}`,
+        strScheduleContact: data.horarioContacto,
+        strProjectDescription: data.platicanosProyecto,
+        language: 'es'
+      }
+      const dataBack: AxiosResponse = await axios.post(`${BACK_URL}/api/leads/save-lead`, dataSend);
+      setSuccessMessage('Formulario enviado');
+      return;
     } catch (error) {
-      //error back
       return console.log(error);
     }
   };
 
   return (
     <form
-      onSubmit={handleRegistroSubmit(onSubmitRegistro)}
+      onSubmit={handleSubmit(onSubmitRegistro)}
       className="w-full flex flex-col gap-4 items-center md:w-[756px]"
+      noValidate
     >
       {successMessage.length > 0 && (
         <div className="flex justify-center items-center">
@@ -137,6 +143,9 @@ export const Formulario = () => {
             type="text"
             placeholder="Nombre Completo"
             id="name"
+            {...registroContacto("nombre", {
+              required: "Nombre es requerido"
+            })}
           />
         </div>
         <div className="flex flex-col gap-2 mt-4 md:mt-0">
@@ -151,6 +160,9 @@ export const Formulario = () => {
             type="email"
             placeholder="Email"
             id="email"
+            {...registroContacto("email", {
+              required: "Email es requerido"
+            })}
           />
         </div>
       </div>
@@ -166,6 +178,9 @@ export const Formulario = () => {
             name="tipoServicio"
             id="tipoServicio"
             className=" w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("tipoServicio", {
+              required: "Tipo de servicio requerido"
+            })}
           >
             <option value="">Seleccione un servicio</option>
             {Object.values(tipoServicios).map((servicio) => (
@@ -183,11 +198,14 @@ export const Formulario = () => {
             Giro empresarial <span className="text-[#FF0000]">*</span>
           </label>
           <select
-            name="tipoServicio"
-            id="tipoServicio"
+            name="giroEmpresarial"
+            id="giroEmpresarial"
             className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("giroEmpresarial", {
+              required: "Giro Empresarial Requerido"
+            })}
           >
-            <option value="">Seleccione un servicio</option>
+            <option value="">Seleccione un Giro Empresarial</option>
             {Object.values(giroEmpresarial).map((giro) => (
               <option key={giro} value={giroEmpresarialIds[giro]}>
                 {giro}
@@ -205,10 +223,15 @@ export const Formulario = () => {
             WhatsApp con lada de país
           </label>
           <div className="w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
-            <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]">
+            <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]"
+            {...registroContacto("lada", {
+              required: "Lada es requerida"
+            })}
+            >
+              <option value="">--</option>
               {countries.map((country) => (
                 <option value={country.callingCode} key={country.callingCode}>
-                  +{country.callingCode}
+                  {country.callingCode}
                 </option>
               ))}
             </select>
@@ -220,6 +243,9 @@ export const Formulario = () => {
               className="w-[300px] h-[44px] bg-[rgb(38,40,45)]"
               minLength={10}
               maxLength={10}
+              {...registroContacto("whatsApp", {
+                required: 'WhatsApp requerido'
+              })}
             />
           </div>
         </div>
@@ -234,6 +260,9 @@ export const Formulario = () => {
             name="horarioContacto"
             id="horarioContacto"
             className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("horarioContacto", {
+              required: 'Horario de contacto requerido'
+            })}
           >
             <option value="">Seleccione un horario</option>
             {Object.values(horario).map((horariocontacto) => (
@@ -257,9 +286,12 @@ export const Formulario = () => {
           id="platicanosProyecto"
           placeholder="Escribe aquí..."
           maxLength={200}
+          {...registroContacto("platicanosProyecto", {
+            required: "Platicanos sobre tu proyecto es requerido"
+          })}
         ></textarea>
       </div>
-      <button className="btn btn-white btn-animated mt-4">Enviar</button>
+      <button className="btn btn-white btn-animated mt-4" type="submit">Enviar</button>
     </form>
   );
 };

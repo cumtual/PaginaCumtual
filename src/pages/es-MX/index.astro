@@ -15,12 +15,17 @@ import LogoIconPC from "@components/SVG/LogoIconPC.astro";
 import HerramientasDesarrollo from "@components/SVG/HerramientasDesarrollo.astro";
 import { Formulario } from "@components/ComponetesES/Formulario";
 
-import "../../styles/globals.css";
+import "@styles/globals.css";
 
 const pageTitle = "Inicio";
 const description =
   "Empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web.";
 const url = "es-MX/";
+
+import { VITE_BACK_URL } from 'astro:env/server';
+
+console.log(VITE_BACK_URL)
+
 ---
 
 <BaseLayoutES pageTitle={pageTitle} description={description} url={url}>
@@ -178,7 +183,7 @@ const url = "es-MX/";
       Lleva tu negocio a la cumbre virtual
     </h2> -->
     <div class="w-full md:flex justify-center mt-[48px]" id="form">
-      <Formulario />
+      <Formulario client:load  BACK_URL={VITE_BACK_URL}/>
     </div>
   </article>
 </BaseLayoutES>
