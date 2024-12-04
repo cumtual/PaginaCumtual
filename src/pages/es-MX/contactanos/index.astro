@@ -3,6 +3,7 @@ import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import '@styles/globals.css';
 import { Formulario } from "@components/ComponetesES/Formulario";
 const pageTitle = 'Contáctanos'
+import { VITE_BACK_URL } from 'astro:env/server';
 ---
 
 <BaseLayoutES pageTitle={pageTitle}>
@@ -11,6 +12,6 @@ const pageTitle = 'Contáctanos'
       </h1>
     <p class="font-[600] text-[24px] text-center leading-[31.19px] mt-24 text-gradient-animated">Lleva tu empresa a la cumbre virtual.</p>
     <div class="mt-14 md:mt-28 flex justify-center items-center">
-        <Formulario client:load/>
+        <Formulario client:load BACK_URL={VITE_BACK_URL} />
     </div>
 </BaseLayoutES>

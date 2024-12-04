@@ -102,8 +102,19 @@ export const Formulario = ({BACK_URL}: ComponentsProps) => {
         strProjectDescription: data.platicanosProyecto,
         language: 'es'
       }
-      const dataBack: AxiosResponse = await axios.post(`${BACK_URL}/api/leads/save-lead`, dataSend);
+      const dataBack: AxiosResponse = await axios.post(
+        `${BACK_URL}/api/leads/save-lead`,
+        dataSend,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
       setSuccessMessage('Formulario enviado');
+      setTimeout(() => {
+        window.location.reload()
+      }, 3000);
       return;
     } catch (error) {
       return console.log(error);

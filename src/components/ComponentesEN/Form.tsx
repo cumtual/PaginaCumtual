@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import axios, { type AxiosResponse } from "axios";
 
 import "@styles/globals.css";
 enum serviceType {
@@ -11,8 +12,6 @@ enum serviceType {
     blogs = "Blogs",
     manageable_product_catalog = "Manageable Product Catalog",
   }
-  
-
 
 enum businessSector {
     real_estate = "Real Estate",
@@ -31,7 +30,6 @@ enum businessSector {
     noon = "Noon (12pm - 2pm)",
     afternoon = "Afternoon (4pm - 6pm)",
   }
-  
 
 interface FormData {
   nombre: string;
@@ -41,11 +39,16 @@ interface FormData {
   whatsApp?: string;
   horarioContacto?: timeSlot;
   platicanosProyecto: string;
+  lada?:string;
 }
 
 interface Country {
   name: string;
   callingCode: string;
+}
+
+interface ComponentsProps {
+  BACK_URL: string
 }
 
 const countries: Country[] = [
@@ -56,7 +59,7 @@ const countries: Country[] = [
   { name: "United Kingdom", callingCode: "44" },
 ];
 
-export const Form = () => {
+export const Form = ({BACK_URL}: ComponentsProps) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -68,23 +71,32 @@ export const Form = () => {
   } = useForm<FormData>();
 
   const onSubmitRegistro: SubmitHandler<FormData> = async (data) => {
-    event?.preventDefault();
-    if (
-      [
-        data.nombre,
-        data.email,
-        data.tipoServicio,
-        data.giroEmpresarial,
-        data.platicanosProyecto,
-      ].includes("")
-    ) {
-      return;
-    }
     try {
-      //logica de back
-      return console.log("enviando");
+      const dataSend= {
+        strFullName: data.nombre,
+        strEmail: data.email,
+        intTipoServ: +data.tipoServicio,
+        intBuisness: +data.giroEmpresarial,
+        strPhone: `${data.lada} ${data.whatsApp}`,
+        strScheduleContact: data.horarioContacto,
+        strProjectDescription: data.platicanosProyecto,
+        language: 'en'
+      }
+      const dataBack: AxiosResponse = await axios.post(
+        `${BACK_URL}/api/leads/save-lead`,
+        dataSend,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      setSuccessMessage('Formulario enviado');
+      setTimeout(() => {
+        window.location.reload()
+      }, 3000);
+      return;
     } catch (error) {
-      //error back
       return console.log(error);
     }
   };
@@ -121,6 +133,9 @@ export const Form = () => {
             type="text"
             placeholder="Full Name"
             id="name"
+            {...registroContacto("nombre", {
+              required: "Name is requerid"
+            })}
           />
         </div>
         <div className="flex flex-col gap-2 mt-4 md:mt-0">
@@ -135,6 +150,9 @@ export const Form = () => {
             type="email"
             placeholder="Email"
             id="email"
+            {...registroContacto("email", {
+              required: "Email is requerid"
+            })}
           />
         </div>
       </div>
@@ -150,6 +168,9 @@ export const Form = () => {
             name="tipoServicio"
             id="tipoServicio"
             className=" w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("tipoServicio", {
+              required: "Service type is requerid"
+            })}
           >
             <option value="">Select service</option>
             {Object.values(serviceType).map((servicio) => (
@@ -170,6 +191,9 @@ export const Form = () => {
             name="tipoServicio"
             id="tipoServicio"
             className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("giroEmpresarial", {
+              required: "Business sector is required"
+            })}
           >
             <option value="">Select business sector</option>
             {Object.values(businessSector).map((giro) => (
@@ -189,7 +213,11 @@ export const Form = () => {
             WhatsApp with country code
           </label>
           <div className="w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
-            <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]">
+            <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]"
+            {...registroContacto("lada", {
+              required: "Lada is required"
+            })}
+            >
               {countries.map((country) => (
                 <option value={country.callingCode} key={country.callingCode}>
                   +{country.callingCode}
@@ -204,9 +232,11 @@ export const Form = () => {
               className="w-[300px] h-[44px] bg-[rgb(38,40,45)]"
               minLength={10}
               maxLength={10}
+              {...registroContacto("whatsApp", {
+                required: 'WhatsApp is required'
+              })}
             />
           </div>
-          
         </div>
         <div className="flex flex-col gap-2 mt-4 md:mt-0">
           <label
@@ -219,6 +249,9 @@ export const Form = () => {
             name="horarioContacto"
             id="horarioContacto"
             className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            {...registroContacto("horarioContacto", {
+              required: 'Preferred contact hours is required'
+            })}
           >
             <option value="">Select a time</option>
             {Object.values(timeSlot).map((horariocontacto) => (
@@ -242,6 +275,9 @@ export const Form = () => {
           id="platicanosProyecto"
           placeholder="Write here..."
           maxLength={200}
+          {...registroContacto("platicanosProyecto", {
+            required: "Tell us about your project is requerid"
+          })}
         ></textarea>
       </div>
       <button className="btn btn-white btn-animated mt-4">Send</button>
