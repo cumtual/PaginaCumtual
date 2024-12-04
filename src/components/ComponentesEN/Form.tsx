@@ -13,6 +13,17 @@ enum serviceType {
     manageable_product_catalog = "Manageable Product Catalog",
   }
 
+  const  serviceTypeids: Record<string, number> =  {
+    "Landing Page": 1,
+    "Logos": 2,
+    "Cloud Storage": 3,
+    "Custom E-commerce": 4,
+    "Administrative Systems": 5,
+    "Blogs": 6,
+    "Manageable Product Catalog": 7,
+  }
+
+
 enum businessSector {
     real_estate = "Real Estate",
     transportation_and_logistics = "Transportation and Logistics",
@@ -23,7 +34,16 @@ enum businessSector {
     education = "Education",
     other = "Other",
   }
-  
+  const businessSectorids: Record<string, number> = {
+    "Real Estate": 1,
+    "Transportation and Logistics": 2,
+    "Health": 3,
+    "Agriculture and Livestock": 4,
+    "Technology": 5,
+    "Finance": 6,
+    "Education": 7,
+    "Other": 8,
+  }
 
   enum timeSlot {
     morning = "Morning (9am - 12pm)",
@@ -174,7 +194,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           >
             <option value="">Select service</option>
             {Object.values(serviceType).map((servicio) => (
-              <option key={servicio} value={servicio}>
+              <option key={servicio} value={serviceTypeids[servicio]}>
                 {servicio}
               </option>
             ))}
@@ -197,7 +217,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           >
             <option value="">Select business sector</option>
             {Object.values(businessSector).map((giro) => (
-              <option key={giro} value={giro}>
+              <option key={giro} value={businessSectorids[giro]}>
                 {giro}
               </option>
             ))}
