@@ -21,6 +21,7 @@ const pageTitle = "Home";
 const description =
   "Empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web.";
 const url = "en-US/";
+import { VITE_BACK_URL } from 'astro:env/server';
 ---
 
 <BaseLayoutEN pageTitle={pageTitle} description={description} url={url}>
@@ -173,7 +174,7 @@ const url = "en-US/";
       Lleva tu negocio a la cumbre virtual
     </h2> -->
     <div class="w-full md:flex justify-center mt-[48px]" id="form">
-      <Form />
+      <Form client:load BACK_URL={VITE_BACK_URL}/>
     </div>
   </article>
 </BaseLayoutEN>
