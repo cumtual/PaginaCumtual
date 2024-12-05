@@ -136,6 +136,7 @@ Inside of your Astro project, you'll see the following folders and files:
 |             └── portafolio-logos
 |               └── index.astro
 |          └── index.astro
+│       └── 404.astro
 │       └── index.astro
 │   └── styles/
 │       └── globals.css

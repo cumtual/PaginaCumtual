@@ -1,0 +1,39 @@
+---
+const userLanguage =
+  (typeof window !== "undefined" && navigator.language) || "en";
+const isSpanish = userLanguage.startsWith("es");
+import CumtualElevamos from "@components/SVG/CumtualElevamos.astro";
+---
+
+<html>
+  <head>
+    <title>404 - {isSpanish ? "Página no encontrada" : "Page not found"}</title>
+    <meta
+      name="description"
+      content={isSpanish
+        ? "Lo sentimos, no pudimos encontrar la página que buscas."
+        : "Sorry, we couldn't find the page you are looking for."}
+    />
+  </head>
+  <body class="bg-bg-gray-cumtual w-full h-screen">
+    <section class="p-10 flex flex-col justify-center items-center h-[550px]">
+      <CumtualElevamos />
+      <h1 class="mt-20 text-xl">
+        {isSpanish ? "404 - Página no encontrada" : "404 - Page not found"}
+      </h1>
+      <p class="mt-5">
+        {
+          isSpanish
+            ? "Lo sentimos, la página que buscas no existe."
+            : "Sorry, the page you are looking for does not exist."
+        }
+      </p>
+      <a href="/"
+      class="mt-10 hover:text-[#FFF] transition-colors delay-100 duration-200 ease-in-out underline font-semibold"
+        >{
+          isSpanish ? "Volver a la página principal" : "Go back to the homepage"
+        }</a
+      >
+    </section>
+  </body>
+</html>
