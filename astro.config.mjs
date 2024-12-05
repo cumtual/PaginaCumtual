@@ -2,7 +2,7 @@ import { defineConfig, envField } from "astro/config";
 import partytown from "@astrojs/partytown";
 
 import tailwind from "@astrojs/tailwind";
-
+import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -31,6 +31,7 @@ export default defineConfig({
   site: "https://cumtual.com",
   integrations: [
     tailwind(),
+    sitemap(),
     react({
       experimentalReactChildren: true,
     }),
