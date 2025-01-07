@@ -2,39 +2,24 @@
 import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
 import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import "@styles/globals.css";
-const pageTitle = "Portafolio logo";
+const pageTitle = "Portafolio logos";
+// TODO: DESCRIPCION
+const descripcion="almacenamiento en la nube"
+//TODO: Keywords
+const keywords="almacenamiento";
+const url ="servicios/portafolio-logos";
 
 import { Image } from "astro:assets";
 ---
 
-<BaseLayoutES pageTitle={pageTitle}>
+<BaseLayoutES pageTitle={pageTitle} description={descripcion} keywords={keywords} url={url}>
   <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40">
     Portafolio Logo
   </h1>
-  <artcile class="text-center flex flex-col gap-8 mt-16 px-[30px] md:px-40">
+  <artcile class="text-center flex flex-col gap-8 mt-16 px-[30px] md:px-40" data-aos="fade-down">
     <section>
       <div class="text-[#7C7C7C] font-[600] flex flex-col gap-4">
-        <p class="md:text-[25px] md:leading-[32.49px]">Creación de:</p>
-        <div>
-          <p class="text-gradient md:text-[20px]">- Identidad visual única y profesional.</p>
-          <p class="text-gradient md:text-[20px]">- Braning.</p>
-        </div>
-        <div class="flex flex-col gap-4 md:flex-row-reverse md:justify-around md:mt-12">
-          <p
-            class="md:w-[275px] md:text-start md:text-[20px] md:leading-[25.99px]"
-          >
-            Completamente <span class="text-[#FFF]"
-              >personalizado y adaptado a las necesidades específicas</span
-            > del proyecto del cliente.
-          </p>
-          <p
-            class="md:w-[275px] md:text-start md:text-[20px] md:leading-[25.99px]"
-          >
-            Desarrollamos <span class="text-[#FFF]">
-              conceptos con base en la metodología "Design thinking"</span
-            > para garantizar el éxito de tu proyecto.
-          </p>
-        </div>
+        <h1>El diseño de logos es fundamental para la identidad de una marca, ya que <span class="text-[#FFF]">facilita su reconocimiento</span> y establece una imagen coherente. <br/><span class="text-gradient">Ofrecemos</span> el servicio de creación de logos personalizados y manual de identidad corporativa, asegurando una presencia de marca consistente y profesional.</h1>
       </div>
       <div class="flex justify-center items-center mt-14">
         <ContactanosBoton />
@@ -42,7 +27,7 @@ import { Image } from "astro:assets";
     </section>
   </artcile>
   <article class="px-[30px] md:px-40">
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Xiti-tákú">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Xiti-tákú" data-aos="zoom-in">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Xiti Tákú</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -80,13 +65,13 @@ import { Image } from "astro:assets";
               alt="Logo Xiti tákú"
               width={191}
               height={147}
-              class="object-cover w-[181px] h-[65px] svg-icon"
+              class="object-cover w-[181px] h-[65px]"
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="sadeli-tower">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="sadeli-tower" data-aos="zoom-out">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Sedeli Tower</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -126,13 +111,13 @@ import { Image } from "astro:assets";
               alt="Logo Sedeli Tower"
               width={191}
               height={147}
-              class="object-cover w-[142px] h-[79px] svg-icon"
+              class="object-cover w-[142px] h-[79px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="rivas-haus">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="rivas-haus" data-aos="zoom-in">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Rivas Haus</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -167,14 +152,14 @@ import { Image } from "astro:assets";
               alt="Logo Sedeli Tower"
               width={191}
               height={147}
-              class="object-contain w-[147.6px] h-[45px] svg-icon"
+              class="object-contain w-[147.6px] h-[45px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-[48px] hidden md:flex md:justify-center md:items-center md:mt-[58px]" id="Xiti-tákú-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-[48px] hidden md:flex md:justify-center md:items-center md:mt-[58px]" id="Xiti-tákú-pc" data-aos="zoom-in">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -205,20 +190,20 @@ import { Image } from "astro:assets";
               cuerpo de la gallina representa lo orgánico y saludable del
               producto.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/xiti-taku-3.webp"
             alt="Logo Xiti tákú"
             width={251}
             height={90}
-            class="object-cover w-[251px] h-[90px] img-slide-left"
+            class="object-cover w-[251px] h-[90px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="sadeli-tower-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="sadeli-tower-pc" data-aos="zoom-out">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -251,20 +236,20 @@ import { Image } from "astro:assets";
               de las Limas” SEDELI.<br/> El diseño de imagen combina la abstracción de
               una “S” junto con la altura de un edificio.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/sadeli-tower-3.webp"
             alt="Logo Sedeli Tower"
             width={230}
             height={128.51}
-            class="object-cover w-[230px] h-[128.51px] img-slide-right"
+            class="object-cover w-[230px] h-[128.51px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="rivas-house-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="rivas-house-pc" data-aos="zoom-in">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -290,13 +275,13 @@ import { Image } from "astro:assets";
               empresa “r” y “h” las cuales están divididas con dos diferentes
               colores formando una sola letra “h”.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/rivas-haus-3.webp"
               alt="Logo Sedeli Tower"
             width={245.15}
             height={60.35}
-            class="object-cover w-[245.15px] h-[60.35px] img-slide-left"
+            class="object-cover w-[245.15px] h-[60.35px] "
             />
           </div>
         </div>
@@ -342,7 +327,7 @@ import { Image } from "astro:assets";
     </article>
   </article>
   <article class="px-[30px] md:px-40">
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Arthonix">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Arthonix" data-aos="zoom-in">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Arthonix</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -379,13 +364,13 @@ import { Image } from "astro:assets";
               alt="Logo Arthonix"
               width={86}
               height={88}
-              class="object-cover w-[86px] h-[88px] svg-icon-right"
+              class="object-cover w-[86px] h-[88px] -right"
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Barkov">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Barkov" data-aos="zoom-out">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Borkov</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -422,13 +407,13 @@ import { Image } from "astro:assets";
               alt="Logo Barkov"
               width={140}
               height={48}
-              class="object-cover w-[140px] h-[48px] svg-icon"
+              class="object-cover w-[140px] h-[48px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Nolu">
+    <section class="mt-10 w-[345px] flex flex-col justify-center items-center gap-2 md:hidden" id="Nolu" data-aos="zoom-in">
       <h3 class="text-[24px] text-start text-[#FFF] font-[600] w-full text-gradient-animated">Nolu</h3>
       <div class="flex flex-col justify-center items-center p-2">
         <div class="flex items-center justify-around gap-4">
@@ -466,14 +451,14 @@ import { Image } from "astro:assets";
               alt="Logo Barkov"
               width={140}
               height={55}
-              class="object-cover w-[140px] h-[55px] svg-icon"
+              class="object-cover w-[140px] h-[55px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Arthonix-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Arthonix-pc" data-aos="zoom-in">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -503,20 +488,20 @@ import { Image } from "astro:assets";
               guerra, una flama con un casco de caballero reflejan lo equipado que
               debe estar para sus futuras batallas y aventuras.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/arthonix-3.webp"
             alt="Logo Arthonix"
             width={155}
             height={159}
-            class="object-cover w-[155px] h-[159px] svg-icon"
+            class="object-cover w-[155px] h-[159px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc" data-aos="zoom-out">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -541,25 +526,25 @@ import { Image } from "astro:assets";
         </div>
         <div class="flex-1 h-[517px] flex flex-col justify-between">
           <div>
-            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF] text-gradient-animated">Barkov</h2>
+            <h2 class="font-[700] text-[40px] leading-[46.88px] text-start text-[#FFF] text-gradient-animated">Borkov</h2>
             <p class="text-[20px] leading-[23.44px] text-start font-[300] mt-11">Diseño para un spa, el nombre proviene del apellido de un
               colaborador en el libro “Entrenamiento de relajación progresiva”
               (Douglas A. Bernstein y Thomas D. Borkovec).</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/barkov-3.webp"
             alt="Logo Barkov"
             width={251}
             height={86}
-            class="object-cover w-[251px] h-[86px] svg-icon"
+            class="object-cover w-[251px] h-[86px] "
             />
           </div>
         </div>
       </div>
     </section>
-    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc">
-      <div class="flex gap-4 w-[1080px] h-[517px] items-end">
+    <section class="mt-10 md:mt-20 hidden md:flex md:justify-center md:items-center" id="Barkov-pc" data-aos="zoom-in">
+      <div class="flex gap-4 md:w-[820px] lg:w-[1080px] h-[517px] items-end">
         <div
           class="flex-1 overflow-hidden w-[229.33px] h-[517px] rounded-[15px] group"
         >
@@ -590,13 +575,13 @@ import { Image } from "astro:assets";
               “Nona” y su apellido “Luna”. El diseño manifiesta un atardecer en el
               mar con una ola y un sol.</p>
           </div>
-          <div class="bg-[#FFF] w-[575px] h-[188px] flex items-center justify-center rounded-[11px]">
+          <div class="bg-[#FFF] w-[385px] h-[168px] lg:w-[575px] lg:h-[188px] flex items-center justify-center rounded-[11px]">
             <Image
             src="/imagenesConvertidas/nolu-3.webp"
               alt="Logo Barkov"
             width={247}
             height={97}
-            class="object-cover w-[247px] h-[97px] svg-icon"
+            class="object-cover w-[247px] h-[97px] "
             />
           </div>
         </div>

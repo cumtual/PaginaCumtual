@@ -4,11 +4,13 @@ import { BurguerMenu } from "./BurguerMenu";
 import NavBar from "./NavBar";
 import ServiciosSlider from "./ServiciosSlider";
 const { idioma } = Astro.props;
+import ChooseLanguage from "@components/ComponentesEN/ChooseLenguage";
 ---
 
-<header class="p-[30px]">
+<header class="p-[30px] sticky top-0 left-0 z-30">
+    {idioma === "en" ? null : <ChooseLanguage client:load/> }
     <nav class="flex items-center justify-between static">
-        <div class="cursor-pointer md:ml-28" onclick={`window.location.href=${idioma === 'es' ? '/es-MX/' : '/en-US/'}`}>
+        <a href="/" class=" md:ml-14 lg:ml-28">
             <svg
                 width="61"
                 height="33"
@@ -61,7 +63,7 @@ const { idioma } = Astro.props;
                     </linearGradient>
                 </defs>
             </svg>
-        </div>
+        </a>
         <div class="block md:hidden">
             <BurguerMenu client:load/>
             <Slider idioma={idioma} client:load />
@@ -72,3 +74,16 @@ const { idioma } = Astro.props;
         </div>
     </nav>
 </header>
+
+<script>
+    window.addEventListener("scroll", function() {
+        const header = document.querySelector("header");
+        if(window.scrollY > 0){
+            header?.classList.add("bg-[#191A1E]", "shadow-lg", "transition-all", "duration-500", "ease-in-out", "border-b-2");
+            header?.classList.remove('bg-transparent');
+        }else{
+            header?.classList.remove("bg-[#191A1E]", "shadow-lg", "transition-all", "duration-500", "ease-in-out", "border-b-2");
+            header?.classList.add("bg-transparent");
+        }
+    })
+</script>

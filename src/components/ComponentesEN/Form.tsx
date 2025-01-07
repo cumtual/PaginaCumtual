@@ -124,7 +124,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
   return (
     <form
       onSubmit={handleRegistroSubmit(onSubmitRegistro)}
-      className="w-full flex flex-col gap-4 items-center md:w-[756px]"
+      className="w-full flex flex-col gap-4 items-center md:w-[656px] lg:w-[756px]"
     >
       {successMessage.length > 0 && (
         <div className="flex justify-center items-center">
@@ -140,7 +140,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           </span>
         </div>
       )}
-      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+      <div className="md:flex md:gap-4 md:w-[654px] lg:w-[754px] md:justify-between">
         <div className="flex flex-col gap-2">
           <label
             htmlFor="name"
@@ -149,7 +149,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
             Name <span className="text-[#FF0000]">*</span>
           </label>
           <input
-            className="w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className="w-[340px] h-[44px]  md:w-[317px] lg:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             type="text"
             placeholder="Full Name"
             id="name"
@@ -166,7 +166,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
             Email <span className="text-[#FF0000]">*</span>
           </label>
           <input
-            className="w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
+            className="w-[340px] h-[44px]  md:w-[317px] lg:w-[367px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300"
             type="email"
             placeholder="Email"
             id="email"
@@ -176,7 +176,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           />
         </div>
       </div>
-      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+      <div className="md:flex md:gap-4 md:w-[654px] lg:w-[754px] md:justify-between">
         <div className="flex flex-col gap-2 mt-0 ">
           <label
             htmlFor="tipoServicio"
@@ -187,7 +187,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           <select
             name="tipoServicio"
             id="tipoServicio"
-            className=" w-[340px] h-[44px] md:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className=" w-[340px] h-[44px] md:w-[317px] lg:w-[367px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             {...registroContacto("tipoServicio", {
               required: "Service type is requerid"
             })}
@@ -202,15 +202,15 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
         </div>
         <div className="flex flex-col gap-2 mt-4 md:mt-0">
         <label
-            htmlFor="tipoServicio"
+            htmlFor="giroEmpresarial"
             className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             Business sector <span className="text-[#FF0000]">*</span>
           </label>
           <select
-            name="tipoServicio"
-            id="tipoServicio"
-            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            name="giroEmpresarial"
+            id="giroEmpresarial"
+            className=" w-[340px] md:w-[317px] lg:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             {...registroContacto("giroEmpresarial", {
               required: "Business sector is required"
             })}
@@ -224,7 +224,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           </select>
         </div>
       </div>
-      <div className="md:flex md:gap-4 md:w-[754px] md:justify-between">
+      <div className="md:flex md:gap-4 md:w-[654px] lg:w-[754px] md:justify-between">
       <div className="flex flex-col gap-2 ">
       <label
             htmlFor="tipoServicio"
@@ -232,12 +232,13 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           >
             WhatsApp with country code
           </label>
-          <div className="w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
+          <div className="w-[340px] md:w-[317px] lg:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
             <select className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]"
             {...registroContacto("lada", {
               required: "Lada is required"
             })}
             >
+              <option value="">--</option>
               {countries.map((country) => (
                 <option value={country.callingCode} key={country.callingCode}>
                   +{country.callingCode}
@@ -268,7 +269,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           <select
             name="horarioContacto"
             id="horarioContacto"
-            className=" w-[340px] md:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
+            className=" w-[340px] md:w-[317px] lg:w-[367px] h-[44px] rounded-[4px] bg-[#26282d] px-2 text-[14px] font-300"
             {...registroContacto("horarioContacto", {
               required: 'Preferred contact hours is required'
             })}
@@ -282,7 +283,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           </select>
         </div>
       </div>
-      <div className="flex flex-col gap-2 mt-0 md:mt-0 md:w-[754px]">
+      <div className="flex flex-col gap-2 mt-0 md:mt-0 md:w-[654px] lg:w-[754px]">
         <label
           htmlFor="platicanosProyecto"
           className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
@@ -290,7 +291,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           Tell us about your project <span className="text-[#FF0000]">*</span>
         </label>
         <textarea
-          className="w-[340px] md:w-[756px] md:h-[407px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
+          className="w-[340px] md:w-[656px] lg:w-[756px] md:h-[407px] h-[243px] rounded-[4px] bg-[#26282D] p-2"
           name="platicanosProyecto"
           id="platicanosProyecto"
           placeholder="Write here..."

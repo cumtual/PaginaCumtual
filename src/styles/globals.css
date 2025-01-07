@@ -493,7 +493,7 @@ body {
 
 .contenedor-imagenes div:hover {
   cursor: pointer;
-  width: 120px;
+  width: fit-content;
   filter: contrast(120%);
   padding: 2px;
   transform: translate(90deg);
@@ -503,7 +503,7 @@ body {
   position: absolute;
   bottom: 29%;
   left: -53%;
-  width: 155%;
+  width: fit-content;
   background: #191a1e7b;
   color: white;
   text-align: center;
@@ -534,23 +534,23 @@ body {
   transform: rotate(0deg);  /* El texto se vuelve horizontal */
   top: 51%;
   left: 0;
-  width: 100%;
+  width: fit-content;
   height: 130px;
 }
 
 
 .contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen .logo-linkedin {
-  width: 30px;
+  width: fit-content;
   height: 30px;
 }
 .contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen .logo-instagram {
-  width: 30px;
+  width: fit-content;
   height: 30px;
 }
 
 .contenedor-imagenes:hover .contenedor-imagen:not(:hover) .texto-sobre-imagen {
   left: -79%; /* Desplaza el texto hacia la izquierda */
-  width: 210%;
+  width: fit-content;
 }
 
 /* Ocultar los elementos .hover-hidden por defecto */

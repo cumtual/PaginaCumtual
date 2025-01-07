@@ -1,107 +1,201 @@
 ---
-"";
-import "@styles/globals.css";
+import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import CumtualElevamos from "@components/SVG/CumtualElevamos.astro";
-import BotonHomeSeleccionarIdioma from "@components/Ui/BotonHomeSeleccionarIdioma";
+import InsiginaCalidad from "@components/SVG/InsigniaCalidad.astro";
+import SlideIcon from "@components/SVG/SlideIcon.astro";
+
+import InsigniaAdaptabilidad from "@components/SVG/InsigniaAdaptabilidad.astro";
+
+import DesarrolloIcon from "@components/SVG/DesarrolloIcon.astro";
+import DesarrolloIconPC from "@components/SVG/DesarrolloIconPC.astro";
+import NubeIcon from "@components/SVG/NubeIcon.astro";
+import NubeIconPC from "@components/SVG/NubeIconPC.astro";
+import LogoIcon from "@components/SVG/LogoIcon.astro";
+import LogoIconPC from "@components/SVG/LogoIconPC.astro";
+import HerramientasDesarrollo from "@components/SVG/HerramientasDesarrollo.astro";
+import { Formulario } from "@components/ComponetesES/Formulario";
+
+const pageTitle = "Inicio";
+const description =
+  "Especialistas en desarrollo web a medida, diseño de marcas profesionales y hosting web confiable, ofrecemos soluciones digitales innovadoras. Ayudamos a potenciar su presencia en línea con sitios web responsivos y estrategias digitales personalizadas";
+const url = "";
+const keywords = [
+  "desarrollo web a medida",
+  "diseño de marcas profesionales",
+  "hosting web confiable",
+  "soluciones digitales innovadoras",
+  "presencia en línea"
+];
+
+import { VITE_BACK_URL } from 'astro:env/server';
+
+export const prerender = true;
+
 ---
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Cumtual</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="https://cumtual.com/favicon.svg?v=2">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <meta
-      property="og:image"
-      content={"https://cumtual.com/fondo.webp"}
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image:width" content="25" />
-    <meta property="og:image:height" content="25" />
-    <meta property="og:description" content="Somos una empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web." />
-    <meta property="og:url" content="https://www.cumtual.com" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:title" content="Cumtual - Elevamos tu idea." />
-    <meta name="twitter:description" content="Ofrecemos servicios de desarrollo web, incluyendo sitios web personalizados, landing pages, blogs, tiendas e-commerce y mucho más. Contáctanos para hacer crecer tu negocio online." />
-    <meta name="twitter:image" content="https://cumtual.com/logocumtual-23.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="description" content="Ofrecemos servicios de desarrollo web, incluyendo sitios web personalizados, landing pages, blogs, tiendas e-commerce y mucho más. Contáctanos para hacer crecer tu negocio online." />
-    <meta name="keywords" content="desarrollo web, landing pages, blogs, ecommerce, diseño web, desarrollo de tiendas online, desarrollo de sitios web" />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Cumtual" />
-    <link rel="canonical" href="https://www.cumtual.com" />
-    <link rel="alternate" hreflang="es" href="https://www.cumtual.com" />
-    <link rel="alternate" hreflang="en" href="https://www.cumtual.com" />
-    <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8D7V8Z1J43"></script>
-    <script type="text/partytown" is:inline>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8D7V8Z1J43');
-    </script>
-  </head>
-  <body class="bg-bg-gray-cumtual w-full h-screen">
-    <section class="p-10 flex flex-col justify-center items-center h-[550px]">
-      <CumtualElevamos />
-      <div class="mt-20">
-        <div id="languageSwitcher" class="text-2xl font-bold p-10">
-          <p class="text-center">Elige un idioma</p>
-          <p class="text-center hidden">Choose a language</p>
+<BaseLayoutES pageTitle={pageTitle} description={description} url={url} keywords={keywords}>
+  <article
+    class="flex flex-col justify-center items-center h-[550px] px-[70px]"
+  >
+    <CumtualElevamos />
+    <div class="mt-20">
+      <button
+        type="button"
+        onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});"
+        class="btn btn-white "
+        data-aos="zoom-out-up"
+      >
+        Contáctanos
+      </button>
+    </div>
+    <div class="mt-20 svg-icon">
+      <SlideIcon />
+    </div>
+  </article>
+  <article
+    class="flex flex-col justify-center items-center text-center mt-20 px-[30px]"
+    data-aos="fade-down"
+  >
+    <p
+      class="font-[600] text-[14px] md:w-[690px] lg:w-[790px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]"
+    >
+      Somos una empresa dedicada a la <span class="text-[#FFF]"
+        >creación de páginas web, diseño de marcas y almacenamiento web,</span
+      > centrada en ofrecer soluciones digitales personalizadas
+      <span class="text-gradient">
+        para establecer o mejorar su presencia en linea.</span
+      >
+    </p>
+  </article>
+  <article class="md:flex md:justify-center md:mt-24 px-[30px]">
+    <div class="md:flex md:justify-between md:items-start md:w-[654px] lg:w-[754px]">
+      <section
+        class="flex flex-col justify-start items-center md:items-start mt-10 gap-2 text-center md:text-start md:w-[275px] md:h-[227.38px]"
+        data-aos="flip-up"
+      >
+        <InsiginaCalidad />
+        <p
+          class="text-[#FFF] font-bold text-[14px] md:text-[20px] md:leading-[25.99px]"
+        >
+          Calidad
+        </p>
+        <p class="md:text-[20px] md:leading-[25.99px] leading-[18.19px] text-[14px]">
+          Nos comprometemos a entregar productos y servicios de alta calidad que
+          superen las expectativas de nuestro clientes y garanticen su éxito.
+        </p>
+      </section>
+      <section
+        class="flex flex-col justify-start items-center md:items-start mt-10 gap-2 text-start md:w-[275px] md:h-[227.38px]"
+        data-aos="flip-down"
+      >
+        <InsigniaAdaptabilidad />
+        <p
+          class="text-[#FFF] font-bold text-[14px] md:text-[20px] md:leading-[25.99px]"
+        >
+          Adaptabilidad
+        </p>
+        <p
+          class="leading-[18.19px] text-[14px] md:text-[20px] md:leading-[25.99px] font-[400] text-justify"
+        >
+          Aceptamos el cambio como una oportunidad para crecer <br
+            class="hidden md:block"
+          />y mejorar continuamente.
+        </p>
+      </section>
+    </div>
+  </article>
+  <article
+    class="mt-[28px] md:mt-[18px] ejemplo md:flex md:justify-center px-[30px]"
+  >
+    <section class="flex flex-col justify-start gap-2 text-center">
+      <h2 class="font-[600] text-[#FFF] text-[24px] text-start">
+        Nuestros servicios
+      </h2>
+      <div class="flex gap-4 w-full mt-[10px] md:justify-center">
+        <div
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[317px] lg:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
+          data-aos="zoom-in"
+        >
+          <div class="flex justify-center items-center mt-4 w-full md:hidden">
+            <NubeIcon />
+          </div>
+          <div class="justify-center items-center w-full hidden md:flex">
+            <NubeIconPC />
+          </div>
+          <p
+            class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 w-full leading-[20.09px] md:h-[40px] text-gradient-animated"
+          >
+            Almacenamiento <br /> en la nube
+          </p>
+        </div>
+        <div
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[317px] lg:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative"
+          data-aos="zoom-in"
+        >
+          <div class="flex justify-center items-center w-full md:hidden">
+            <LogoIcon />
+          </div>
+          <div class="hidden justify-center items-center w-full md:flex">
+            <LogoIconPC />
+          </div>
+          <div class="px-2 w-full">
+            <p
+              class="font-[600] text-[#FFF] text-[15.46px] text-center leading-[20.09px] px-2 md:text-center md:h-[40px] text-gradient-animated"
+            >
+              Logos
+            </p>
+          </div>
         </div>
       </div>
-      <div>
-        <BotonHomeSeleccionarIdioma client:load />
+      <div class="flex gap-5 w-full md:justify-center">
+        <div
+          class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[654px] lg:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] mt-2 gap-5"
+          data-aos="zoom-in"
+        >
+          <div class="flex justify-center items-center w-full md:hidden">
+            <DesarrolloIcon />
+          </div>
+          <div class="hidden justify-center items-center w-full md:flex">
+            <DesarrolloIconPC />
+          </div>
+          <div class="px-2 w-full">
+            <p
+              class="font-[600] text-[#FFF] text-[15.46px] text-center px-2 self-end md:text-center leading-[20.09px] text-gradient-animated"
+            >
+              Desarrollo web <br class="block md:hidden" />a la medida
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const userLang = navigator.language;
-        const currentPath = window.location.pathname;
-        if (userLang.startsWith("es") && currentPath !== "/es-MX") {
-          window.location.href = "/es-MX";
-        } else if (userLang.startsWith("en") && currentPath !== "/en-EU") {
-          window.location.href = "/en-US";
-        } else if (currentPath !== "/es-MX" && currentPath !== "/en-EU") {
-          window.location.href = "/es-MX";
-        }
-        const switcher = document.getElementById("languageSwitcher");
-        const texts = switcher.getElementsByTagName("p");
-        let current = 0;
-
-        setInterval(() => {
-          // Añadir animación para ocultar el texto actual
-          texts[current].classList.add(
-            "opacity-0",
-            "transition-opacity",
-            "duration-500"
-          );
-
-          setTimeout(() => {
-            // Ocultar el texto actual después de la animación
-            texts[current].classList.add("hidden");
-
-            // Alternar al siguiente texto
-            current = (current + 1) % texts.length;
-            texts[current].classList.remove("hidden");
-
-            // Mostrar el siguiente texto con animación
-            setTimeout(() => {
-              texts[current].classList.remove("opacity-0");
-              texts[current].classList.add("opacity-100");
-            }, 10); // Pequeña demora para la animación
-          }, 500); // Duración de la animación de salida (0.5s)
-        }, 3000); // Intervalo de 3 segundos
-      });
-    </script>
-  </body>
-</html>
+  </article>
+  <article class="mt-[48px] ejemplo md:flex md:justify-center px-[30px]">
+    <section class=" md:w-[654px] lg:w-[754px]">
+      <h2 class="font-[600] text-[#FFF] text-[24px]">
+        Herramientas de desarrollo
+      </h2>
+      <div class="mt-[18px]">
+        <HerramientasDesarrollo />
+      </div>
+    </section>
+  </article>
+  <article
+    class="mt-[48px] flex flex-col justify-center items-center text-center gap-2 px-[30px]"
+    data-aos="zoom-in-down"
+  >
+    <h2 class="text-gradient font-[600] text-[25px] leading-[32.49px]">
+      Lleva tu negocio a la cumbre virtual
+    </h2>
+    <p class="font-[600] text-[14px] leading-[18.19px]">
+      Trabaja con nosotros
+    </p>
+  </article>
+  <article class="text-center flex flex-col justify-center px-[30px]">
+    <!-- <h2 class="text-gradient text-[25px] font-[600] leading-[32.49px]">
+      Lleva tu negocio a la cumbre virtual
+    </h2> -->
+    <div class="w-full md:flex justify-center mt-[48px]" id="form">
+      <Formulario client:load  BACK_URL={VITE_BACK_URL}/>
+    </div>
+  </article>
+</BaseLayoutES>

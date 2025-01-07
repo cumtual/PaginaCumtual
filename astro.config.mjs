@@ -2,22 +2,21 @@ import { defineConfig, envField } from "astro/config";
 import partytown from "@astrojs/partytown";
 
 import tailwind from "@astrojs/tailwind";
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    env: {
-      schema: {
-        VITE_BACK_URL: envField.string({
-          context: "server",
-          access: "secret",
-          optional: false,
-        }),
-      },
+  env: {
+    schema: {
+      VITE_BACK_URL: envField.string({
+        context: "server",
+        access: "secret",
+        optional: false,
+      }),
     },
   },
+
   vite: {
     resolve: {
       alias: {
@@ -25,10 +24,13 @@ export default defineConfig({
         "@layouts": "/src/layouts",
         "@pages": "/src/pages",
         "@styles": "/src/styles",
+        "@utils": "/src/utils",
       },
     },
   },
+
   site: "https://cumtual.com",
+
   integrations: [
     tailwind(),
     sitemap(),

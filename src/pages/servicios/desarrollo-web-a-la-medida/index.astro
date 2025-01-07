@@ -1,15 +1,25 @@
 ---
-import BaseLayoutEN from "@layouts/BaseLayoutEN.astro";
+import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import "@styles/globals.css";
-import ContactUs from "@components/ComponentesEN/ContactUs.astro";
-const pageTitle = "Custom web development";
+import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
+const pageTitle = "Desarrollo web a la medida";
+// TODO: DESCRIPCION
+const descripcion = "almacenamiento en la nube";
+//TODO: Keywords
+const keywords = "almacenamiento";
+const url = "servicios/desarrollo-web-a-la-medida";
 ---
 
-<BaseLayoutEN pageTitle={pageTitle}>
+<BaseLayoutES
+  pageTitle={pageTitle}
+  description={descripcion}
+  keywords={keywords}
+  url={url}
+>
   <h1
     class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40"
   >
-    Custom web development
+    Desarrollo web a la medida
   </h1>
   <article class="flex flex-col gap-8 mt-8 md:mt-32">
     <section
@@ -19,18 +29,18 @@ const pageTitle = "Custom web development";
       <p
         class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px] md:w-[754px] text-center"
       >
-        Fully <span class="text-gradient">customized web development</span> tailored
-        to the specific needs of the client's project, without templates.
+        Desarrollo web completamente <span class="text-[#FFF]"
+          >personalizado y adaptado a las necesidades específicas
+        </span>snap del proyecto del cliente, sin plantillas.
       </p>
       <p
         class="text-[#7C7C7C] font-[600] text-[14px] text-center mt-6 md:text-[20px] md:leading-[25.99px]"
       >
-        <span class="text-[#FFF]">Custom</span> web development involves a personalized
-        approach that considers:
+        El desarrollo web <span class="text-gradient">a la medida </span> implica
+        un enfoque personalizado que considera:
       </p>
-
       <div class="flex justify-center items-center mt-12">
-        <ContactUs />
+        <ContactanosBoton />
       </div>
     </section>
     <!-- <section class="flex justify-center items-center mt-8">
@@ -241,7 +251,7 @@ const pageTitle = "Custom web development";
         <p
           class="font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[77px] text-center svg-icon-right"
         >
-          Custom E-commerce
+          E-commerce Personalizado
         </p>
       </div>
       <div
@@ -658,12 +668,12 @@ const pageTitle = "Custom web development";
       </div>
       <div
         class="flex gap-4 justify-center items-center"
-        data-aos="fade-down-rigth"
+        data-aos="fade-down-right"
       >
         <p
           class="font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[85px] text-center svg-icon-left"
         >
-          Administrative Systems
+          Sistemas Administrativos
         </p>
         <div class="svg-icon-right">
           <svg
@@ -1494,7 +1504,7 @@ const pageTitle = "Custom web development";
       </div>
       <div
         class="flex gap-4 justify-center items-center"
-        data-aos="fade-down-right"
+        data-aos="fade-down-left"
       >
         <div class="svg-icon-left">
           <svg
@@ -2261,7 +2271,7 @@ const pageTitle = "Custom web development";
         <p
           class="font-[600] text-[11.97px] text-[#FFF] leading-[15px] w-[140px] text-center svg-icon-right"
         >
-          Web Catalog of Manageable Products
+          Catálogo web de Productos Administrables
         </p>
       </div>
     </section>
@@ -2276,7 +2286,7 @@ const pageTitle = "Custom web development";
           <p
             class="font-[600] text-[20px] w-[129px] leading-[22px] text-center text-[#FFF] svg-icon-right"
           >
-            Custom E-commerce
+            E-commerce Personalizado
           </p>
           <div class="svg-icon-left">
             <svg
@@ -3708,7 +3718,7 @@ const pageTitle = "Custom web development";
           <p
             class="font-medium text-[20px] w-[142px] leading-[25.99px] text-center text-[#FFF] svg-icon"
           >
-            Administrative Systems
+            Sistemas Administrativos
           </p>
         </div>
         <div
@@ -4480,7 +4490,7 @@ const pageTitle = "Custom web development";
           <p
             class="font-medium text-[20px] leading-[24px] w-[255px] text-center text-[#FFF] svg-icon-right"
           >
-            Web Catalog of Manageable Products
+            Catálogo Web de Productos Administrables
           </p>
         </div>
       </div>
@@ -4489,6 +4499,7 @@ const pageTitle = "Custom web development";
   <article class="block md:hidden px-[30px] md:px-40">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
         <div>
@@ -4518,16 +4529,17 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">
-          Specific requirements
+          Requerimientos específicos
         </h2>
         <p class="text-[14px]">
-          We design based on the needs and interests of the client, providing a
-          100% custom design.
+          Diseñamos con base a las necesidades e intereses del cliente
+          otorganido un diseño 100% personalizado.
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-right"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
         <div>
@@ -4571,19 +4583,21 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">
-          Corporate Identity
+          Identidad corporativa
         </h2>
         <p class="text-[14px]">
-          We ensure that the website reflects the client's brand and visual
-          identity (color palettes, typography, and other graphic elements).
+          Nos aseguramos de que el sitio web refleje la marca y la identidad
+          visual del cliente (paletas de colores, tipografías y otros elementos
+          gráficos).
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-8"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
-        <h2 class="font-[600] text-[#FFF] text-[24px]">Let's work together</h2>
+        <h2 class="font-[600] text-[#FFF] text-[24px]">Trabajemos juntos</h2>
         <div>
           <svg
             width="42"
@@ -4611,12 +4625,13 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <div>
-          <ContactUs />
+          <ContactanosBoton />
         </div>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-right"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -6969,14 +6984,18 @@ const pageTitle = "Custom web development";
             </g>
           </svg>
         </div>
-        <h2 class="font-[600] text-[#FFF] text-[15.46px]">User Experience</h2>
+        <h2 class="font-[600] text-[#FFF] text-[15.46px]">
+          Experiencia de usuario
+        </h2>
         <p class="text-[14px]">
-          We design with intuitive navigation and smooth interaction in mind.
+          Diseñamos pensando en una navegación intuitiva y una interacción
+          fluida
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-right"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -7005,15 +7024,16 @@ const pageTitle = "Custom web development";
             </defs>
           </svg>
         </div>
-        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Optimization</h2>
+        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Optimización</h2>
         <p class="text-[14px]">
-          We optimize the site for optimal performance and speed, considering
-          factors such as fast page load times.
+          Optimizamos el sitio para un rendimiento y velocidad óptimos,
+          considerando aspectos como la carga rápida de páginas
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -7084,15 +7104,16 @@ const pageTitle = "Custom web development";
             </defs>
           </svg>
         </div>
-        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Responsive design</h2>
+        <h2 class="font-[600] text-[#FFF] text-[15.46px]">Diseño responsivo</h2>
         <p class="text-[14px]">
-          We offer a smooth and functional experience, whether the user is on a
-          desktop, tablet, or mobile phone.
+          Ofrecemos una experiencia fluida y funcional, independientemente de si
+          el usuario está en un ordenador de escritorio, una tableta o un
+          teléfono móvil.
         </p>
       </div>
     </section>
     <div class="mt-16 flex justify-center items-center">
-      <ContactUs />
+      <ContactanosBoton />
     </div>
   </article>
   <article
@@ -7127,11 +7148,11 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Specific requirements
+          Requerimientos específicos
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          We design based on the needs and interests of the client, providing a
-          100% custom design.
+          Diseñamos con base en las necesidades e intereses del cliente
+          otorganido un diseño 100% personalizado.
         </p>
       </div>
     </section>
@@ -9488,10 +9509,11 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          User experience
+          Experiencia de usuario
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          We design with intuitive navigation and smooth interaction in mind.
+          Diseñamos pensando en un navegación intuitiva y una interacción
+          fluida.
         </p>
       </div>
     </section>
@@ -9538,11 +9560,11 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Optimization
+          Optimización
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          We optimize the site for optimal performance and speed, considering
-          factors such as fast page load times.
+          Optimizamos el sitio para un rendimiento y velocidad óptimos,
+          considerando aspectos como la carga rápida de páginas.
         </p>
       </div>
     </section>
@@ -9594,11 +9616,12 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Corporate Identity
+          Identidad corporativa
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400]">
-          We ensure that the website reflects the client's brand and visual
-          identity (color palettes, typography, and other graphic elements).
+          Nos aseguramos de que el sitio web refleje la marca y la identidad
+          visual del cliente (paletas de colores, tipografías y otros elementos
+          gráficos).
         </p>
       </div>
     </section>
@@ -9676,16 +9699,17 @@ const pageTitle = "Custom web development";
           </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px]">
-          Responsive design
+          Diseño responsivo
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400]">
-          We offer a smooth and functional experience, whether the user is on a
-          desktop, tablet, or mobile phone.
+          Ofrecemos una experiencia fluida y funcional, independientemente de si
+          el usuario está en un ordenador de escritorio, una tableta o un
+          teléfono móvil.
         </p>
       </div>
     </section>
   </article>
   <div class="mt-[48px] hidden md:flex md:justify-center px-[30px]">
-    <ContactUs />
+    <ContactanosBoton />
   </div>
-</BaseLayoutEN>
+</BaseLayoutES>

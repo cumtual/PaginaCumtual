@@ -30,7 +30,9 @@ import { VITE_BACK_URL } from 'astro:env/server';
   >
     <CumtualElevamos />
     <div class="mt-20">
-      <button type="button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});" class="btn btn-white btn-animated">
+      <button type="button" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'});" class="btn btn-white"
+      data-aos="zoom-out-up"
+      >
         Contact us
       </button>
     </div>
@@ -40,9 +42,10 @@ import { VITE_BACK_URL } from 'astro:env/server';
   </article>
   <article
     class="flex flex-col justify-center items-center text-center mt-20 px-[30px]"
+    data-aos="fade-down"
   >
     <p
-      class="font-[600] text-[14px] md:w-[790px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]"
+      class="font-[600] text-[14px] md:w-[690px] lg:w-[790px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]"
     >
       We are a company dedicated to <span class="text-[#FFF]"
         >creating websites, brand design, and web hosting,</span
@@ -53,9 +56,10 @@ import { VITE_BACK_URL } from 'astro:env/server';
     </p>
   </article>
   <article class="md:flex md:justify-center md:mt-24 px-[30px]">
-    <div class="md:flex md:justify-between md:items-start md:w-[754px]">
+    <div class="md:flex md:justify-between md:items-start md:w-[654px] lg:w-[754px]">
       <section
         class="flex flex-col justify-start items-center md:items-start mt-10 gap-2 text-center md:text-start md:w-[275px] md:h-[227.38px]"
+        data-aos="flip-up"
       >
         <InsiginaCalidad />
         <p
@@ -70,6 +74,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
       </section>
       <section
         class="flex flex-col justify-start items-center md:items-start mt-10 gap-2 text-start md:w-[275px] md:h-[227.38px]"
+        data-aos="flip-down"
       >
         <InsigniaAdaptabilidad />
         <p
@@ -96,7 +101,8 @@ import { VITE_BACK_URL } from 'astro:env/server';
       </h2>
       <div class="flex gap-4 w-full mt-[10px] md:justify-center">
         <a
-          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative" href="/en-US/services/custom-web-development"
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[317px] lg:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative" href="/en-US/services/custom-web-development"
+          data-aos="zoom-in"
         >
           <div class="flex justify-center items-center mt-4 w-full md:hidden">
             <NubeIcon />
@@ -111,7 +117,8 @@ import { VITE_BACK_URL } from 'astro:env/server';
           </p>
         </a>
         <a
-          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative" href="/en-US/services/logos"
+          class="bg-[#353536] rounded-[9px] w-1/2 md:w-[317px] lg:w-[367px] md:h-[251.72px] h-[173px] flex flex-col justify-center items-center text-[#FFF] gap-5 relative" href="/en-US/services/logos"
+          data-aos="zoom-in"
         >
           <div class="flex justify-center items-center w-full md:hidden">
             <LogoIcon />
@@ -130,7 +137,8 @@ import { VITE_BACK_URL } from 'astro:env/server';
       </div>
       <div class="flex gap-5 w-full md:justify-center">
         <a
-          class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] mt-2 gap-5" href="/en-US/services/custom-web-development"
+          class="bg-[#353536] rounded-[9px] w-full h-[173px] md:w-[654px] lg:w-[754px] md:h-[251.33px] flex flex-col justify-center items-center text-[#FFF] mt-2 gap-5" href="/en-US/services/custom-web-development"
+          data-aos="zoom-in"
         >
           <div class="flex justify-center items-center w-full md:hidden">
             <DesarrolloIcon />
@@ -150,7 +158,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
     </section>
   </article>
   <article class="mt-[48px] ejemplo md:flex md:justify-center px-[30px]">
-    <section class="md:w-[754px]">
+    <section class="md:w-[654px] lg:w-[754px]">
       <h2 class="font-[600] text-[#FFF] text-[24px]">
         Development tools
       </h2>
@@ -161,6 +169,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
   </article>
   <article
     class="mt-[48px] flex flex-col justify-center items-center text-center gap-2 px-[30px]"
+    data-aos="zoom-in-down"
   >
     <h2 class="text-gradient font-[600] text-[25px] leading-[32.49px]">
       Take your business to the virtual summit.

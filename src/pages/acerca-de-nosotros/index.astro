@@ -1,17 +1,22 @@
 ---
-import Image from "astro/components/Image.astro";
 import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import "@styles/globals.css";
 const pageTitle = "Acerca de nosotros";
+//TODO: descripcion
+const description = "Acerca de Cumtual, "
+//TODO: keywords
+const keywords = "empresa desarrollo"
+const url="acerca-de-nosotros"
+import Imagenes from "@components/ComponetesES/Imagenes";
 ---
 
-<BaseLayoutES pageTitle={pageTitle}>
+<BaseLayoutES pageTitle={pageTitle} description={description} keywords={keywords} url={url}>
   <h1
     class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40"
   >
     Acerca de nosotros
   </h1>
-  <section id="imagenes" class="flex justify-center items-center mt-16 gap-2">
+  <!-- <section id="imagenes" class="flex justify-center items-center mt-16 gap-2">
     <div class="contenedor-imagenes">
       <div class="contenedor-imagen rounded-lg">
         <Image
@@ -135,11 +140,17 @@ const pageTitle = "Acerca de nosotros";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <div class="flex justify-center items-center mt-10 md:mt-20">
+    <div class="w-full max-w-6xl md:min-h-[420px] min-h-[130px]">
+      <Imagenes client:only />
+    </div>
+  </div>
   <article class="flex flex-col gap-10 mt-10 px-[30px] md:px-40">
     <section
       id="vision"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-down"
     >
       <div class="hidden md:block">
         <svg
@@ -200,20 +211,21 @@ const pageTitle = "Acerca de nosotros";
         Visión
       </h3>
       <p
-        class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px] w-[321px]"
+        class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px] w-[321px]"
       >
         Ser una empresa reconocida por nuestra capacidad de <span
           class="text-[#FFF] font-[700] text-gradient-animated"
         >
-          transformar ideas en plataformas web y aplicaciones web centradas en
+          transformar ideas en innovaciones centradas en
           los intereses y necesidades del usuario,</span
-        > de esta manera impulsamos el éxito y la presencia en línea de nuestros
-        clientes en entornos digitales de constante evolución.
+        >  impulsando el éxito y la presencia en línea de nuestros
+        clientes.
       </p>
     </section>
     <section
       id="mision"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-up"
     >
       <div class="hidden md:block">
         <svg
@@ -297,20 +309,17 @@ const pageTitle = "Acerca de nosotros";
         Misión
       </h3>
       <p
-        class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px] w-[321px]"
+        class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px] w-[321px]"
       >
         Ofrecer <span class="text-[#FFF] font-[700] text-gradient-animated"
           >soluciones digitales innovadoras y personalizadas,</span
-        > desarrollando aplicaciones y páginas web que optimizan procesos, mejoran
-        la presencia en línea, aumentan la productividad y competitividad de nuestros
-        clientes. Nuestro compromiso con la calidad, la tecnología de vanguardia
-        y la satisfacción del cliente impulsa el crecimiento y éxito de las empresas
-        en el entorno digital.
+        > desarrollando aplicaciones y páginas web para optimizar procesos, aumentando la productividad y competitividad de nuestros clientes. Teniendo altos estandares de calidad durante todos los procesos de desarrollo buscando la satisfacción del cliente.
       </p>
     </section>
     <section
       id="valores"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-down"
     >
       <div class="block md:hidden svg-icon">
         <svg
@@ -372,7 +381,7 @@ const pageTitle = "Acerca de nosotros";
       </h3>
       <div class="flex flex-col gap-4">
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[754px] w-[321px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px] w-[321px]"
         >
           <span class="text-[#FFF] font-[700] text-gradient-animated"
             >Calidad:</span
@@ -380,7 +389,7 @@ const pageTitle = "Acerca de nosotros";
           superen las expectativas de nuestros clientes y garanticen su éxito.
         </p>
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[754px] w-[321px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px] w-[321px]"
         >
           <span class="text-[#FFF] font-[700] text-gradient-animated"
             >Adaptabilidad:</span
@@ -389,8 +398,9 @@ const pageTitle = "Acerca de nosotros";
       </div>
     </section>
     <section
-      id="valores"
+      id="objetivos"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-right"
     >
       <div class="block md:hidden svg-icon">
         <svg
@@ -476,9 +486,9 @@ const pageTitle = "Acerca de nosotros";
       >
         Objetivos
       </h3>
-      <div class="flex flex-col gap-4 md:w-[754px] w-[321px]">
+      <div class="flex flex-col gap-4 md:w-[384px] lg:w-[754px] w-[321px]">
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[754px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] text-start md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px]"
         >
           Objetivo general: Ofrecer soluciones creativas y personalizadas en
           desarrollo web, impulsando el crecimiento y la competitividad
@@ -496,7 +506,7 @@ const pageTitle = "Acerca de nosotros";
           -Fomentar la innovación continua.
         </p>
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px]"
         >
           Estar a la vanguardia de las tecnologías emergentes mediante la
           investigación y adopción de nuevas herramientas y metodologías, con el
@@ -508,7 +518,7 @@ const pageTitle = "Acerca de nosotros";
           -Mejorar la experiencia del usuario en cada proyecto.
         </p>
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px]"
         >
           Diseñamos interfaces intuitivas y atractivas, asegurando una
           navegación fluida y una interacción eficiente para ofrecer la mejor
@@ -520,7 +530,7 @@ const pageTitle = "Acerca de nosotros";
           -Desarrollo web progresivo
         </p>
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px]"
         >
           Desarrollar aplicaciones web de manera progresiva, comenzando con una
           versión básica funcional para todos los usuarios y añadiendo
@@ -533,7 +543,7 @@ const pageTitle = "Acerca de nosotros";
           -Brindar soporte técnico post-lanzamiento
         </p>
         <p
-          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[754px]"
+          class="px-2 font-[400] text-[14px] text-[#7C7C7C] leading-[18.19px] md:text-[20px] md:leading-[25.99px] md:w-[384px] lg:w-[754px]"
         >
           Proporcionar un servicio de mantenimiento continuo que garantice que
           las plataformas permanezcan actualizadas, funcionales y resilientes.

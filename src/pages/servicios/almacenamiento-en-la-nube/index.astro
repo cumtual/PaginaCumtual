@@ -3,16 +3,22 @@ import BaseLayoutES from "@layouts/BaseLayoutES.astro";
 import "@styles/globals.css";
 const pageTitle = "Almacenamiento en la nube";
 import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
+// TODO: DESCRIPCION
+const descripcion="almacenamiento en la nube"
+//TODO: Keywords
+const keywords="almacenamiento";
+const url ="servicios/almacenamiento-en-la-nube";
+
 ---
 
-<BaseLayoutES pageTitle={pageTitle}>
+<BaseLayoutES pageTitle={pageTitle} description={descripcion} keywords={keywords} url={url}>
   <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40">
     Almacenamiento en la nube
   </h1>
   <article
     class="text-center flex flex-col gap-8 mt-16 md:items-center md:mt-28 px-[38px] md:px-40"
   >
-    <section class="md:w-[754px]">
+    <section class="md:w-[554px] lg:w-[754px]" data-aos="flip-right">
       <p
         class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px]"
       >
@@ -27,6 +33,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
   <article class="block md:hidden px-[30px] md:px-40">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon-left">
@@ -65,6 +72,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-down"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon-right">
@@ -114,6 +122,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon">
@@ -139,7 +148,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
     </div>
   </article>
   <article class="hidden md:flex gap-4 mt-32 justify-around px-[30px] md:px-40">
-    <section class="w-[276px]">
+    <section class="w-[276px]" data-aos="flip-left">
       <div class="flex flex-col justify-center gap-4 py-3 px-4">
         <div class="svg-icon">
           <svg width="29" height="48" viewBox="0 0 29 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +169,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
         </p>
       </div>
     </section>
-    <section class="w-[276px]">
+    <section class="w-[276px]" data-aos="flip-right">
       <div class="flex flex-col justify-center gap-4 py-3 px-4">
         <div class="svg-icon-right">
           <svg width="53" height="31" viewBox="0 0 53 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +198,8 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
   </article>
   <article class="hidden md:flex md:justify-center px-[30px] md:px-40">
     <section
-      class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-8 py-6 px-1 w-[896px] h-[274px]"
+      class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-8 py-6 px-1 md:w-[584px] lg:w-[896px] h-[274px]"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-8 py-3 px-1">
         <div class="svg-icon-left">
@@ -204,7 +214,7 @@ import ContactanosBoton from "@components/ComponetesES/ContactanosBoton.astro";
             </svg>
         </div>
         <h2 class="font-[600] text-[#FFF] text-[25px] leading-[32.49px] text-gradient-animated">Accesibilidad</h2>
-        <p class="text-[20px] leading-[25.99px] font-[400] w-[754px]">
+        <p class="text-[20px] leading-[25.99px] font-[400] w-[554px] lg:w-[754px]">
           Accede a tus archivos desde cualquier dispositivo conectado a
           Internet, lo que facilita el trabajo desde casa y la colaboración
           entre equipos.
