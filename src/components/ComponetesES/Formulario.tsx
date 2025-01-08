@@ -224,14 +224,14 @@ export const Formulario = ({ BACK_URL }: ComponentsProps) => {
       <div className="md:flex md:gap-4 md:w-[654px] lg:w-[754px] md:justify-between">
         <div className="flex flex-col gap-2 ">
           <label
-            htmlFor="tipoServicio"
+            htmlFor="lada"
             className="font-[700] text-[14px] md:text-[20px] leading-[18.19px] text-[#FFF] text-start"
           >
             WhatsApp con lada de país
           </label>
           <div className="w-[340px] md:w-[317px] lg:w-[367px] h-[44px] rounded-[4px] bg-[rgb(38,40,45)] px-2 text-[14px] font-300 flex justify-center items-center gap-4">
             <select
-              className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]"
+              className="w-[60px] md:w-[67px] h-[44px] bg-[rgb(38,40,45)]" id="lada"
               {...registroContacto("lada", {
                 required: "Lada es requerida",
               })}

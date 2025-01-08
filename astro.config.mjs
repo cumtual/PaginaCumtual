@@ -16,7 +16,6 @@ export default defineConfig({
       }),
     },
   },
-
   vite: {
     resolve: {
       alias: {
@@ -28,7 +27,6 @@ export default defineConfig({
       },
     },
   },
-
   site: "https://cumtual.com",
 
   integrations: [
@@ -43,4 +41,7 @@ export default defineConfig({
       },
     }),
   ],
+  build:{
+    minify: true
+  },
 });

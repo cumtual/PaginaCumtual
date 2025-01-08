@@ -3,15 +3,18 @@ import BaseLayoutEN from "@layouts/BaseLayoutEN.astro";
 import '@styles/globals.css';
 import { Form } from "@components/ComponentesEN/Form";
 const pageTitle = 'Contact us'
+const description = "Cumtual contact form."
+const keywords=["contact form"]
+const url = "en-US/contact-us"
 import { VITE_BACK_URL } from 'astro:env/server';
 ---
 
-<BaseLayoutEN pageTitle={pageTitle}>
+<BaseLayoutEN pageTitle={pageTitle} description={description} keywords={keywords} url={url}>
     <h1 class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40">
         Contact Us
       </h1>
-    <p class="text-gradient-animated font-[600] text-[24px] text-center leading-[31.19px] mt-24">Take your business to the virtual summit.</p>
-    <div class="mt-14 md:mt-28 flex justify-center items-center">
+    <p class="text-gradient-animated font-[600] text-[24px] text-center leading-[31.19px] mt-24" data-aos="zoom-in">Take your business to the virtual summit.</p>
+    <div class="mt-14 md:mt-28 flex justify-center items-center" data-aos="zoom-out">
         <Form client:load BACK_URL={VITE_BACK_URL}/>
     </div>
 </BaseLayoutEN>

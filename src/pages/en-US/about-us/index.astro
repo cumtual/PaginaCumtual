@@ -1,17 +1,28 @@
 ---
-import Image from "astro/components/Image.astro";
 import BaseLayoutEN from "@layouts/BaseLayoutEN.astro";
-import "@styles/globals.css";
-const pageTitle = "Acerca de nosotros";
+import Imagenes from "@components/ComponetesES/Imagenes";
+const pageTitle = "About us";
+const description = "We transform ideas into user-centered digital innovations. We help businesses enhance their success and online presence with creative, strategic, and personalized solutions.";
+const keywords = [
+  "We transform ideas",
+  "Digital innovations",
+  "User-centered solutions",
+  "Enhance success",
+  "Online presence",
+  "Creative solutions",
+  "Strategic solutions",
+  "Personalized solutions",
+];
+const url="en-US/about-us"
 ---
 
-<BaseLayoutEN pageTitle={pageTitle}>
+<BaseLayoutEN pageTitle={pageTitle} keywords={keywords} description={description} url={url}>
   <h1
     class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40"
   >
     About us
   </h1>
-  <section id="imagenes" class="flex justify-center items-center mt-16 gap-2">
+  <!-- <section id="imagenes" class="flex justify-center items-center mt-16 gap-2">
     <div class="contenedor-imagenes">
       <div class="contenedor-imagen rounded-lg">
         <Image
@@ -225,11 +236,17 @@ const pageTitle = "Acerca de nosotros";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <div class="flex justify-center items-center mt-10 md:mt-20">
+    <div class="w-full max-w-6xl md:min-h-[420px] min-h-[130px]">
+      <Imagenes client:only />
+    </div>
+  </div>
   <article class="flex flex-col gap-10 mt-10 px-[30px] md:px-40">
     <section
       id="vision"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-down"
     >
       <div class="hidden md:block">
         <svg
@@ -304,6 +321,7 @@ const pageTitle = "Acerca de nosotros";
     <section
       id="mision"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-up"
     >
       <div class="hidden md:block">
         <svg
@@ -400,6 +418,7 @@ const pageTitle = "Acerca de nosotros";
     <section
       id="valores"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-down"
     >
       <div class="block md:hidden svg-icon">
         <svg
@@ -481,6 +500,7 @@ const pageTitle = "Acerca de nosotros";
     <section
       id="valores"
       class="flex flex-col justify-center items-center bg-[#26282D] rounded-[9px] py-4 gap-4 pb-8"
+      data-aos="flip-right"
     >
       <div class="block md:hidden svg-icon">
         <svg

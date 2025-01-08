@@ -3,9 +3,22 @@ import BaseLayoutEN from "@layouts/BaseLayoutEN.astro";
 import "@styles/globals.css";
 import ContactUs from "@components/ComponentesEN/ContactUs.astro";
 const pageTitle = "Custom web development";
+const description =
+  "We offer customized solutions in bespoke web development tailored to the specific needs of your business. With unique designs, scalable functionalities, and modern technologies, we ensure responsive and SEO-optimized web developments that enhance your online presence and deliver effective results.";
+const keywords = [
+  "custom web development",
+  "personalized solutions",
+  "business adaptability",
+  "unique and innovative designs",
+  "advanced functionalities",
+  "guaranteed scalability",
+  "modern and efficient technologies",
+  "guaranteed results",
+];
+const url = "en-US/services/custom-web-development";
 ---
 
-<BaseLayoutEN pageTitle={pageTitle}>
+<BaseLayoutEN pageTitle={pageTitle} description={description} keywords={keywords} url={url}>
   <h1
     class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40"
   >
@@ -4489,6 +4502,7 @@ const pageTitle = "Custom web development";
   <article class="block md:hidden px-[30px] md:px-40">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
         <div>
@@ -4521,13 +4535,13 @@ const pageTitle = "Custom web development";
           Specific requirements
         </h2>
         <p class="text-[14px]">
-          We design based on the needs and interests of the client, providing a
-          100% custom design.
+          We develop unique solutions that adapt to the needs of each business. This approach includes custom functionalities, UX/UI design, and responsive websites.
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-right"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
         <div>
@@ -4581,6 +4595,7 @@ const pageTitle = "Custom web development";
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-8"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-4">
         <h2 class="font-[600] text-[#FFF] text-[24px]">Let's work together</h2>
@@ -4617,6 +4632,7 @@ const pageTitle = "Custom web development";
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -6977,6 +6993,7 @@ const pageTitle = "Custom web development";
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-right"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -7007,13 +7024,13 @@ const pageTitle = "Custom web development";
         </div>
         <h2 class="font-[600] text-[#FFF] text-[15.46px]">Optimization</h2>
         <p class="text-[14px]">
-          We optimize the site for optimal performance and speed, considering
-          factors such as fast page load times.
+          It enables the creation of fast, responsive, and SEO-optimized websites. This process enhances user experience and increases visibility on Google search engines.
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-2 px-4"
+      data-aos="flip-left"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-2">
         <div>
@@ -7097,6 +7114,7 @@ const pageTitle = "Custom web development";
   </article>
   <article
     class="hidden md:flex gap-4 mt-[65px] justify-between px-[30px] md:px-40"
+    data-aos="zoom-in-right"
   >
     <section class="w-[276px]" data-aos="zoom-in-right">
       <div class="flex flex-col justify-center gap-4 py-3 px-4">
@@ -7130,8 +7148,7 @@ const pageTitle = "Custom web development";
           Specific requirements
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          We design based on the needs and interests of the client, providing a
-          100% custom design.
+          We develop unique solutions that adapt to the needs of each business. This approach includes custom functionalities, UX/UI design, and responsive websites.
         </p>
       </div>
     </section>
@@ -9541,8 +9558,7 @@ const pageTitle = "Custom web development";
           Optimization
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          We optimize the site for optimal performance and speed, considering
-          factors such as fast page load times.
+          It enables the creation of fast, responsive, and SEO-optimized websites. This process enhances user experience and increases visibility on Google search engines.
         </p>
       </div>
     </section>
@@ -9597,8 +9613,7 @@ const pageTitle = "Custom web development";
           Corporate Identity
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400]">
-          We ensure that the website reflects the client's brand and visual
-          identity (color palettes, typography, and other graphic elements).
+          Corporate identity guides the design of a website by ensuring visual and communicative consistency, reflecting the brand's values, and strengthening its online recognition.
         </p>
       </div>
     </section>

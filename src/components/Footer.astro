@@ -60,7 +60,7 @@ const { idioma } = Astro.props;
     </svg>
   </div>
   <div class="flex gap-8 items-center md:mr-20">
-    <a href="https://www.instagram.com/cumtual" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/cumtual" target="_blank" rel="noopener noreferrer" aria-label={idioma === "en" ? "Instagram account" : "Cuenta de instagram"}>
       <svg
       width="19"
       height="19"
@@ -73,7 +73,7 @@ const { idioma } = Astro.props;
         fill="white"></path>
     </svg>
     </a>
-    <a href="https://www.linkedin.com/company/cumtual" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/company/cumtual" target="_blank" rel="noopener noreferrer" aria-label={idioma === "en" ? "Linkedin account" : "Cuenta de Linkedin"}>
       <svg
       width="21"
       height="21"

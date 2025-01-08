@@ -11,6 +11,7 @@ Dark green: #28b485
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -18,13 +19,12 @@ Dark green: #28b485
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
   padding: 0px;
-  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -440,155 +440,3 @@ body {
   }
 }
 
-.img-jump {
-  animation: jump 2s ease-in-out infinite;
-  animation-delay: 0s, 5s; /* Se repite cada 5 segundos */
-}
-
-.img-slide-left{
-  animation: slideleft 2s ease-in-out infinite;
-  animation-delay: 0s, 5s;
-}
-
-.img-slide-right{
-  animation: slideright 2s ease-in-out infinite;
-  animation-delay: 0s, 5s;
-}
-
-.img-zoom {
-  transition: transform .7s ease-in-out; /* Animación suave de 0.3 segundos */
-}
-
-.img-zoom:hover {
-  transform: scale(1.2); /* Aumenta el tamaño de la imagen al 120% */
-}
-
-
-.contenedor-imagenes{
-  display: flex;
-  width: 380px;
-  height: 264px;
-  gap: 5px;
-}
-
-
-.contenedor-imagenes .contenedor-imagen {
-  width: 0px;
-  flex-grow: 1;
-  opacity: 1;
-  transition: all 0.5s ease;
-  animation: grow 1s forwards;
-  animation-delay: 1s;
-  background: linear-gradient(to right, #04e95f, #007bea);
-  background-clip: padding-box, border-box;
-  background-origin: border-box;
-  position: relative; /* Necesario para el posicionamiento del texto */
-}
-
-.contenedor-imagen img{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.contenedor-imagenes div:hover {
-  cursor: pointer;
-  width: fit-content;
-  filter: contrast(120%);
-  padding: 2px;
-  transform: translate(90deg);
-}
-
-.texto-sobre-imagen {
-  position: absolute;
-  bottom: 29%;
-  left: -53%;
-  width: fit-content;
-  background: #191a1e7b;
-  color: white;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 10px;
-  transition: transform 0.5s ease;
-}
-
-.contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen {
-  bottom: 0px; 
-  /* transform: translate(-50%, 0); */
-  transform: (-90deg);
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.contenedor-imagenes .contenedor-imagen .texto-sobre-imagen {
-  transform: rotate(-90deg);
-  transition: transform 0.5s ease; /* Añadimos transición para el cambio suave */
-  animation-delay: 1s;
-
-}
-.contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen {
-  transform: rotate(0deg);  /* El texto se vuelve horizontal */
-  top: 51%;
-  left: 0;
-  width: fit-content;
-  height: 130px;
-}
-
-
-.contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen .logo-linkedin {
-  width: fit-content;
-  height: 30px;
-}
-.contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen .logo-instagram {
-  width: fit-content;
-  height: 30px;
-}
-
-.contenedor-imagenes:hover .contenedor-imagen:not(:hover) .texto-sobre-imagen {
-  left: -79%; /* Desplaza el texto hacia la izquierda */
-  width: fit-content;
-}
-
-/* Ocultar los elementos .hover-hidden por defecto */
-.texto-sobre-imagen .hover-hidden {
-  display: none;
-}
-
-/* Mostrar .hover-hidden solo en el contenedor que tiene hover */
-.contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen .hover-hidden {
-  display: flex;
-}
-
-/* Asegurarse de que los otros contenedores mantengan los .hover-hidden ocultos */
-.contenedor-imagenes .contenedor-imagen:not(:hover) .texto-sobre-imagen .hover-hidden {
-  display: none;
-}
-
-@media (min-width: 768px){
-  .contenedor-imagenes{
-    width: 850px;
-    height: 602px;
-    gap: 10px;
-  }
-  .texto-sobre-imagen {
-    position: absolute;
-    bottom: 24%;
-    left: -50.5%;
-    width: 135%;
-  }
-  .contenedor-imagenes div:hover {
-    cursor: pointer;
-    width: 300px;
-  }
-  .contenedor-imagenes .contenedor-imagen:hover .texto-sobre-imagen {
-    transform: rotate(0deg);  /* El texto se vuelve horizontal */
-    top: 60%;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-}

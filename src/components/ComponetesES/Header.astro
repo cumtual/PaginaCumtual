@@ -10,7 +10,7 @@ import ChooseLanguage from "@components/ComponentesEN/ChooseLenguage";
 <header class="p-[30px] sticky top-0 left-0 z-30">
     {idioma === "en" ? null : <ChooseLanguage client:load/> }
     <nav class="flex items-center justify-between static">
-        <a href="/" class=" md:ml-14 lg:ml-28">
+        <a href={idioma === "en" ? "/en-US" : "/"} class=" md:ml-14 lg:ml-28" aria-label={idioma === "en" ? "Visit homepage" : "Ir a inicio"}>
             <svg
                 width="61"
                 height="33"

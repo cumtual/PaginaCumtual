@@ -15,16 +15,22 @@ import LogoIconPC from "@components/SVG/LogoIconPC.astro";
 import HerramientasDesarrollo from "@components/SVG/HerramientasDesarrollo.astro";
 import { Form } from '@components/ComponentesEN/Form'
 
-import "@styles/globals.css";
-
 const pageTitle = "Home";
 const description =
-  "Empresa dedicada a la creación de páginas web, diseño de marcas y almacenamiento web.";
+  "Specialists in custom web development, professional brand design, and reliable web hosting, we offer innovative digital solutions. We help enhance your online presence with responsive websites and personalized digital strategies.";
 const url = "en-US/";
+const keywords = [
+  "custom web development",
+  "professional brand design",
+  "reliable web hosting",
+  "innovative digital solutions",
+  "online presence"
+];
+
 import { VITE_BACK_URL } from 'astro:env/server';
 ---
 
-<BaseLayoutEN pageTitle={pageTitle} description={description} url={url}>
+<BaseLayoutEN pageTitle={pageTitle} description={description} url={url} keywords={keywords}>
   <article
     class="flex flex-col justify-center items-center h-[550px] px-[70px]"
   >
@@ -68,8 +74,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
           Quality
         </p>
         <p class="text-[14px] leading-[18.19px] md:text-[20px] md:leading-[25.99px]">
-          We are committed to delivering high-quality products and services that
-          exceed our clients expectations and ensure their success.
+          Our commitment is to ensure exceptional results that drive your success with innovative and personalized solutions.
         </p>
       </section>
       <section
@@ -175,7 +180,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
       Take your business to the virtual summit.
     </h2>
     <p class="font-[600] text-[14px] leading-[18.19px]">
-      We will assist you within 30 minutes, and you will receive your quote in less than 24 hours.
+      Work with us
     </p>
   </article>
   <article class="text-center flex flex-col justify-center px-[30px]">

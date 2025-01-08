@@ -1,11 +1,30 @@
 ---
 import BaseLayoutEN from "@layouts/BaseLayoutEN.astro";
-import "@styles/globals.css";
 const pageTitle = "Cloud Storage";
+const description =
+  "Cloud storage provides secure and scalable solutions for managing data efficiently. It enables remote access, automatic backup, and resource optimization, adapting to the needs of businesses of all sizes.";
+const keywords = [
+  "cloud storage",
+  "secure storage solutions",
+  "scalable storage",
+  "efficient data management",
+  "secure remote access",
+  "automatic data backup",
+  "cloud resource optimization",
+  "cloud backup solutions",
+  "enterprise storage management",
+];
+const url = "en-US/services/cloud-storage";
+
 import ContactUs from "@components/ComponentesEN/ContactUs.astro";
 ---
 
-<BaseLayoutEN pageTitle={pageTitle}>
+<BaseLayoutEN
+  pageTitle={pageTitle}
+  description={description}
+  keywords={keywords}
+  url={url}
+>
   <h1
     class="font-[600] text-[24px] text-[#FFF] mt-16 md:-ml-12 px-[30px] md:px-40"
   >
@@ -14,7 +33,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
   <article
     class="text-center flex flex-col gap-8 mt-16 md:items-center md:mt-28 px-[38px] md:px-40"
   >
-    <section class="md:w-[754px]">
+  <section class="md:w-[554px] lg:w-[754px]" data-aos="flip-right">
       <p
         class="text-[#7C7C7C] font-[600] text-[14px] md:text-[20px] md:leading-[25.99px]"
       >
@@ -28,6 +47,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
   <article class="block md:hidden px-[30px] md:px-40">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon-left">
@@ -62,13 +82,13 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Accessibility:
         </h2>
         <p class="text-[14px]">
-          Access your files from any Internet-connected device, making it easier
-          to work from home and collaborate with teams.
+          It allows businesses to access their data from anywhere, at any time. This flexible and secure solution optimizes data management and enhances real-time collaboration with multidisciplinary teams.
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-down"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon-right">
@@ -115,13 +135,13 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Scalability
         </h2>
         <p class="text-[14px]">
-          Adjust storage capacity as needed, without requiring additional
-          physical hardware.
+          It allows businesses to adjust their storage capacity according to their needs. This flexible approach facilitates growth and resource optimization.
         </p>
       </div>
     </section>
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-4 py-6 px-1"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-4 py-3 px-1">
         <div class="svg-icon">
@@ -156,8 +176,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Costs
         </h2>
         <p class="text-[14px]">
-          Eliminate the need to purchase and maintain hardware, as you only pay
-          for the storage you use.
+          It offers flexible and scalable costs, adapting to the needs of each business. With a pay-as-you-go model, it allows organizations to optimize their expenses and avoid large initial investments in infrastructure.
         </p>
       </div>
     </section>
@@ -166,7 +185,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
     </div>
   </article>
   <article class="hidden md:flex gap-4 mt-32 justify-around px-[30px] md:px-40">
-    <section class="w-[276px]">
+    <section class="w-[276px]" data-aos="flip-left">
       <div class="flex flex-col justify-center gap-4 py-3 px-4">
         <div class="svg-icon">
           <svg
@@ -200,12 +219,11 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Costs
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          Remove the need to purchase and maintain hardware, as you only pay for
-          the storage you actually use.
+          It offers flexible and scalable costs, adapting to the needs of each business. With a pay-as-you-go model, it allows organizations to optimize their expenses and avoid large initial investments in infrastructure.
         </p>
       </div>
     </section>
-    <section class="w-[276px]">
+    <section class="w-[276px]" data-aos="flip-right">
       <div class="flex flex-col justify-center gap-4 py-3 px-4">
         <div class="svg-icon-right">
           <svg
@@ -252,8 +270,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Scalability
         </h2>
         <p class="text-[19px] leading-[25.99px] font-[400]">
-          Adjust storage capacity as needed, without the need for additional
-          physical hardware.
+          It allows businesses to adjust their storage capacity according to their needs. This flexible approach facilitates growth and resource optimization.
         </p>
       </div>
     </section>
@@ -261,6 +278,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
   <article class="hidden md:flex md:justify-center px-[30px] md:px-40">
     <section
       class="mt-16 bg-[#26282D] rounded-[9px] text-center flex flex-col items-center gap-8 py-6 px-1 w-[896px] h-[274px]"
+      data-aos="flip-up"
     >
       <div class="flex flex-col items-center gap-8 py-3 px-1">
         <div class="svg-icon-left">
@@ -295,8 +313,7 @@ import ContactUs from "@components/ComponentesEN/ContactUs.astro";
           Accessibility
         </h2>
         <p class="text-[20px] leading-[25.99px] font-[400] w-[754px]">
-          Access your files from any device connected to the Internet, making
-          remote work and team collaboration easier.
+          It allows businesses to access their data from anywhere, at any time. This flexible and secure solution optimizes data management and enhances real-time collaboration with multidisciplinary teams.
         </p>
       </div>
     </section>
