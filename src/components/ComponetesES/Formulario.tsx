@@ -78,6 +78,7 @@ const countries: Country[] = [
 export const Formulario = ({ BACK_URL }: ComponentsProps) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const {
     register: registroContacto,
@@ -98,6 +99,7 @@ export const Formulario = ({ BACK_URL }: ComponentsProps) => {
         strProjectDescription: data.platicanosProyecto,
         language: "es",
       };
+      setLoading(true);
       const dataBack: AxiosResponse = await axios.post(
         `${BACK_URL}/api/leads/save-lead`,
         dataSend,
@@ -109,6 +111,7 @@ export const Formulario = ({ BACK_URL }: ComponentsProps) => {
       );
       setSuccessMessage("Formulario enviado");
       setTimeout(() => {
+        setLoading(false);
         window.location.reload();
       }, 3000);
       return;
@@ -299,7 +302,7 @@ export const Formulario = ({ BACK_URL }: ComponentsProps) => {
           })}
         ></textarea>
       </div>
-      <button className="btn btn-white mt-4 btn-animated" type="submit">
+      <button className="btn btn-white mt-4" type="submit" disabled={loading ? true : false} >
         Enviar
       </button>
     </form>

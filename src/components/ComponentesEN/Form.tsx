@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import axios, { type AxiosResponse } from "axios";
-
-import "@styles/globals.css";
 enum serviceType {
     landing_page = "Landing Page",
     logos = "Logos",
@@ -82,6 +80,7 @@ const countries: Country[] = [
 export const Form = ({BACK_URL}: ComponentsProps) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const {
     register: registroContacto,
@@ -102,6 +101,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
         strProjectDescription: data.platicanosProyecto,
         language: 'en'
       }
+      setLoading(true);
       const dataBack: AxiosResponse = await axios.post(
         `${BACK_URL}/api/leads/save-lead`,
         dataSend,
@@ -111,8 +111,9 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           }
         }
       );
-      setSuccessMessage('Formulario enviado');
+      setSuccessMessage('Form sended');
       setTimeout(() => {
+        setLoading(false);
         window.location.reload()
       }, 3000);
       return;
@@ -301,7 +302,7 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
           })}
         ></textarea>
       </div>
-      <button className="btn btn-white btn-animated mt-4">Send</button>
+      <button className="btn btn-white mt-4" type="submit" disabled={loading ? true : false}>Send</button>
     </form>
   );
 };
