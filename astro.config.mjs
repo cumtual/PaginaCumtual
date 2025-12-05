@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   env: {
@@ -16,6 +18,7 @@ export default defineConfig({
       }),
     },
   },
+
   vite: {
     resolve: {
       alias: {
@@ -27,6 +30,7 @@ export default defineConfig({
       },
     },
   },
+
   site: "https://cumtual.com",
 
   integrations: [
@@ -41,7 +45,10 @@ export default defineConfig({
       },
     }),
   ],
+
   build:{
     minify: true
   },
+
+  adapter: cloudflare(),
 });
