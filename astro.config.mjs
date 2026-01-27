@@ -9,15 +9,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  env: {
-    schema: {
-      VITE_BACK_URL: envField.string({
-        context: "server",
-        access: "secret",
-        optional: false,
-      }),
-    },
-  },
+  adapter: cloudflare(),
 
   vite: {
     resolve: {
@@ -48,7 +40,5 @@ export default defineConfig({
 
   build:{
     minify: true
-  },
-
-  adapter: cloudflare(),
+  }
 });
