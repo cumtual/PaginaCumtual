@@ -27,7 +27,6 @@ const keywords = [
   "online presence"
 ];
 
-import { VITE_BACK_URL } from 'astro:env/server';
 ---
 
 <BaseLayoutEN pageTitle={pageTitle} description={description} url={url} keywords={keywords}>
@@ -188,7 +187,7 @@ import { VITE_BACK_URL } from 'astro:env/server';
       Lleva tu negocio a la cumbre virtual
     </h2> -->
     <div class="w-full md:flex justify-center mt-[48px]" id="form">
-      <Form client:load BACK_URL={VITE_BACK_URL}/>
+      <Form client:load/>
     </div>
   </article>
 </BaseLayoutEN>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import axios, { type AxiosResponse } from "axios";
 enum serviceType {
     landing_page = "Landing Page",
     logos = "Logos",
@@ -65,9 +64,6 @@ interface Country {
   callingCode: string;
 }
 
-interface ComponentsProps {
-  BACK_URL: string
-}
 
 const countries: Country[] = [
   { name: "United States", callingCode: "1" },
@@ -77,7 +73,7 @@ const countries: Country[] = [
   { name: "United Kingdom", callingCode: "44" },
 ];
 
-export const Form = ({BACK_URL}: ComponentsProps) => {
+export const Form = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -102,15 +98,15 @@ export const Form = ({BACK_URL}: ComponentsProps) => {
         language: 'en'
       }
       setLoading(true);
-      const dataBack: AxiosResponse = await axios.post(
-        `${BACK_URL}/api/leads/save-lead`,
-        dataSend,
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      );
+      // const dataBack: AxiosResponse = await axios.post(
+      //   `${BACK_URL}/api/leads/save-lead`,
+      //   dataSend,
+      //   {
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     }
+      //   }
+      // );
       setSuccessMessage('Form sended');
       setTimeout(() => {
         setLoading(false);

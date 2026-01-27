@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import axios, { type AxiosResponse } from "axios";
 import "@styles/globals.css";
 enum tipoServicios {
   landing_page = "Landing page",
@@ -63,9 +62,6 @@ interface Country {
   callingCode: string;
 }
 
-interface ComponentsProps {
-  BACK_URL: string;
-}
 
 const countries: Country[] = [
   { name: "United States", callingCode: "+1" },
@@ -75,7 +71,7 @@ const countries: Country[] = [
   { name: "United Kingdom", callingCode: "+44" },
 ];
 
-export const Formulario = ({ BACK_URL }: ComponentsProps) => {
+export const Formulario = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -100,15 +96,15 @@ export const Formulario = ({ BACK_URL }: ComponentsProps) => {
         language: "es",
       };
       setLoading(true);
-      const dataBack: AxiosResponse = await axios.post(
-        `${BACK_URL}/api/leads/save-lead`,
-        dataSend,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      // const dataBack: AxiosResponse = await axios.post(
+      //   `${BACK_URL}/api/leads/save-lead`,
+      //   dataSend,
+      //   {
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   }
+      // );
       setSuccessMessage("Formulario enviado");
       setTimeout(() => {
         setLoading(false);
