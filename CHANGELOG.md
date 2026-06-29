@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/cumtual/PaginaCumtual/compare/v1.0.0...v1.0.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* mejora la estructura y formato del componente Imagenes ([#18](https://github.com/cumtual/PaginaCumtual/issues/18)) ([59864ec](https://github.com/cumtual/PaginaCumtual/commit/59864ec3e8c2b12291aa3f6eabe65bacd05836a0))
+
 ## 1.0.0 (2026-06-16)
 
 
